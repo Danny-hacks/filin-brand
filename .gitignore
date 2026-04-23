@@ -1,0 +1,16 @@
+# macOS artifacts
+.DS_Store
+__MACOSX/
+
+# Internal documents — not needed for the live site
+*.pdf
+*.xlsx
+
+# Design references — working files only
+index-v2-design-ref.png
+index-v1.html
+
+# Editor/OS
+Thumbs.db
+*.swp
+.vscode/

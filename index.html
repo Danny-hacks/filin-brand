@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fillin — More Than Just Fuel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fraunces + Instrument (v1 hero/locator) + Barlow Condensed/Barlow (v2 sections) -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital,wght@0,400;1,400&family=Barlow+Condensed:ital,wght@0,600;0,700;0,900;1,700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- V1 base styles — used by hero + locator sections -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- V2 styles — used by all new sections; loaded second so v2 rules win -->
+  <link rel="stylesheet" href="styles-v2.css">
+</head>
+<body>
+
+<!-- Grain overlay (required by v1 hero CSS) -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════════════════ HEADER (from index.html) -->
+<header class="site-header" id="top">
+  <a class="brand" href="#top" aria-label="Fillin home">
+    <img src="assets/fillin-logo.png" alt="Fillin" class="brand-logo" width="534" height="264">
+  </a>
+
+  <nav class="site-nav" aria-label="Primary">
+    <a href="#services" data-en="Products &amp; Services" data-fr="Produits &amp; Services">Products &amp; Services</a>
+    <a href="#promotions" data-en="Promotions" data-fr="Promotions">Promotions</a>
+    <a href="#locator" data-en="Shops" data-fr="Stations">Shops</a>
+    <a href="#about" data-en="About" data-fr="À propos">About</a>
+    <a href="#business" data-en="Business (B2B)" data-fr="Entreprises">Business (B2B)</a>
+    <a href="#newsroom" data-en="Newsroom" data-fr="Actualités">Newsroom</a>
+    <a href="#careers" data-en="Careers" data-fr="Carrières">Careers</a>
+    <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+  </nav>
+
+  <div class="site-actions">
+    <button class="lang-toggle" aria-label="Change language" data-pressed="en">
+      <span class="lang-en">EN</span>
+      <span class="lang-sep" aria-hidden="true">/</span>
+      <span class="lang-fr">FR</span>
+    </button>
+    <a href="#locator" class="btn-find">
+      <span data-en="Find a station" data-fr="Trouver une station">Find a station</span>
+      <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════ HERO (from index.html) -->
+<section class="hero">
+  <div class="edge">
+    <figure class="hero-visual">
+      <img src="assets/hero-station.jpg" alt="A Fillin station at night, canopy lit, car light-trails sweeping past." loading="eager" decoding="async" width="1600" height="968">
+      <div class="hero-visual__scrim" aria-hidden="true"></div>
+
+      <div class="hero-visual__top">
+        <div class="section-label hero-label section-label--on-navy">
+          <span class="roman">N°01</span>
+          <span class="sep" aria-hidden="true">—</span>
+          <span data-en="Welcome" data-fr="Bienvenue">Welcome</span>
+        </div>
+        <figcaption class="hero-visual__cap">
+          <span class="hero-visual__tag" data-en="Flagship" data-fr="Phare">Flagship</span>
+          <span class="hero-visual__loc" data-en="Port Louis · forecourt" data-fr="Port-Louis · devant de station">Port Louis · forecourt</span>
+        </figcaption>
+      </div>
+
+      <h1 class="hero-headline hero-headline--on-image">
+        <span class="line line-1" data-en="When you stop to" data-fr="Quand vous faites">When you stop to</span>
+        <span class="line line-2">
+          <em class="em-serif" data-en="refill" data-fr="le plein">refill</em>
+          <span data-en="your car," data-fr="de votre voiture,">your car,</span>
+        </span>
+        <span class="line line-3">
+          <span data-en="you" data-fr="vous">you</span>
+          <em class="em-serif em-glow" data-en="refill" data-fr="faites le plein">refill</em>
+          <span data-en="yourself." data-fr="de vous-même.">yourself.</span>
+        </span>
+      </h1>
+    </figure>
+
+    <div class="hero-foot">
+      <p class="signature"><em>Lesans nou pei.</em></p>
+      <a href="#happening" class="scroll-cue">
+        <span data-en="Keep reading" data-fr="Lire la suite">Keep reading</span>
+        <svg viewBox="0 0 16 24" width="10" height="16" aria-hidden="true"><path d="M8 2v20M2 16l6 6 6-6" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-watermark" aria-hidden="true">
+    <span>f</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ FEATURE BAR -->
+<div class="v2-feature-bar">
+  <div class="v2-wrap">
+    <div class="v2-feature-bar__grid">
+
+      <div class="v2-feature-item">
+        <span class="v2-feature-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="8" width="24" height="32" rx="2"/>
+            <path d="M30 16h5a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-5"/>
+            <circle cx="38" cy="35" r="3"/>
+            <path d="M14 40v4M22 40v4"/>
+            <path d="M10 20h16"/>
+          </svg>
+        </span>
+        <div class="v2-feature-item__text">
+          <strong>Quality Fuel</strong>
+          <span>High performance fuel you can depend on.</span>
+        </div>
+      </div>
+
+      <div class="v2-feature-item">
+        <span class="v2-feature-item__icon v2-feature-item__icon--shield" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 4L8 10v14c0 9 7 17 16 20 9-3 16-11 16-20V10L24 4z" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 24l5 5 11-11" stroke="#F5B625" stroke-width="2.5"/>
+          </svg>
+        </span>
+        <div class="v2-feature-item__text">
+          <strong>Safety First</strong>
+          <span>Your safety is our top priority.</span>
+        </div>
+      </div>
+
+      <div class="v2-feature-item">
+        <span class="v2-feature-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="24" cy="14" r="7"/>
+            <path d="M10 42c0-7.7 6.3-14 14-14s14 6.3 14 14"/>
+            <path d="M34 30l4-2 4 4-3 4"/>
+            <path d="M36 40h4"/>
+          </svg>
+        </span>
+        <div class="v2-feature-item__text">
+          <strong>Customer Care</strong>
+          <span>Friendly service, every time.</span>
+        </div>
+      </div>
+
+      <div class="v2-feature-item">
+        <span class="v2-feature-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 40c0 0-18-10-18-24a18 18 0 0 1 36 0c0 14-18 24-18 24z"/>
+            <path d="M24 16c-4 4-4 10 0 14"/>
+            <path d="M24 16c4 4 4 10 0 14"/>
+            <line x1="24" y1="12" x2="24" y2="30"/>
+          </svg>
+        </span>
+        <div class="v2-feature-item__text">
+          <strong>Local &amp; Proud</strong>
+          <span>A Mauritian brand, for Mauritians.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ WHAT'S HAPPENING (v2) -->
+<section class="v2-happening" id="happening">
+  <div class="v2-wrap">
+    <div class="v2-section-head">
+      <h2 class="v2-sh-title">What's Happening</h2>
+      <a href="#" class="v2-link-more">View all offers &nbsp;→</a>
+    </div>
+    <div class="v2-happening__grid">
+
+      <!-- Card 1 — Navy — Loyalty -->
+      <article class="v2-hcard v2-hcard--navy">
+        <div class="v2-hcard__content">
+          <h3>Every journey deserves more.</h3>
+          <p>Earn points. Enjoy rewards. Coming soon.</p>
+          <a href="#loyalty" class="v2-btn v2-btn--yellow v2-btn--sm">Learn More</a>
+        </div>
+        <!-- loyalty-card.png ✓ -->
+        <figure class="v2-hcard__fig">
+          <img src="assets/loyalty-card.png" alt="Fillin loyalty rewards card">
+        </figure>
+      </article>
+
+      <!-- Card 2 — Yellow — Lubricants (PLACEHOLDER: swap portrait-ev.png → lubricants-products.png) -->
+      <article class="v2-hcard v2-hcard--yellow">
+        <div class="v2-hcard__content">
+          <h3>Keep your engine at its best.</h3>
+          <p>Premium lubricants for longer performance.</p>
+          <a href="#services" class="v2-btn v2-btn--outline-dark v2-btn--sm">Learn More</a>
+        </div>
+        <figure class="v2-hcard__fig">
+          <img src="assets/portrait-ev.png" alt="Engine lubricants at Fillin">
+        </figure>
+      </article>
+
+      <!-- Card 3 — Navy — Car Wash (PLACEHOLDER: swap portrait-safety.png → carwash-service.png) -->
+      <article class="v2-hcard v2-hcard--navy">
+        <div class="v2-hcard__content">
+          <h3>Clean car. Clear mind.</h3>
+          <p>Car wash services now available.</p>
+          <a href="#services" class="v2-btn v2-btn--yellow v2-btn--sm">Learn More</a>
+        </div>
+        <figure class="v2-hcard__fig">
+          <img src="assets/portrait-safety.png" alt="Fillin car wash service">
+        </figure>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ SERVICES + LOYALTY (v2) -->
+<section class="v2-sl" id="services">
+  <div class="v2-wrap v2-sl__inner">
+
+    <div class="v2-svc">
+      <h2 class="v2-sh-title">Our Services</h2>
+      <div class="v2-svc__grid">
+
+        <a href="#" class="v2-svc-tile">
+          <span class="v2-svc-tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="6" y="6" width="18" height="26" rx="2"/>
+              <path d="M24 13h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-4"/>
+              <circle cx="30" cy="27" r="2"/>
+              <path d="M12 32v3M18 32v3"/>
+            </svg>
+          </span>
+          <strong class="v2-svc-tile__name">Fuel</strong>
+          <span class="v2-svc-tile__desc">Unleaded, Diesel &amp; Premium fuels</span>
+        </a>
+
+        <a href="#" class="v2-svc-tile">
+          <span class="v2-svc-tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 8h16l2 20H10L12 8z"/>
+              <path d="M16 8V6a2 2 0 0 1 4 0v2"/>
+              <path d="M15 19h10M15 24h6"/>
+            </svg>
+          </span>
+          <strong class="v2-svc-tile__name">Shop</strong>
+          <span class="v2-svc-tile__desc">Snacks, drinks &amp; everyday essentials</span>
+        </a>
+
+        <a href="#" class="v2-svc-tile">
+          <span class="v2-svc-tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="5" y="18" width="30" height="12" rx="3"/>
+              <path d="M9 18v-4a11 11 0 0 1 22 0v4"/>
+              <path d="M8 12l2 3M32 12l-2 3M20 6v4"/>
+            </svg>
+          </span>
+          <strong class="v2-svc-tile__name">Car Wash</strong>
+          <span class="v2-svc-tile__desc">Drive in clean, drive out fresh</span>
+        </a>
+
+        <a href="#" class="v2-svc-tile">
+          <span class="v2-svc-tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="13" y="5" width="14" height="20" rx="3"/>
+              <path d="M13 14h14"/>
+              <path d="M17 25v10M23 25v10"/>
+              <path d="M14 35h12"/>
+            </svg>
+          </span>
+          <strong class="v2-svc-tile__name">Lubricants</strong>
+          <span class="v2-svc-tile__desc">High quality oils &amp; lubricants</span>
+        </a>
+
+        <a href="#" class="v2-svc-tile">
+          <span class="v2-svc-tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="20" cy="20" r="12"/>
+              <circle cx="20" cy="20" r="5"/>
+              <path d="M20 3v5M20 32v5M3 20h5M32 20h5"/>
+              <circle cx="20" cy="20" r="2" fill="currentColor"/>
+            </svg>
+          </span>
+          <strong class="v2-svc-tile__name">Air &amp; Water</strong>
+          <span class="v2-svc-tile__desc">Quick checks on the go</span>
+        </a>
+
+      </div>
+      <a href="#" class="v2-btn v2-btn--outline-navy v2-svc__view-all">View All Services</a>
+    </div>
+
+    <div class="v2-loyalty-card" id="loyalty">
+      <div class="v2-loyalty-card__copy">
+        <h3>Fillin Loyalty<br>&amp; Rewards</h3>
+        <p class="v2-loyalty-card__sub">More value for every journey.</p>
+        <p>Earn points. Enjoy benefits. Coming soon.</p>
+        <a href="#" class="v2-btn v2-btn--yellow">Learn More</a>
+      </div>
+      <!-- portrait-care.png ✓ -->
+      <figure class="v2-loyalty-card__fig">
+        <img src="assets/portrait-care.png" alt="Fillin loyalty rewards member smiling">
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ LOCATOR -->
+<section class="locator v2-locator-sec" id="locator">
+  <div class="v2-wrap">
+    <div class="v2-loc-grid">
+
+      <div class="v2-loc-copy">
+        <span class="v2-label">Find Us</span>
+        <h2 class="v2-loc-heading">
+          Find a Fillin
+          <em data-en="near home." data-fr="près de chez vous.">near home.</em>
+        </h2>
+        <p class="v2-loc-lede" data-en="24 stations across Mauritius. Each one local, each one yours." data-fr="24 stations à travers l'île. Chacune locale, chacune à vous.">24 stations across Mauritius. Each one local, each one yours.</p>
+
+        <form class="locator-search v2-loc-search" onsubmit="event.preventDefault();">
+          <div class="v2-loc-search__wrap">
+            <svg class="v2-loc-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+            </svg>
+            <input type="text" class="v2-loc-search__input" placeholder="Search by town or district…" data-en="Search by town or district…" data-fr="Rechercher par ville ou district…">
+          </div>
+          <button type="submit" class="v2-btn v2-btn--yellow" data-en="Search" data-fr="Rechercher">Search</button>
+        </form>
+
+        <div class="v2-loc-stats">
+          <div class="v2-loc-stat">
+            <strong data-stat="stations">24</strong>
+            <span data-en="Stations" data-fr="Stations">Stations</span>
+          </div>
+          <div class="v2-loc-stat">
+            <strong>9</strong>
+            <span data-en="Districts" data-fr="Districts">Districts</span>
+          </div>
+          <div class="v2-loc-stat">
+            <strong data-stat="flagship">4</strong>
+            <span data-en="Flagship" data-fr="Phares">Flagship</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="v2-loc-map locator-map" aria-label="Map of Mauritius with station locations">
+        <div class="map-frame">
+          <svg id="locatorMap" class="map-svg" viewBox="0 0 800 900" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Interactive map of Mauritius with Fillin station pins">
+            <defs>
+              <filter id="mapIslandShadow" x="-10%" y="-10%" width="120%" height="120%">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+                <feOffset dx="0" dy="4" result="offsetblur"/>
+                <feComponentTransfer><feFuncA type="linear" slope="0.35"/></feComponentTransfer>
+                <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <linearGradient id="mapIslandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="rgba(244, 238, 226, 0.92)"/>
+                <stop offset="100%" stop-color="rgba(244, 238, 226, 0.72)"/>
+              </linearGradient>
+            </defs>
+            <path id="islandGlow" class="island-glow"/>
+            <path id="islandFill" class="island-fill" fill="url(#mapIslandGrad)" filter="url(#mapIslandShadow)"/>
+            <path id="islandStroke" class="island-stroke"/>
+            <g id="compassLabels"></g>
+            <g id="pins"></g>
+          </svg>
+
+          <div class="map-tip" id="mapTip" role="dialog" aria-live="polite">
+            <p class="map-tip__region" id="tipRegion">North</p>
+            <p class="map-tip__name" id="tipName">Station name</p>
+            <p class="map-tip__addr" id="tipAddr">Town, Mauritius</p>
+            <a class="map-tip__cta" id="tipCta" href="#" target="_blank" rel="noopener">
+              <span data-en="Open in Google Maps" data-fr="Ouvrir dans Google Maps">Open in Google Maps</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </div>
+        <p class="v2-loc-map__caption">
+          <em data-en="Hover a pin to see the station · tap to open directions" data-fr="Survolez une épingle pour voir la station · tapez pour l'itinéraire">Hover a pin to see the station · tap to open directions</em>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ ABOUT (added per requirements) -->
+<section class="v2-about" id="about">
+  <div class="v2-wrap v2-about__inner">
+
+    <div class="v2-about__copy">
+      <span class="v2-label v2-label--dark">About Fillin</span>
+      <h2>Born in Mauritius.<br>Built around its people.</h2>
+      <p class="v2-about__lead">Fillin is the first fuel station brand built entirely around Mauritian life — its roads, its rhythms, and the people who move across it every day.</p>
+      <p>A Beta Oil Ltd brand, we built Fillin on a conviction: that a fuel stop could be more than a transaction — a moment of care, dignity, and belonging.</p>
+
+      <ul class="v2-about__pillars">
+        <li class="v2-about__pillar">
+          <svg class="v2-about__pillar-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <path d="M14 4C9 4 5 8 5 13c0 3.5 2 6.6 5 8.2V24h8v-2.8c3-1.6 5-4.7 5-8.2 0-5-4-9-9-9z"/><path d="M11 17h6"/>
+          </svg>
+          <strong>Care</strong>
+          <span>Every interaction, every station — designed around people first.</span>
+        </li>
+        <li class="v2-about__pillar">
+          <svg class="v2-about__pillar-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <circle cx="14" cy="10" r="5"/><path d="M6 24c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M18 13l3 2-5 5"/>
+          </svg>
+          <strong>Competence</strong>
+          <span>World-class fuel standards, delivered by skilled local teams.</span>
+        </li>
+        <li class="v2-about__pillar">
+          <svg class="v2-about__pillar-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <path d="M14 24c0 0-10-5.6-10-13.4A7 7 0 0 1 14 4a7 7 0 0 1 10 6.6C24 18.4 14 24 14 24z"/>
+          </svg>
+          <strong>Belonging</strong>
+          <span>A place where Mauritians see themselves and feel at home.</span>
+        </li>
+      </ul>
+
+      <dl class="v2-about__stats">
+        <div><dd>24</dd><dt>Stations</dt></div>
+        <div><dd>9</dd><dt>Districts</dt></div>
+        <div><dd>2026</dd><dt>Founded</dt></div>
+        <div><dd>4</dd><dt>Flagship</dt></div>
+      </dl>
+      <a href="#" class="v2-btn v2-btn--navy">Our Full Story →</a>
+    </div>
+
+    <figure class="v2-about__img">
+      <!-- about-community.png ✓ -->
+      <img src="assets/about-community.png" alt="Fillin forecourt at golden hour — a cross-section of Mauritian daily life" loading="lazy">
+    </figure>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ PROMOTIONS -->
+<section class="v2-promotions" id="promotions">
+  <div class="v2-wrap">
+    <div class="v2-section-head">
+      <div>
+        <h2 class="v2-sh-title">Promotions</h2>
+        <p class="v2-section-lead">Current offers across all Fillin stations — always worth stopping for.</p>
+      </div>
+      <a href="#" class="v2-link-more">View all →</a>
+    </div>
+    <div class="v2-promos__grid">
+
+      <article class="v2-promo-card">
+        <figure class="v2-promo-card__img">
+          <img src="assets/promo-tyre-check.png" alt="Free tyre pressure check promotion">
+        </figure>
+        <div class="v2-promo-card__body">
+          <div class="v2-promo-card__meta">
+            <span class="v2-promo-card__tag">Safety</span>
+            <span class="v2-promo-card__valid">Every Thursday</span>
+          </div>
+          <h3>Free Tyre Pressure Check</h3>
+          <p>At all Fillin stations. No appointment needed — just pull in and our team handles the rest.</p>
+          <a href="#" class="v2-btn v2-btn--yellow v2-btn--sm">See Offer</a>
+        </div>
+      </article>
+
+      <article class="v2-promo-card">
+        <figure class="v2-promo-card__img">
+          <img src="assets/loyalty-card.png" alt="Double points loyalty promotion">
+        </figure>
+        <div class="v2-promo-card__body">
+          <div class="v2-promo-card__meta">
+            <span class="v2-promo-card__tag">Loyalty</span>
+            <span class="v2-promo-card__valid">This weekend</span>
+          </div>
+          <h3>Double Points Weekend</h3>
+          <p>Earn 2× points on every refuel this weekend at all 24 Fillin stations. No minimum spend.</p>
+          <a href="#" class="v2-btn v2-btn--yellow v2-btn--sm">See Offer</a>
+        </div>
+      </article>
+
+      <article class="v2-promo-card">
+        <figure class="v2-promo-card__img">
+          <img src="assets/editorial-forecourt.png" alt="Free coffee with every fill-up">
+        </figure>
+        <div class="v2-promo-card__body">
+          <div class="v2-promo-card__meta">
+            <span class="v2-promo-card__tag">Flagship</span>
+            <span class="v2-promo-card__valid">Ongoing</span>
+          </div>
+          <h3>Free Coffee with Every Fill-up</h3>
+          <p>At flagship stations only. Present your Fillin card at the counter and enjoy a complimentary coffee.</p>
+          <a href="#" class="v2-btn v2-btn--yellow v2-btn--sm">See Offer</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ B2B (Business Solutions) -->
+<section class="v2-b2b" id="business">
+  <div class="v2-wrap">
+    <div class="v2-b2b__inner">
+
+      <div class="v2-b2b__copy">
+        <span class="v2-label">Business Solutions</span>
+        <h2 class="v2-b2b__heading">
+          Fuel your
+          <em>business.</em>
+        </h2>
+        <p class="v2-b2b__lead">From fleet management to bulk fuel delivery — Fillin provides dedicated commercial solutions to businesses of every size across Mauritius.</p>
+        <a href="#" class="v2-btn v2-btn--yellow">Request a Quote →</a>
+      </div>
+
+      <div class="v2-b2b__offers">
+
+        <div class="v2-b2b__offer">
+          <span class="v2-b2b__offer-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Fleet Fuel Cards</strong>
+            <p>Manage spend for your entire fleet with Fillin business cards.</p>
+          </div>
+        </div>
+
+        <div class="v2-b2b__offer">
+          <span class="v2-b2b__offer-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Bulk Delivery</strong>
+            <p>Reliable on-site fuel delivery to keep your operations running.</p>
+          </div>
+        </div>
+
+        <div class="v2-b2b__offer">
+          <span class="v2-b2b__offer-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Volume Pricing</strong>
+            <p>Competitive rates for high-volume commercial customers.</p>
+          </div>
+        </div>
+
+        <div class="v2-b2b__offer">
+          <span class="v2-b2b__offer-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Dedicated Account</strong>
+            <p>Your own account manager — responsive, reliable, Mauritian.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ NEWSROOM (added per requirements) -->
+<section class="v2-newsroom" id="newsroom">
+  <div class="v2-wrap">
+    <div class="v2-section-head">
+      <div>
+        <h2 class="v2-sh-title">Newsroom</h2>
+        <p class="v2-section-lead">The latest from Fillin — stories, launches, and community.</p>
+      </div>
+      <a href="#" class="v2-link-more">Full newsroom →</a>
+    </div>
+    <div class="v2-news__grid">
+
+      <article class="v2-news-card v2-news-card--lead">
+        <!-- newsroom-opening.png ✓ -->
+        <figure class="v2-news-card__img">
+          <img src="assets/newsroom-opening.png" alt="Opening of the new Curepipe Fillin station" loading="lazy">
+        </figure>
+        <div class="v2-news-card__body">
+          <div class="v2-news-card__meta">
+            <span class="v2-news-tag">Announcement</span>
+            <time datetime="2026-04-18">18.04.2026</time>
+          </div>
+          <h3>Fillin opens its 24th station in Curepipe.</h3>
+          <p>A new flagship site on the central plateau — quieter pumps, a dedicated safety lane, and local coffee on the house for opening weekend.</p>
+          <a href="#" class="v2-link-arrow">Read more →</a>
+        </div>
+      </article>
+
+      <div class="v2-news__sidebar">
+
+        <article class="v2-news-card v2-news-card--side">
+          <!-- news-cleanup.png ✓ -->
+          <figure class="v2-news-card__img">
+            <img src="assets/news-cleanup.png" alt="Fillin volunteers at coastal cleanup in Mahébourg" loading="lazy">
+          </figure>
+          <div class="v2-news-card__body">
+            <div class="v2-news-card__meta">
+              <span class="v2-news-tag">Community</span>
+              <time datetime="2026-04-12">12.04.2026</time>
+            </div>
+            <h3>Fillin teams with Rogers for a coastal cleanup in Mahébourg.</h3>
+            <a href="#" class="v2-link-arrow">Read more →</a>
+          </div>
+        </article>
+
+        <article class="v2-news-card v2-news-card--side">
+          <!-- news-attendant.png ✓ -->
+          <figure class="v2-news-card__img">
+            <img src="assets/news-attendant.png" alt="Janice, Fillin attendant of twelve years" loading="lazy">
+          </figure>
+          <div class="v2-news-card__body">
+            <div class="v2-news-card__meta">
+              <span class="v2-news-tag">People</span>
+              <time datetime="2026-03-27">27.03.2026</time>
+            </div>
+            <h3>Meet Janice — twelve years at the pump, one hundred regulars by name.</h3>
+            <a href="#" class="v2-link-arrow">Read more →</a>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ CAREERS (added per requirements) -->
+<section class="v2-careers" id="careers">
+  <div class="v2-wrap v2-careers__inner">
+
+    <figure class="v2-careers__img">
+      <!-- careers-team.png ✓ -->
+      <img src="assets/careers-team.png" alt="Fillin team at the forecourt" loading="lazy">
+    </figure>
+
+    <div class="v2-careers__copy">
+      <span class="v2-label">Join the team</span>
+      <h2>Work where it<em>matters.</em></h2>
+      <p class="v2-careers__lead">We are building Mauritius's most human-centered fuel network — and we need people who care as deeply as we do about the island and everyone on it.</p>
+      <blockquote class="v2-careers__quote">
+        <p>"At Fillin, a job at the pump is a career with purpose. Every uniform, every handshake — it means something here."</p>
+        <cite>— Fillin People Team</cite>
+      </blockquote>
+      <ul class="v2-careers__links">
+        <li><a href="#">Why Work at Fillin <span>→</span></a></li>
+        <li><a href="#">Current Vacancies <span>→</span></a></li>
+        <li><a href="#">Graduate Programmes <span>→</span></a></li>
+        <li><a href="#">Apply Online <span>→</span></a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ CONTACT (added per requirements) -->
+<section class="v2-contact" id="contact">
+  <div class="v2-wrap">
+    <div class="v2-section-head">
+      <h2 class="v2-sh-title">Get in Touch</h2>
+    </div>
+    <div class="v2-contact__grid">
+
+      <a href="#" class="v2-contact-card">
+        <span class="v2-contact-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </span>
+        <h3>General Contact</h3>
+        <p>Questions, compliments, or anything else — we're listening.</p>
+        <span class="v2-link-arrow">Contact us →</span>
+      </a>
+
+      <a href="#" class="v2-contact-card">
+        <span class="v2-contact-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
+        </span>
+        <h3>Customer Feedback</h3>
+        <p>Tell us about your experience at any of our 24 stations.</p>
+        <span class="v2-link-arrow">Share feedback →</span>
+      </a>
+
+      <a href="#" class="v2-contact-card">
+        <span class="v2-contact-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </span>
+        <h3>Supplier Queries</h3>
+        <p>Interested in supplying Fillin? Reach our procurement team.</p>
+        <span class="v2-link-arrow">Get in touch →</span>
+      </a>
+
+      <a href="#" class="v2-contact-card v2-contact-card--yellow">
+        <span class="v2-contact-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </span>
+        <h3>Safety Reporting</h3>
+        <p>Report a safety concern at any Fillin station — we take every report seriously.</p>
+        <span class="v2-link-arrow">Report now →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ FOOTER (v2) -->
+<footer class="v2-footer">
+  <div class="v2-wrap">
+
+    <div class="v2-footer__top">
+      <div class="v2-footer__brand">
+        <a href="#top" aria-label="Fillin home">
+          <img src="assets/fillin-logo.png" alt="Fillin" class="v2-footer__logo">
+        </a>
+        <p class="v2-footer__tagline">Lesans nou pei</p>
+        <div class="v2-footer__social">
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="v2-footer__cols">
+        <div class="v2-footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#newsroom">Newsroom</a></li>
+            <li><a href="#">Sustainability</a></li>
+          </ul>
+        </div>
+        <div class="v2-footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Fuel</a></li>
+            <li><a href="#services">Car Wash</a></li>
+            <li><a href="#services">Lubricants</a></li>
+            <li><a href="#services">Air &amp; Water</a></li>
+          </ul>
+        </div>
+        <div class="v2-footer__col">
+          <h4>Locations</h4>
+          <ul>
+            <li><a href="#locator">Find a Station</a></li>
+            <li><a href="#locator">Station Locator</a></li>
+          </ul>
+        </div>
+        <div class="v2-footer__col">
+          <h4>Loyalty &amp; Rewards</h4>
+          <ul>
+            <li><a href="#loyalty">Fillin Rewards</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="v2-footer__col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="#contact">General Contact</a></li>
+            <li><a href="#contact">Customer Feedback</a></li>
+            <li><a href="#contact">Safety Reporting</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="v2-footer__bottom">
+      <p>&copy; 2026 Beta Oil Ltd. All rights reserved.</p>
+      <div class="v2-footer__legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
