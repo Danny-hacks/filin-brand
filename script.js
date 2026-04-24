@@ -69,7 +69,7 @@
   const innerH = VB.h - VB.padY * 2;
   const lonSpan = bounds.maxLon - bounds.minLon;
   const latSpan = bounds.maxLat - bounds.minLat;
-  const scale = Math.min(innerW / lonSpan, innerH / latSpan);
+  const scale   = Math.min(innerW / lonSpan, innerH / latSpan);
   const offsetX = VB.padX + (innerW - lonSpan * scale) / 2;
   const offsetY = VB.padY + (innerH - latSpan * scale) / 2;
 
@@ -110,18 +110,97 @@
     });
   }
 
+  // ── tooltip elements ──
+  const tip       = document.getElementById('mapTip');
+  const tipRegion = document.getElementById('tipRegion');
+  const tipName   = document.getElementById('tipName');
+  const tipAddr   = document.getElementById('tipAddr');
+  const tipCta    = document.getElementById('tipCta');
+
+  function positionTip(posEl) {
+    const rect    = posEl.getBoundingClientRect();
+    const pinCx   = rect.left + rect.width / 2;
+    const pinTop  = rect.top;
+    const tipRect = tip.getBoundingClientRect();
+    const vw      = window.innerWidth;
+    let left = pinCx - tipRect.width / 2;
+    let top  = pinTop - tipRect.height - 14;
+    let flipped = false;
+    if (top < 12) { top = pinTop + rect.height + 14; flipped = true; }
+    if (left < 12) left = 12;
+    if (left + tipRect.width > vw - 12) left = vw - tipRect.width - 12;
+    tip.style.left = left + 'px';
+    tip.style.top  = top  + 'px';
+    tip.classList.toggle('is-flipped', flipped);
+  }
+
+  function fillTip(s) {
+    tipName.textContent   = s.name;
+    tipRegion.textContent = s.region + (s.featured ? ' · Flagship' : '');
+    tipAddr.textContent   = `${s.town}, Mauritius`;
+    tipCta.href = `https://www.google.com/maps/search/?api=1&query=${s.lat},${s.lon}`;
+  }
+
+  // ── auto-cycle state ──
+  const allPins     = [];
+  const flagshipPins = [];
+  let isUserHovered = false;
+  let autoIdx       = 0;
+  let autoTimer     = null;
+  let sectionVisible = false;
+  const AUTO_DURATION = 3400;
+  const FADE_MS       = 260;
+
+  function clearAutoActive() {
+    allPins.forEach(({ pos }) => pos.classList.remove('is-auto-active'));
+  }
+
+  function renderAutoTip() {
+    if (isUserHovered) return;
+    const fp = flagshipPins[autoIdx];
+    clearAutoActive();
+    fp.pos.classList.add('is-auto-active');
+    fillTip(fp.s);
+    tipRegion.textContent = fp.s.region + ' · Flagship';
+    tip.classList.remove('is-leaving');
+    tip.classList.add('is-visible', 'is-auto');
+    requestAnimationFrame(() => positionTip(fp.pos));
+  }
+
+  function cycleTip() {
+    if (isUserHovered) return;
+    tip.classList.add('is-leaving');
+    setTimeout(() => {
+      tip.classList.remove('is-visible', 'is-leaving');
+      autoIdx = (autoIdx + 1) % flagshipPins.length;
+      setTimeout(() => { if (!isUserHovered) renderAutoTip(); }, 80);
+    }, FADE_MS);
+  }
+
+  function startAutoCycle() {
+    if (autoTimer) return;
+    renderAutoTip();
+    autoTimer = setInterval(cycleTip, AUTO_DURATION);
+  }
+
+  function stopAutoCycle() {
+    clearInterval(autoTimer);
+    autoTimer = null;
+  }
+
+  function resumeAutoCycle() {
+    if (isUserHovered || autoTimer || !sectionVisible) return;
+    autoIdx = (autoIdx + 1) % flagshipPins.length;
+    renderAutoTip();
+    autoTimer = setInterval(cycleTip, AUTO_DURATION);
+  }
+
   // ── pins ──
   const pinsEl = document.getElementById('pins');
-  const tip = document.getElementById('mapTip');
-  const tipRegion = document.getElementById('tipRegion');
-  const tipName = document.getElementById('tipName');
-  const tipAddr = document.getElementById('tipAddr');
-  const tipCta = document.getElementById('tipCta');
 
   STATIONS.forEach((s, i) => {
     const [x, y] = project(s.lon, s.lat);
 
-    // Outer group: SVG transform for positioning only
     const pos = document.createElementNS(SVGNS, 'g');
     pos.setAttribute('class', 'pin-pos');
     pos.setAttribute('transform', `translate(${x.toFixed(1)}, ${y.toFixed(1)})`);
@@ -129,15 +208,17 @@
     pos.setAttribute('role', 'button');
     pos.setAttribute('aria-label', `${s.name}, ${s.town} — open in Google Maps`);
 
-    // Inner group: CSS animations + hover transforms
     const pin = document.createElementNS(SVGNS, 'g');
     pin.setAttribute('class', 'pin' + (s.featured ? ' pin--featured' : ''));
     pin.style.animationDelay = (80 + i * 40) + 'ms';
 
-    const halo = document.createElementNS(SVGNS, 'circle');
-    halo.setAttribute('class', 'pin__halo');
-    halo.setAttribute('r', '11');
-    pin.appendChild(halo);
+    // Three staggered halo rings — CSS controls wave animation delays
+    for (let ri = 0; ri < 3; ri++) {
+      const h = document.createElementNS(SVGNS, 'circle');
+      h.setAttribute('r', '11');
+      h.setAttribute('class', ri === 0 ? 'pin__halo' : `pin__halo pin__halo--${ri + 1}`);
+      pin.appendChild(h);
+    }
 
     const base = document.createElementNS(SVGNS, 'path');
     base.setAttribute('class', 'pin__base');
@@ -152,56 +233,85 @@
 
     pos.appendChild(pin);
 
-    const positionTip = () => {
-      const rect = pos.getBoundingClientRect();
-      const pinCx = rect.left + rect.width / 2;
-      const pinTop = rect.top;
-      const tipRect = tip.getBoundingClientRect();
-      const vw = window.innerWidth;
-      let left = pinCx - tipRect.width / 2;
-      let top = pinTop - tipRect.height - 14;
-      let flipped = false;
-      if (top < 12) { top = pinTop + rect.height + 14; flipped = true; }
-      if (left < 12) left = 12;
-      if (left + tipRect.width > vw - 12) left = vw - tipRect.width - 12;
-      tip.style.left = left + 'px';
-      tip.style.top = top + 'px';
-      tip.classList.toggle('is-flipped', flipped);
-    };
+    // Mark pin ready after its drop animation completes — enables CSS hang animation
+    setTimeout(() => pos.classList.add('is-ready'), 80 + i * 40 + 700);
 
-    const showTip = () => {
-      tipName.textContent = s.name;
-      tipRegion.textContent = s.region + (s.featured ? ' · Flagship' : '');
-      tipAddr.textContent = `${s.town}, Mauritius`;
-      tipCta.href = `https://www.google.com/maps/search/?api=1&query=${s.lat},${s.lon}`;
-      tip.classList.add('is-visible');
-      positionTip();
-    };
-    const hideTip = () => tip.classList.remove('is-visible');
-
-    pos.addEventListener('mouseenter', showTip);
-    pos.addEventListener('mouseleave', hideTip);
-    pos.addEventListener('focus', showTip);
-    pos.addEventListener('blur', hideTip);
-    pos.addEventListener('click', () => window.open(tipCta.href, '_blank', 'noopener'));
-    pos.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        window.open(tipCta.href, '_blank', 'noopener');
+    // ── manual hover ──
+    pos.addEventListener('mouseenter', () => {
+      isUserHovered = true;
+      stopAutoCycle();
+      clearAutoActive();
+      if (tip.classList.contains('is-auto')) {
+        // Crossfade: fade out auto-tip, then show manual tip
+        tip.classList.add('is-leaving');
+        setTimeout(() => {
+          tip.classList.remove('is-visible', 'is-auto', 'is-leaving');
+          fillTip(s);
+          tip.classList.add('is-visible');
+          requestAnimationFrame(() => positionTip(pos));
+        }, FADE_MS);
+      } else {
+        fillTip(s);
+        tip.classList.add('is-visible');
+        requestAnimationFrame(() => positionTip(pos));
       }
     });
 
+    pos.addEventListener('mouseleave', () => {
+      isUserHovered = false;
+      tip.classList.remove('is-visible');
+      // Resume cycle with a short pause after user finishes browsing
+      setTimeout(() => { if (!isUserHovered && sectionVisible) resumeAutoCycle(); }, 1800);
+    });
+
+    pos.addEventListener('focus', () => {
+      isUserHovered = true;
+      fillTip(s);
+      tip.classList.add('is-visible');
+      requestAnimationFrame(() => positionTip(pos));
+    });
+    pos.addEventListener('blur', () => {
+      isUserHovered = false;
+      tip.classList.remove('is-visible');
+    });
+    pos.addEventListener('click', () => window.open(tipCta.href, '_blank', 'noopener'));
+    pos.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open(tipCta.href, '_blank', 'noopener'); }
+    });
+
     pinsEl.appendChild(pos);
+    allPins.push({ pos, pin, s });
+    if (s.featured) flagshipPins.push({ pos, pin, s });
   });
 
-  // Update visible stats if elements are present
+  // ── stats ──
   const statCount = document.querySelector('[data-stat="stations"]');
   if (statCount) statCount.textContent = STATIONS.length;
   const statFlagship = document.querySelector('[data-stat="flagship"]');
-  if (statFlagship) statFlagship.textContent = STATIONS.filter(s => s.featured).length;
+  if (statFlagship) statFlagship.textContent = flagshipPins.length;
 
-  // Hide tooltip on scroll to avoid detached positioning
+  // ── IntersectionObserver — start/stop cycle with section visibility ──
+  const locEl = document.querySelector('.v2-locator-sec');
+  if (locEl && 'IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => {
+      sectionVisible = entry.isIntersecting;
+      if (sectionVisible && !autoTimer && !isUserHovered) {
+        setTimeout(startAutoCycle, 900);
+      } else if (!sectionVisible) {
+        stopAutoCycle();
+        tip.classList.remove('is-visible', 'is-auto', 'is-leaving');
+        clearAutoActive();
+      }
+    }, { threshold: 0.2 }).observe(locEl);
+  } else {
+    // Fallback for browsers without IntersectionObserver
+    setTimeout(startAutoCycle, 1600);
+  }
+
+  // Hide manual tip on scroll (auto-tips stay since cycle manages them)
   window.addEventListener('scroll', () => {
-    if (tip.classList.contains('is-visible')) tip.classList.remove('is-visible');
+    if (tip.classList.contains('is-visible') && !tip.classList.contains('is-auto')) {
+      tip.classList.remove('is-visible');
+    }
   }, { passive: true });
 })();
