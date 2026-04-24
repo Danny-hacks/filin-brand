@@ -15,13 +15,10 @@
 </head>
 <body>
 
-<!-- Grain overlay (required by v1 hero CSS) -->
-<div class="grain" aria-hidden="true"></div>
-
 <!-- ══════════════════════════════════════════════════════ HEADER (from index.html) -->
 <header class="site-header" id="top">
   <a class="brand" href="#top" aria-label="Fillin home">
-    <img src="assets/fillin-logo.png" alt="Fillin" class="brand-logo" width="534" height="264">
+    <img src="assets/Logo-no-bg.png" alt="Fillin" class="brand-logo" width="534" height="264">
   </a>
 
   <nav class="site-nav" aria-label="Primary">
@@ -48,51 +45,98 @@
   </div>
 </header>
 
-<!-- ══════════════════════════════════════════════════════ HERO (from index.html) -->
-<section class="hero">
-  <div class="edge">
-    <figure class="hero-visual">
-      <img src="assets/hero-station.jpg" alt="A Fillin station at night, canopy lit, car light-trails sweeping past." loading="eager" decoding="async" width="1600" height="968">
-      <div class="hero-visual__scrim" aria-hidden="true"></div>
+<!-- ══════════════════════════════════════════════════════ HERO SLIDER -->
+<section class="v2-slider" id="hero" aria-label="Hero slideshow">
+  <div class="v2-slider__track">
 
-      <div class="hero-visual__top">
-        <div class="section-label hero-label section-label--on-navy">
-          <span class="roman">N°01</span>
-          <span class="sep" aria-hidden="true">—</span>
-          <span data-en="Welcome" data-fr="Bienvenue">Welcome</span>
+    <!-- Slide 1 — Daytime forecourt -->
+    <div class="v2-slide v2-slide--active" role="group" aria-label="Slide 1 of 3">
+      <figure class="v2-slide__media">
+        <img class="v2-slide__img" src="assets/slider1.jpeg" alt="Fillin station forecourt by day" loading="eager" decoding="async">
+        <div class="v2-slide__scrim" aria-hidden="true"></div>
+      </figure>
+      <div class="v2-slide__content">
+        <div class="v2-wrap">
+          <span class="v2-slide__label">Good fuel. Good feels.</span>
+          <h1 class="v2-slide__heading">
+            <span class="line-1">More than</span>
+            <em class="line-2">just fuel.</em>
+          </h1>
+          <p class="v2-slide__sub">24 stations across Mauritius — each one built around you.</p>
+          <div class="v2-slide__ctas">
+            <a href="#locator" class="v2-btn v2-btn--yellow">Find a Station</a>
+            <a href="#services" class="v2-btn v2-btn--ghost">Our Services</a>
+          </div>
         </div>
-        <figcaption class="hero-visual__cap">
-          <span class="hero-visual__tag" data-en="Flagship" data-fr="Phare">Flagship</span>
-          <span class="hero-visual__loc" data-en="Port Louis · forecourt" data-fr="Port-Louis · devant de station">Port Louis · forecourt</span>
-        </figcaption>
       </div>
-
-      <h1 class="hero-headline hero-headline--on-image">
-        <span class="line line-1" data-en="When you stop to" data-fr="Quand vous faites">When you stop to</span>
-        <span class="line line-2">
-          <em class="em-serif" data-en="refill" data-fr="le plein">refill</em>
-          <span data-en="your car," data-fr="de votre voiture,">your car,</span>
-        </span>
-        <span class="line line-3">
-          <span data-en="you" data-fr="vous">you</span>
-          <em class="em-serif em-glow" data-en="refill" data-fr="faites le plein">refill</em>
-          <span data-en="yourself." data-fr="de vous-même.">yourself.</span>
-        </span>
-      </h1>
-    </figure>
-
-    <div class="hero-foot">
-      <p class="signature"><em>Lesans nou pei.</em></p>
-      <a href="#happening" class="scroll-cue">
-        <span data-en="Keep reading" data-fr="Lire la suite">Keep reading</span>
-        <svg viewBox="0 0 16 24" width="10" height="16" aria-hidden="true"><path d="M8 2v20M2 16l6 6 6-6" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
     </div>
+
+    <!-- Slide 2 — Team & community -->
+    <div class="v2-slide" role="group" aria-label="Slide 2 of 3">
+      <figure class="v2-slide__media">
+        <img class="v2-slide__img" src="assets/slider2.jpeg" alt="Fillin team holding the Mauritian flag" loading="lazy" decoding="async">
+        <div class="v2-slide__scrim" aria-hidden="true"></div>
+      </figure>
+      <div class="v2-slide__content">
+        <div class="v2-wrap">
+          <span class="v2-slide__label">Our People</span>
+          <h1 class="v2-slide__heading">
+            <span class="line-1">The heart of</span>
+            <em class="line-2">every station.</em>
+          </h1>
+          <p class="v2-slide__sub">Real Mauritians. Real care. Every time you pull in.</p>
+          <div class="v2-slide__ctas">
+            <a href="#about" class="v2-btn v2-btn--yellow">About Us</a>
+            <a href="#careers" class="v2-btn v2-btn--ghost">Join the Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 — Dusk station -->
+    <div class="v2-slide" role="group" aria-label="Slide 3 of 3">
+      <figure class="v2-slide__media">
+        <img class="v2-slide__img" src="assets/slider3.jpeg" alt="Fillin station at dusk" loading="lazy" decoding="async">
+        <div class="v2-slide__scrim" aria-hidden="true"></div>
+      </figure>
+      <div class="v2-slide__content">
+        <div class="v2-wrap">
+          <span class="v2-slide__label">Open. Always.</span>
+          <h1 class="v2-slide__heading">
+            <span class="line-1">Where Mauritius</span>
+            <em class="line-2">refuels.</em>
+          </h1>
+          <p class="v2-slide__sub">Fuel, café, and freshness — morning, noon, and deep into the night.</p>
+          <div class="v2-slide__ctas">
+            <a href="#locator" class="v2-btn v2-btn--yellow">Find a Station</a>
+            <a href="#promotions" class="v2-btn v2-btn--ghost">See Promotions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <div class="hero-watermark" aria-hidden="true">
-    <span>f</span>
+  <!-- Prev / Next arrows -->
+  <button class="v2-slider__arrow v2-slider__arrow--prev" aria-label="Previous slide">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="v2-slider__arrow v2-slider__arrow--next" aria-label="Next slide">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+
+  <!-- Dot navigation -->
+  <div class="v2-slider__nav" role="tablist" aria-label="Slides">
+    <button class="v2-slider__dot v2-slider__dot--active" data-slide="0" aria-label="Slide 1" role="tab"></button>
+    <button class="v2-slider__dot" data-slide="1" aria-label="Slide 2" role="tab"></button>
+    <button class="v2-slider__dot" data-slide="2" aria-label="Slide 3" role="tab"></button>
   </div>
+
+  <!-- Progress bar -->
+  <div class="v2-slider__progress" aria-hidden="true">
+    <div class="v2-slider__progress-fill"></div>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════ FEATURE BAR -->
@@ -628,6 +672,20 @@
           </div>
         </article>
 
+        <article class="v2-news-card v2-news-card--side">
+          <figure class="v2-news-card__img">
+            <img src="assets/services-overview.png" alt="Fillin green fuel initiative" loading="lazy">
+          </figure>
+          <div class="v2-news-card__body">
+            <div class="v2-news-card__meta">
+              <span class="v2-news-tag">Sustainability</span>
+              <time datetime="2026-03-10">10.03.2026</time>
+            </div>
+            <h3>Fillin commits to cleaner fuel blends across all 24 stations by Q3.</h3>
+            <a href="#" class="v2-link-arrow">Read more →</a>
+          </div>
+        </article>
+
       </div>
 
     </div>
@@ -727,7 +785,7 @@
     <div class="v2-footer__top">
       <div class="v2-footer__brand">
         <a href="#top" aria-label="Fillin home">
-          <img src="assets/fillin-logo.png" alt="Fillin" class="v2-footer__logo">
+          <img src="assets/Logo-no-bg-white.png" alt="Fillin" class="v2-footer__logo">
         </a>
         <p class="v2-footer__tagline">Lesans nou pei</p>
         <div class="v2-footer__social">
@@ -802,5 +860,62 @@
 </footer>
 
 <script src="script.js" defer></script>
+<script>
+// ── Hero Slider ──────────────────────────────────────────────────────────────
+(function () {
+  const slides   = Array.from(document.querySelectorAll('.v2-slide'));
+  const dots     = Array.from(document.querySelectorAll('.v2-slider__dot'));
+  const fill     = document.querySelector('.v2-slider__progress-fill');
+  const DURATION = 6000;
+  let current    = 0;
+  let autoTimer  = null;
+
+  function goTo(idx) {
+    const from = current;
+    current = ((idx % slides.length) + slides.length) % slides.length;
+    if (from === current) return;
+
+    slides[from].classList.remove('v2-slide--active');
+    slides[from].classList.add('v2-slide--exit');
+    dots[from].classList.remove('v2-slider__dot--active');
+
+    slides[current].classList.remove('v2-slide--exit');
+    slides[current].classList.add('v2-slide--active');
+    dots[current].classList.add('v2-slider__dot--active');
+
+    setTimeout(() => slides[from].classList.remove('v2-slide--exit'), 1000);
+    startProgress();
+  }
+
+  function startProgress() {
+    if (!fill) return;
+    fill.style.transition = 'none';
+    fill.style.width = '0%';
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      fill.style.transition = 'width ' + DURATION + 'ms linear';
+      fill.style.width = '100%';
+    }));
+  }
+
+  function startAuto() { stopAuto(); autoTimer = setInterval(() => goTo(current + 1), DURATION); }
+  function stopAuto()  { clearInterval(autoTimer); }
+
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); }));
+
+  const btnPrev = document.querySelector('.v2-slider__arrow--prev');
+  const btnNext = document.querySelector('.v2-slider__arrow--next');
+  if (btnPrev) btnPrev.addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
+  if (btnNext) btnNext.addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
+
+  const sliderEl = document.querySelector('.v2-slider');
+  if (sliderEl) {
+    sliderEl.addEventListener('mouseenter', stopAuto);
+    sliderEl.addEventListener('mouseleave', startAuto);
+  }
+
+  startProgress();
+  startAuto();
+})();
+</script>
 </body>
 </html>
