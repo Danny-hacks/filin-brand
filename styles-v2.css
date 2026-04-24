@@ -453,30 +453,31 @@ svg { display: block; }
 .v2-slide__label {
   display: block;
   font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.26em;
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--yellow);
   margin-bottom: 0.9rem;
 }
 .v2-slide__heading {
   font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 900;
-  font-size: clamp(3.5rem, 8.5vw, 7.5rem);
-  line-height: 0.92;
+  font-weight: 700;
+  font-size: clamp(3rem, 5.5vw, 5.5rem);
+  line-height: 0.95;
   text-transform: uppercase;
   color: var(--white);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 1.25rem;
 }
 .v2-slide__heading .line-1 { display: block; }
 .v2-slide__heading em { font-style: normal; color: var(--yellow); display: block; }
 .v2-slide__sub {
-  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
-  color: rgba(255,255,255,0.78);
-  line-height: 1.55;
-  max-width: 560px;
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+  max-width: 520px;
   margin-bottom: 2rem;
 }
 .v2-slide__ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
