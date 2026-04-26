@@ -425,6 +425,19 @@ svg { display: block; }
   background: rgba(8,16,30,0.52);
 }
 
+/* Bottom-right corner burn — hides video watermark */
+.v2-slide__media--vid::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 320px;
+  height: 110px;
+  background: radial-gradient(ellipse at bottom right, rgba(0,0,0,0.92) 0%, transparent 72%);
+  z-index: 2;
+  pointer-events: none;
+}
+
 /* Ken Burns zoom-out on active slide */
 @keyframes v2KenBurns {
   from { transform: scale(1.08); }
