@@ -877,10 +877,24 @@
   let current    = 0;
   let autoTimer  = null;
 
+  // iOS Safari ignores autoplay on hidden elements — drive video manually
+  function handleVideo(slideEl, play) {
+    const v = slideEl.querySelector('video');
+    if (!v) return;
+    if (play) {
+      v.play().catch(() => {});
+    } else {
+      v.pause();
+      v.currentTime = 0;
+    }
+  }
+
   function goTo(idx) {
     const from = current;
     current = ((idx % slides.length) + slides.length) % slides.length;
     if (from === current) return;
+
+    handleVideo(slides[from], false);
 
     slides[from].classList.remove('v2-slide--active');
     slides[from].classList.add('v2-slide--exit');
@@ -889,6 +903,8 @@
     slides[current].classList.remove('v2-slide--exit');
     slides[current].classList.add('v2-slide--active');
     dots[current].classList.add('v2-slider__dot--active');
+
+    handleVideo(slides[current], true);
 
     setTimeout(() => slides[from].classList.remove('v2-slide--exit'), 1000);
     startProgress();
@@ -919,6 +935,9 @@
     sliderEl.addEventListener('mouseenter', stopAuto);
     sliderEl.addEventListener('mouseleave', startAuto);
   }
+
+  // Explicitly play slide 1 video on load (required for iOS autoplay policy)
+  handleVideo(slides[0], true);
 
   startProgress();
   startAuto();

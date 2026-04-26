@@ -1641,6 +1641,7 @@ svg { display: block; }
 
 @media (max-width: 620px) {
   :root { --angle: 1.75rem; }
+  .v2-slider__arrow { display: none; }
   .v2-feature-bar__grid { grid-template-columns: 1fr; }
   .v2-feature-item { border-right: none; border-bottom: 1px solid #E2E8F0; }
   .v2-feature-item:last-child { border-bottom: none; }
