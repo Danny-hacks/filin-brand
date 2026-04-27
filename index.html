@@ -17,7 +17,7 @@
 
 <!-- ══════════════════════════════════════════════════════ HEADER (from index.html) -->
 <header class="site-header" id="top">
-  <a class="brand" href="#top" aria-label="Fillin home">
+  <a class="brand" href="index.html" aria-label="Fillin home">
     <img src="assets/Logo-no-bg.png" alt="Fillin" class="brand-logo" width="534" height="264">
   </a>
 
@@ -60,7 +60,7 @@
           <span class="v2-slide__label">Proudly Mauritian</span>
           <h1 class="v2-slide__heading">
             <span class="line-1">The First 100%</span>
-            <em>Mauritian Fuel Station Brand</em>
+            <em>Mauritian Fuel Station</em>
           </h1>
           <p class="v2-slide__sub">Home-grown, independent, and built for every Mauritian driver.</p>
         </div>
@@ -480,7 +480,7 @@
 
     <figure class="v2-about__img">
       <!-- about-community.png ✓ -->
-      <img src="assets/about-community.png" alt="Fillin forecourt at golden hour — a cross-section of Mauritian daily life" loading="lazy">
+      <img src="assets/BornInMauritius.jpeg" alt="Fillin forecourt at golden hour — a cross-section of Mauritian daily life" loading="lazy">
     </figure>
 
   </div>
@@ -791,7 +791,7 @@
 
     <div class="v2-footer__top">
       <div class="v2-footer__brand">
-        <a href="#top" aria-label="Fillin home">
+        <a href="index.html" aria-label="Fillin home">
           <img src="assets/Logo-no-bg-white.png" alt="Fillin" class="v2-footer__logo">
         </a>
         <p class="v2-footer__tagline">Lesans nou pei</p>
@@ -941,6 +941,20 @@
 
   startProgress();
   startAuto();
+})();
+</script>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+<script>
+(function () {
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('is-visible', window.scrollY > 400);
+  }, { passive: true });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 })();
 </script>
 </body>

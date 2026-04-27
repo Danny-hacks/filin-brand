@@ -1668,6 +1668,36 @@ svg { display: block; }
   .v2-footer__bottom { flex-direction: column; align-items: flex-start; }
 }
 
+/* ═══════════════════════════════════════ LANG TOGGLE — boost inactive visibility on white header */
+.lang-toggle[data-pressed="en"] .lang-fr { color: rgba(30,58,94,0.48) !important; font-weight: 500; }
+.lang-toggle[data-pressed="fr"] .lang-en { color: rgba(30,58,94,0.48) !important; font-weight: 500; }
+
+/* ═══════════════════════════════════════ BACK TO TOP */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 200;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--navy-deep);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 280ms var(--ease), transform 280ms var(--ease), background 200ms;
+}
+.back-to-top svg { width: 18px; height: 18px; }
+.back-to-top.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top:hover { background: var(--yellow-dk); }
+
 /* ═══════════════════════════════════════ REDUCED MOTION */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
