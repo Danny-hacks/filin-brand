@@ -578,6 +578,36 @@
   els.forEach(el => obs.observe(el));
 })();
 
+/* ─── Mobile nav toggle ──────────────────────────────────────────── */
+(() => {
+  const toggle = document.getElementById('menuToggle');
+  const nav    = document.getElementById('mobileNav');
+  if (!toggle || !nav) return;
+
+  function openMenu() {
+    nav.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Close menu');
+    document.body.classList.add('nav-open');
+  }
+  function closeMenu() {
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+    document.body.classList.remove('nav-open');
+  }
+
+  toggle.addEventListener('click', () =>
+    nav.classList.contains('is-open') ? closeMenu() : openMenu()
+  );
+
+  // Close on any link click (including anchor links that don't navigate away)
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // Close on Escape key
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+})();
+
 /* ─── Back to top (shared) ───────────────────────────────────────── */
 (() => {
   const btn = document.getElementById('backToTop');

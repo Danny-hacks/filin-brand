@@ -21,8 +21,8 @@
     <a href="index.html" data-en="Home" data-fr="Accueil">Home</a>
     <a href="products.html" aria-current="page" data-en="Products &amp; Services" data-fr="Produits &amp; Services">Products &amp; Services</a>
     <a href="stations.html" data-en="Stations" data-fr="Stations">Stations</a>
-    <a href="index.html#promotions" data-en="Promotions" data-fr="Promotions">Promotions</a>
-    <a href="index.html#about" data-en="About Engen Mauritius" data-fr="À propos">About Engen Mauritius</a>
+    <a href="promotions.html" data-en="Promotions" data-fr="Promotions">Promotions</a>
+    <a href="about.html" data-en="About Engen Mauritius" data-fr="À propos">About Engen Mauritius</a>
     <a href="index.html#business" data-en="Business (B2B)" data-fr="Entreprises">Business (B2B)</a>
     <a href="index.html#newsroom" data-en="Newsroom" data-fr="Actualités">Newsroom</a>
     <a href="index.html#careers" data-en="Careers" data-fr="Carrières">Careers</a>
@@ -38,8 +38,26 @@
       <span data-en="Find a station" data-fr="Trouver une station">Find a station</span>
       <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
+    <button class="v2-menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <svg class="icon-bars" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
 </header>
+
+<!-- Mobile nav overlay -->
+<nav class="v2-mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html" data-en="Home" data-fr="Accueil">Home</a>
+  <a href="products.html" aria-current="page" data-en="Products &amp; Services" data-fr="Produits &amp; Services">Products &amp; Services</a>
+  <a href="stations.html" data-en="Stations" data-fr="Stations">Stations</a>
+  <a href="promotions.html" data-en="Promotions" data-fr="Promotions">Promotions</a>
+  <a href="about.html" data-en="About Engen Mauritius" data-fr="À propos">About Engen Mauritius</a>
+  <a href="index.html#business" data-en="Business (B2B)" data-fr="Entreprises">Business (B2B)</a>
+  <a href="index.html#newsroom" data-en="Newsroom" data-fr="Actualités">Newsroom</a>
+  <a href="index.html#careers" data-en="Careers" data-fr="Carrières">Careers</a>
+  <a href="index.html#contact" data-en="Contact" data-fr="Contact">Contact</a>
+  <a href="stations.html" class="v2-mobile-nav__cta">Find a Station →</a>
+</nav>
 
 <!-- ══════════════════════════════════════════════════════ PAGE HERO -->
 <section class="v2-page-hero">
