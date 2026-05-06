@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stations — Engen Mauritius</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Barlow+Condensed:ital,wght@0,600;0,700;0,900;1,700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-v2.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════ HEADER -->
+<header class="site-header" id="top">
+  <a class="brand" href="index.html" aria-label="Engen Mauritius home">
+    <img src="assets/Logo-no-bg.png" alt="Engen Mauritius" class="brand-logo" width="534" height="264">
+  </a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="index.html" data-en="Home" data-fr="Accueil">Home</a>
+    <a href="products.html" data-en="Products &amp; Services" data-fr="Produits &amp; Services">Products &amp; Services</a>
+    <a href="stations.html" aria-current="page" data-en="Stations" data-fr="Stations">Stations</a>
+    <a href="index.html#promotions" data-en="Promotions" data-fr="Promotions">Promotions</a>
+    <a href="index.html#about" data-en="About Engen Mauritius" data-fr="À propos">About Engen Mauritius</a>
+    <a href="index.html#business" data-en="Business (B2B)" data-fr="Entreprises">Business (B2B)</a>
+    <a href="index.html#newsroom" data-en="Newsroom" data-fr="Actualités">Newsroom</a>
+    <a href="index.html#careers" data-en="Careers" data-fr="Carrières">Careers</a>
+    <a href="index.html#contact" data-en="Contact" data-fr="Contact">Contact</a>
+  </nav>
+  <div class="site-actions">
+    <button class="lang-toggle" aria-label="Change language" data-pressed="en">
+      <span class="lang-en">EN</span>
+      <span class="lang-sep" aria-hidden="true">/</span>
+      <span class="lang-fr">FR</span>
+    </button>
+    <a href="#locator" class="btn-find">
+      <span data-en="Find a station" data-fr="Trouver une station">Find a station</span>
+      <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════ PAGE HERO -->
+<section class="v2-page-hero">
+  <figure class="v2-page-hero__bg">
+    <img src="assets/slider4.png" alt="" aria-hidden="true">
+  </figure>
+  <div class="v2-page-hero__scrim" aria-hidden="true"></div>
+  <div class="v2-page-hero__content">
+    <div class="v2-wrap">
+      <h1 class="v2-page-hero__title anim-fade-up">
+        Our
+        <em>Stations</em>
+      </h1>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ LOCATOR -->
+<section class="locator v2-locator-sec v2-locator-flush" id="locator">
+  <div class="v2-wrap">
+    <div class="v2-loc-grid">
+
+      <!-- Left col: heading + result count + scrollable station list -->
+      <div class="v2-loc-copy">
+        <div>
+          <span class="v2-label">Station Locator</span>
+          <h2 class="v2-loc-heading">
+            Find an Engen
+            <em data-en="near you." data-fr="près de chez vous.">near you.</em>
+          </h2>
+        </div>
+        <p class="v2-loc-count" id="locCount">Showing <strong>37</strong> of <strong>37</strong> stations</p>
+        <div class="v2-loc-list" id="stationList" aria-live="polite" aria-label="Filtered station list"></div>
+      </div>
+
+      <!-- Right col: search/filter panel + map stacked vertically -->
+      <div class="v2-loc-map-wrap">
+
+        <!-- Search + filter panel — sits above the map in normal flow -->
+        <div class="v2-loc-overlay">
+          <form class="v2-loc-search" onsubmit="event.preventDefault();">
+            <div class="v2-loc-search__wrap">
+              <svg class="v2-loc-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+              </svg>
+              <input type="text" id="locSearch" class="v2-loc-search__input" placeholder="Station name or town…" data-en="Station name or town…" data-fr="Nom ou ville…" autocomplete="off">
+              <ul class="v2-loc-autocomplete" id="stationLocAc" role="listbox" aria-label="Station suggestions"></ul>
+            </div>
+            <button type="submit" class="v2-btn v2-btn--yellow" data-en="Search" data-fr="Rechercher">Search</button>
+          </form>
+          <div class="v2-loc-filters">
+            <div class="v2-loc-filter-group">
+              <span class="v2-loc-filter-label">Region</span>
+              <div class="v2-loc-filter-pills" id="regionFilter" role="group" aria-label="Filter by region">
+                <button class="v2-filter-pill is-active" data-region="all">All</button>
+                <button class="v2-filter-pill" data-region="Port Louis">Port Louis</button>
+                <button class="v2-filter-pill" data-region="North">North</button>
+                <button class="v2-filter-pill" data-region="Central">Central</button>
+                <button class="v2-filter-pill" data-region="East">East</button>
+                <button class="v2-filter-pill" data-region="South">South</button>
+                <button class="v2-filter-pill" data-region="West">West</button>
+              </div>
+            </div>
+            <div class="v2-loc-filter-group">
+              <span class="v2-loc-filter-label">Services</span>
+              <div class="v2-loc-filter-pills" id="serviceFilter" role="group" aria-label="Filter by service">
+                <button class="v2-filter-pill" data-service="flagship">Flagship</button>
+                <button class="v2-filter-pill" data-service="open24">Open 24/7</button>
+                <button class="v2-filter-pill" data-service="shopIn">ShopIn</button>
+              </div>
+            </div>
+          </div>
+          <div class="v2-loc-filter-clear-row">
+            <button class="v2-loc-clear-btn" id="clearFiltersTop" type="button">Clear filters</button>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="v2-loc-map locator-map" aria-label="Map of Mauritius with station locations">
+          <div class="map-frame">
+            <svg id="locatorMap" class="map-svg" viewBox="0 0 800 900" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Interactive map of Mauritius with Engen station pins">
+              <defs>
+                <filter id="mapIslandShadow" x="-10%" y="-10%" width="120%" height="120%">
+                  <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+                  <feOffset dx="0" dy="4" result="offsetblur"/>
+                  <feComponentTransfer><feFuncA type="linear" slope="0.35"/></feComponentTransfer>
+                  <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <linearGradient id="mapIslandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="rgba(244, 238, 226, 0.92)"/>
+                  <stop offset="100%" stop-color="rgba(244, 238, 226, 0.72)"/>
+                </linearGradient>
+              </defs>
+              <path id="islandGlow" class="island-glow"/>
+              <path id="islandFill" class="island-fill" fill="url(#mapIslandGrad)" filter="url(#mapIslandShadow)"/>
+              <path id="islandStroke" class="island-stroke"/>
+              <g id="compassLabels"></g>
+              <g id="pins"></g>
+            </svg>
+
+            <div class="map-tip" id="mapTip" role="dialog" aria-live="polite">
+              <p class="map-tip__region" id="tipRegion">North</p>
+              <p class="map-tip__name" id="tipName">Station name</p>
+              <p class="map-tip__addr" id="tipAddr">Town, Mauritius</p>
+              <a class="map-tip__cta" id="tipCta" href="#" target="_blank" rel="noopener">
+                <span data-en="Open in Google Maps" data-fr="Ouvrir dans Google Maps">Open in Google Maps</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+          <p class="v2-loc-map__caption">
+            <em data-en="Hover a pin to see the station · tap to open directions" data-fr="Survolez une épingle pour voir la station · tapez pour l'itinéraire">Hover a pin to see the station · tap to open directions</em>
+          </p>
+        </div>
+
+      </div><!-- /.v2-loc-map-wrap -->
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ FLAGSHIP STATIONS -->
+<section class="v2-ip-sec v2-ip-sec--offwht v2-sec-angled-r" id="flagship">
+  <div class="v2-wrap">
+
+    <div class="v2-ip-head anim-fade-up">
+      <span class="v2-label">Flagship Network</span>
+      <h2>Our Flagship <em>Stations</em></h2>
+      <p class="v2-ip-head__lead">
+        Six flagship stations across Mauritius — each designed to deliver the highest standard of service, convenience, and customer experience. Benchmarks for the entire network.
+      </p>
+    </div>
+
+    <div class="v2-flagship-grid">
+
+      <!-- Bagatelle — Replace with station-bagatelle.png when available -->
+      <article class="v2-fs-card anim-fade-up anim-delay-1">
+        <figure class="v2-fs-card__img">
+          <img src="assets/slider1-temp.png" alt="Engen Bagatelle flagship station" loading="lazy" decoding="async">
+          <span class="v2-fs-card__badge">Flagship</span>
+        </figure>
+        <div class="v2-fs-card__body">
+          <div class="v2-fs-card__meta">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" width="14" height="14"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5s4.5-5 4.5-8.5C12.5 3.5 10.5 1.5 8 1.5z"/><circle cx="8" cy="6" r="1.5"/></svg>
+            <span>Bagatelle</span>
+          </div>
+          <h3 class="v2-fs-card__name">Bagatelle</h3>
+          <p class="v2-fs-card__desc">A high-traffic flagship site offering a full-service experience with enhanced convenience retail and modern forecourt design, catering to both daily commuters and shoppers.</p>
+          <ul class="v2-fs-card__services">
+            <li>ShopIn</li>
+            <li>SipIn</li>
+            <li>EatIn</li>
+            <li>Café 365</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Floreal — Replace with station-floreal.png when available -->
+      <article class="v2-fs-card anim-fade-up anim-delay-2">
+        <figure class="v2-fs-card__img">
+          <img src="assets/portrait-safety.png" alt="Engen Floreal flagship station" loading="lazy" decoding="async">
+          <span class="v2-fs-card__badge">Flagship</span>
+        </figure>
+        <div class="v2-fs-card__body">
+          <div class="v2-fs-card__meta">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" width="14" height="14"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5s4.5-5 4.5-8.5C12.5 3.5 10.5 1.5 8 1.5z"/><circle cx="8" cy="6" r="1.5"/></svg>
+            <span>Floreal</span>
+          </div>
+          <h3 class="v2-fs-card__name">Floreal</h3>
+          <p class="v2-fs-card__desc">A premium location known for its strong convenience and Café offering, delivering a relaxed and customer-focused environment for the surrounding community.</p>
+          <ul class="v2-fs-card__services">
+            <li>ShopIn</li>
+            <li>SipIn</li>
+            <li>Café 365</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Phoenix — Replace with station-phoenix.png when available -->
+      <article class="v2-fs-card anim-fade-up anim-delay-3">
+        <figure class="v2-fs-card__img">
+          <img src="assets/editorial-forecourt.png" alt="Engen Phoenix flagship station" loading="lazy" decoding="async">
+          <span class="v2-fs-card__badge">Flagship</span>
+        </figure>
+        <div class="v2-fs-card__body">
+          <div class="v2-fs-card__meta">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" width="14" height="14"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5s4.5-5 4.5-8.5C12.5 3.5 10.5 1.5 8 1.5z"/><circle cx="8" cy="6" r="1.5"/></svg>
+            <span>Phoenix</span>
+          </div>
+          <h3 class="v2-fs-card__name">Phoenix</h3>
+          <p class="v2-fs-card__desc">Strategically positioned to serve both urban and transit customers, combining forecourt efficiency with a comprehensive retail and food experience.</p>
+          <ul class="v2-fs-card__services">
+            <li>ShopIn</li>
+            <li>SipIn</li>
+            <li>EatIn</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Curepipe — Replace with station-curepipe.png when available -->
+      <article class="v2-fs-card anim-fade-up anim-delay-1">
+        <figure class="v2-fs-card__img">
+          <img src="assets/slider2.png" alt="Engen Curepipe flagship station" loading="lazy" decoding="async">
+          <span class="v2-fs-card__badge">Flagship</span>
+        </figure>
+        <div class="v2-fs-card__body">
+          <div class="v2-fs-card__meta">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" width="14" height="14"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5s4.5-5 4.5-8.5C12.5 3.5 10.5 1.5 8 1.5z"/><circle cx="8" cy="6" r="1.5"/></svg>
+            <span>Curepipe</span>
+          </div>
+          <h3 class="v2-fs-card__name">Curepipe</h3>
+          <p class="v2-fs-card__desc">A key regional hub providing reliable fuel supply and a strong convenience offering, serving a diverse customer base throughout the day in the central highlands.</p>
+          <ul class="v2-fs-card__services">
+            <li>ShopIn</li>
+            <li>SipIn</li>
+            <li>EatIn</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- La Croisette — Replace with station-lacroisette.png when available -->
+      <article class="v2-fs-card anim-fade-up anim-delay-2">
+        <figure class="v2-fs-card__img">
+          <img src="assets/slider4.png" alt="Engen La Croisette flagship station" loading="lazy" decoding="async">
+          <span class="v2-fs-card__badge">Flagship</span>
+        </figure>
+        <div class="v2-fs-card__body">
+          <div class="v2-fs-card__meta">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" width="14" height="14"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5s4.5-5 4.5-8.5C12.5 3.5 10.5 1.5 8 1.5z"/><circle cx="8" cy="6" r="1.5"/></svg>
+            <span>La Croisette</span>
+          </div>
+          <h3 class="v2-fs-card__name">La Croisette</h3>
+          <p class="v2-fs-card__desc">Located in a prime commercial area, this flagship offers high visibility and accessibility, with a focus on modern retail and a premium customer experience.</p>
+          <ul class="v2-fs-card__services">
+            <li>ShopIn</li>
+            <li>SipIn</li>
+            <li>Café 365</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Pamplemousses — Replace with station-pamplemousses.png when available -->
+      <article class="v2-fs-card anim-fade-up anim-delay-3">
+        <figure class="v2-fs-card__img">
+          <img src="assets/BornInMauritius.png" alt="Engen Pamplemousses flagship station" loading="lazy" decoding="async">
+          <span class="v2-fs-card__badge">Flagship</span>
+        </figure>
+        <div class="v2-fs-card__body">
+          <div class="v2-fs-card__meta">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" width="14" height="14"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5s4.5-5 4.5-8.5C12.5 3.5 10.5 1.5 8 1.5z"/><circle cx="8" cy="6" r="1.5"/></svg>
+            <span>Pamplemousses</span>
+          </div>
+          <h3 class="v2-fs-card__name">Pamplemousses</h3>
+          <p class="v2-fs-card__desc">A well-established flagship supporting both local communities and passing traffic, with a balanced offering of fuel, retail, and services in the northern district.</p>
+          <ul class="v2-fs-card__services">
+            <li>ShopIn</li>
+            <li>SipIn</li>
+            <li>EatIn</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ WHAT YOU'LL FIND -->
+<section class="v2-ip-sec v2-ip-sec--dark v2-sec-angled-l" id="services">
+  <div class="v2-wrap">
+
+    <div class="v2-ip-head anim-fade-up">
+      <span class="v2-label" style="color:rgba(255,255,255,0.45);">At Every Station</span>
+      <h2>More Than a Stop —<br><em>A Destination</em></h2>
+      <p class="v2-ip-head__lead">
+        Every Engen station is built around the customer. From quality fuel to hot food and premium retail — here's what you'll find across our 37-station network.
+      </p>
+    </div>
+
+    <div class="v2-st-svc-grid">
+
+      <div class="v2-st-svc-card anim-fade-up anim-delay-1">
+        <div class="v2-st-svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <rect x="6" y="18" width="36" height="24" rx="3"/>
+            <path d="M16 18V14a8 8 0 0 1 16 0v4"/>
+            <path d="M24 28v6"/>
+          </svg>
+        </div>
+        <h3>Fuels</h3>
+        <p>Premium Mogas and Gasoil at every site, sourced and quality-tested to meet Mauritius Energy Services Company specifications — reliable performance for every vehicle.</p>
+      </div>
+
+      <div class="v2-st-svc-card anim-fade-up anim-delay-2">
+        <div class="v2-st-svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <rect x="8" y="12" width="32" height="28" rx="3"/>
+            <path d="M16 12V9a2 2 0 0 1 4 0v3M28 12V9a2 2 0 0 1 4 0v3"/>
+            <path d="M8 22h32"/>
+          </svg>
+        </div>
+        <h3>ShopIn</h3>
+        <p>A well-curated convenience store stocked with snacks, beverages, household essentials, and travel necessities — everything you need, right at the forecourt.</p>
+      </div>
+
+      <div class="v2-st-svc-card anim-fade-up anim-delay-3">
+        <div class="v2-st-svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <path d="M14 36c0-8 5-14 10-14s10 6 10 14"/>
+            <path d="M24 22V16M20 18l4-2 4 2"/>
+            <path d="M8 36h32"/>
+          </svg>
+        </div>
+        <h3>SipIn</h3>
+        <p>A refreshing range of beverages — from chilled drinks and juices to hot beverages — available for grab-and-go or enjoyed at the station.</p>
+      </div>
+
+      <div class="v2-st-svc-card anim-fade-up anim-delay-1">
+        <div class="v2-st-svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <path d="M10 36h28M16 36V24l8-10 8 10v12"/>
+            <path d="M24 14V10"/>
+            <path d="M20 34h8"/>
+          </svg>
+        </div>
+        <h3>EatIn</h3>
+        <p>Hot meals, quick bites, and fresh food options — prepared on-site and perfect for a stop during your commute or a longer break on a road trip.</p>
+      </div>
+
+      <div class="v2-st-svc-card anim-fade-up anim-delay-2">
+        <div class="v2-st-svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <rect x="6" y="26" width="36" height="16" rx="2"/>
+            <path d="M14 26V18a10 10 0 0 1 20 0v8"/>
+            <circle cx="24" cy="34" r="3"/>
+            <path d="M24 37v3"/>
+          </svg>
+        </div>
+        <h3>Fleet &amp; Commercial</h3>
+        <p>Engen 1Card fleet payment solutions and commercial bulk fuel supply — tailored for businesses operating across all industries in Mauritius.</p>
+      </div>
+
+      <div class="v2-st-svc-card anim-fade-up anim-delay-3">
+        <div class="v2-st-svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <circle cx="24" cy="24" r="18"/>
+            <path d="M24 12v12l8 4"/>
+          </svg>
+        </div>
+        <h3>Open 24/7</h3>
+        <p>Eight stations across the network operate around the clock — so you always have access to fuel, convenience retail, and essential services, day or night.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ NETWORK STATS -->
+<section class="v2-ip-sec v2-ip-sec--white v2-sec-angled-r" id="network">
+  <div class="v2-wrap">
+
+    <div class="v2-ip-head anim-fade-up">
+      <span class="v2-label">By the Numbers</span>
+      <h2>A Network Built for <em>Mauritius</em></h2>
+      <p class="v2-ip-head__lead">
+        From Port Louis to the south coast, the Engen network reaches every corner of the island — backed by robust infrastructure and a commitment to consistent supply.
+      </p>
+    </div>
+
+    <div class="v2-network-bar anim-fade-up anim-delay-1">
+      <div class="v2-network-bar__label">
+        <span class="v2-network-bar__eyebrow">Our Network</span>
+        <span class="v2-network-bar__title">At a Glance</span>
+      </div>
+      <div class="v2-network-bar__stats">
+        <div class="v2-network-stat">
+          <span class="v2-network-stat__num">37</span>
+          <span class="v2-network-stat__lbl">Stations<br>Nationwide</span>
+        </div>
+        <div class="v2-network-stat">
+          <span class="v2-network-stat__num">8</span>
+          <span class="v2-network-stat__lbl">Open<br>24 / 7</span>
+        </div>
+        <div class="v2-network-stat">
+          <span class="v2-network-stat__num">9</span>
+          <span class="v2-network-stat__lbl">Districts<br>Covered</span>
+        </div>
+        <div class="v2-network-stat">
+          <span class="v2-network-stat__num">6</span>
+          <span class="v2-network-stat__lbl">Flagship<br>Stations</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ CTA BANNER -->
+<section class="v2-cta-banner">
+  <div class="v2-wrap">
+    <h2 class="v2-cta-banner__title anim-fade-up">
+      Ready to Visit or
+      <em>Get in Touch?</em>
+    </h2>
+    <p class="v2-cta-banner__lead anim-fade-up anim-delay-1">
+      Whether it's a station query, commercial fuel enquiry, or customer feedback — our team is here to help.
+    </p>
+    <div class="v2-cta-banner__actions anim-fade-up anim-delay-2">
+      <a href="index.html#contact" class="v2-btn v2-btn--yellow">Contact Us →</a>
+      <a href="products.html" class="v2-btn v2-btn--ghost">View Products &amp; Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ FOOTER -->
+<footer class="v2-footer">
+  <div class="v2-wrap">
+    <div class="v2-footer__top">
+      <div class="v2-footer__brand">
+        <a href="index.html" aria-label="Engen Mauritius home">
+          <img src="assets/Logo-no-bg-white.png" alt="Engen Mauritius" class="v2-footer__logo">
+        </a>
+        <p class="v2-footer__tagline">More Than Just Fuel</p>
+        <div class="v2-footer__social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+        <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-top:0.5rem;">+230 206 6000<br>Quay D Road, Port Louis</p>
+      </div>
+      <div class="v2-footer__cols">
+        <div class="v2-footer__col">
+          <h4>Newsroom</h4>
+          <ul>
+            <li><a href="index.html#newsroom">News &amp; Announcements</a></li>
+            <li><a href="index.html#newsroom">Press Releases</a></li>
+            <li><a href="index.html#newsroom">Media Resources</a></li>
+          </ul>
+        </div>
+        <div class="v2-footer__col">
+          <h4>Careers</h4>
+          <ul>
+            <li><a href="index.html#careers">Why Work at Engen</a></li>
+            <li><a href="index.html#careers">Vacancies</a></li>
+            <li><a href="index.html#careers">Graduate Programs</a></li>
+            <li><a href="mailto:recruitment@engen.mu">Apply Online</a></li>
+          </ul>
+        </div>
+        <div class="v2-footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="index.html#contact">General Contact</a></li>
+            <li><a href="index.html#contact">Customer Feedback</a></li>
+            <li><a href="index.html#contact">Supplier Queries</a></li>
+            <li><a href="index.html#contact">Safety Reporting</a></li>
+          </ul>
+        </div>
+        <div class="v2-footer__col">
+          <h4>Legal &amp; Utilities</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="v2-footer__bottom">
+      <p>&copy; 2026 Engen Mauritius. All rights reserved.</p>
+      <div class="v2-footer__legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="script.js" defer></script>
+</body>
+</html>
