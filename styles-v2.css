@@ -419,6 +419,13 @@ svg { display: block; }
   object-position: center;
   transform-origin: center;
 }
+.v2-slide__vid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 .v2-slide__scrim {
   position: absolute;
   inset: 0;
