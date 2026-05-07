@@ -315,9 +315,28 @@
       isUserHovered = false;
       tip.classList.remove('is-visible');
     });
-    pos.addEventListener('click', () => window.open(tipCta.href, '_blank', 'noopener'));
+    pos.addEventListener('click', () => {
+      isUserHovered = true;
+      stopAutoCycle();
+      clearAutoActive();
+      fillTip(s);
+      tip.classList.remove('is-auto');
+      tip.classList.add('is-visible');
+      requestAnimationFrame(() => positionTip(pos));
+      setTimeout(() => { isUserHovered = false; }, 4000);
+    });
     pos.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open(tipCta.href, '_blank', 'noopener'); }
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        isUserHovered = true;
+        stopAutoCycle();
+        clearAutoActive();
+        fillTip(s);
+        tip.classList.remove('is-auto');
+        tip.classList.add('is-visible');
+        requestAnimationFrame(() => positionTip(pos));
+        setTimeout(() => { isUserHovered = false; }, 4000);
+      }
     });
 
     pinsEl.appendChild(pos);
@@ -329,6 +348,7 @@
   let filterRegion = 'all';
   const filterServices = new Set();
   let filterSearch = '';
+  let selectedId = null;
 
   function getFiltered() {
     const q = filterSearch.toLowerCase();
@@ -344,7 +364,11 @@
 
   function renderList(filtered) {
     const filteredIds = new Set(filtered.map(s => s.id));
-    allPins.forEach(({ pos, s }) => pos.classList.toggle('pin-hidden', !filteredIds.has(s.id)));
+    allPins.forEach(({ pos, s }) => {
+      const hide = !filteredIds.has(s.id);
+      pos.classList.toggle('pin-hidden', hide);
+      pos.style.display = hide ? 'none' : '';
+    });
 
     const countEl = document.getElementById('locCount');
     if (countEl) countEl.innerHTML = `Showing <strong>${filtered.length}</strong> of <strong>${STATIONS.length}</strong> stations`;
@@ -376,23 +400,55 @@
       const sid = parseInt(card.dataset.id);
       const pinData = allPins.find(p => p.s.id === sid);
       if (!pinData) return;
-      const activate = () => {
-        isUserHovered = true;
-        stopAutoCycle();
-        clearAutoActive();
-        fillTip(pinData.s);
-        tip.classList.remove('is-auto');
-        tip.classList.add('is-visible');
-        requestAnimationFrame(() => positionTip(pinData.pos));
-        document.querySelector('.v2-loc-map')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        setTimeout(() => { isUserHovered = false; }, 4000);
-      };
-      card.addEventListener('click', activate);
-      card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
+      card.addEventListener('click', () => selectStation(sid));
+      card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectStation(sid); } });
     });
   }
 
-  function applyFilters() { renderList(getFiltered()); }
+  function selectStation(sid) {
+    if (selectedId === sid) {
+      // Second click — deselect and restore filter view
+      selectedId = null;
+      allPins.forEach(({ pos }) => pos.classList.remove('is-selected'));
+      document.querySelectorAll('.v2-st-card.is-selected').forEach(c => c.classList.remove('is-selected'));
+      isUserHovered = false;
+      tip.classList.remove('is-visible', 'is-auto');
+      renderList(getFiltered());
+      return;
+    }
+    selectedId = sid;
+    document.querySelectorAll('.v2-st-card.is-selected').forEach(c => c.classList.remove('is-selected'));
+    const selectedCard = document.querySelector(`.v2-st-card[data-id="${sid}"]`);
+    if (selectedCard) selectedCard.classList.add('is-selected');
+    allPins.forEach(({ pos, s }) => {
+      const hide = s.id !== sid;
+      pos.classList.toggle('pin-hidden', hide);
+      pos.classList.toggle('is-selected', s.id === sid);
+      pos.style.display = hide ? 'none' : '';
+    });
+    const pinData = allPins.find(p => p.s.id === sid);
+    if (pinData) {
+      isUserHovered = true;
+      stopAutoCycle();
+      clearAutoActive();
+      fillTip(pinData.s);
+      tip.classList.remove('is-auto');
+      tip.classList.add('is-visible');
+      requestAnimationFrame(() => positionTip(pinData.pos));
+      document.querySelector('.v2-loc-map')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      setTimeout(() => { isUserHovered = false; }, 4000);
+    }
+  }
+
+  function applyFilters() {
+    if (selectedId !== null) {
+      selectedId = null;
+      allPins.forEach(({ pos }) => pos.classList.remove('is-selected'));
+      tip.classList.remove('is-visible', 'is-auto');
+      isUserHovered = false;
+    }
+    renderList(getFiltered());
+  }
 
   function clearAllFilters() {
     filterRegion = 'all';
@@ -434,6 +490,15 @@
   document.getElementById('locSearch')?.addEventListener('input', e => {
     filterSearch = e.target.value.trim();
     applyFilters();
+  });
+
+  // Mobile: tap outside pin and tooltip to dismiss tip
+  document.querySelector('.v2-loc-map')?.addEventListener('pointerdown', e => {
+    if (e.pointerType !== 'touch') return;
+    if (!e.target.closest('.pin-pos') && !e.target.closest('.map-tip')) {
+      tip.classList.remove('is-visible', 'is-auto');
+      isUserHovered = false;
+    }
   });
 
   // ── Autocomplete helper ──────────────────────────────────────────
