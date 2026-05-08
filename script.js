@@ -12,7 +12,19 @@
     toggle.dataset.pressed = lang;
     document.querySelectorAll('[data-en][data-fr]').forEach(el => {
       const t = el.getAttribute(`data-${lang}`);
-      if (t != null) el.textContent = t;
+      if (t != null) el.innerHTML = t;
+    });
+    if (typeof window.I18N === 'object') {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const t = window.I18N[key]?.[lang];
+        if (t != null) el.innerHTML = t;
+      });
+    }
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      const t = window.I18N?.[key]?.[lang];
+      if (t != null) el.setAttribute('placeholder', t);
     });
   };
 

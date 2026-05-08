@@ -3300,8 +3300,66 @@ body.nav-open { overflow: hidden; }
   .v2-avi-grid   { grid-template-columns: 1fr; }
   .v2-quote-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
   .v2-quote-row  { grid-template-columns: 1fr; }
+  .v2-contact-cards-grid { grid-template-columns: 1fr !important; }
 }
 @media (max-width: 540px) {
   .v2-b2b-tiles { grid-template-columns: 1fr; }
   .v2-pay-grid  { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════ NEWSROOM PAGE */
+.v2-news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.v2-news-card { border-radius: 14px; overflow: hidden; border: 1px solid rgba(15,31,51,0.1); background: #fff; display: flex; flex-direction: column; box-shadow: 0 4px 24px rgba(15,31,51,0.07); }
+.v2-news-card__thumb { height: 210px; position: relative; overflow: hidden; background: #e8ecf0; }
+.v2-news-card__thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 400ms var(--ease); }
+.v2-news-card:hover .v2-news-card__thumb img { transform: scale(1.04); }
+.v2-news-card__badge { position: absolute; top: 1rem; left: 1rem; font-size: 0.6rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; padding: 0.28rem 0.7rem; border-radius: 100px; background: rgba(245,182,37,0.92); color: #0F1F33; }
+.v2-news-card__body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; gap: 0.55rem; }
+.v2-news-card__cat { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--yellow); }
+.v2-news-card__title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--navy-deep); line-height: 1.2; }
+.v2-news-card__excerpt { font-size: 0.86rem; color: rgba(15,31,51,0.6); line-height: 1.65; flex: 1; }
+.v2-news-empty { text-align: center; padding: 5rem 2rem; max-width: 520px; margin: 0 auto; }
+.v2-news-empty__icon { width: 80px; height: 80px; border-radius: 50%; background: rgba(245,182,37,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--yellow); }
+
+/* ═══════════════════════════════════════ CAREERS PAGE */
+.v2-pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.v2-pillar-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 2.25rem 1.75rem; transition: background 220ms, border-color 220ms; }
+.v2-pillar-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(245,182,37,0.35); }
+.v2-pillar-card__num { font-family: 'Barlow Condensed', sans-serif; font-size: 3.5rem; font-weight: 900; color: var(--yellow); opacity: 0.22; line-height: 1; margin-bottom: 0.75rem; }
+.v2-pillar-card__title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 900; text-transform: uppercase; color: #fff; letter-spacing: 0.02em; margin-bottom: 0.85rem; }
+.v2-pillar-card__body { font-size: 0.9rem; color: rgba(255,255,255,0.68); line-height: 1.7; }
+.v2-vacancy-empty { text-align: center; padding: 5rem 2rem; max-width: 560px; margin: 0 auto; }
+.v2-vacancy-empty__icon { width: 76px; height: 76px; border-radius: 50%; background: rgba(245,182,37,0.12); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.75rem; color: var(--yellow); }
+.v2-vacancy-empty__title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; }
+.v2-vacancy-empty__body { font-size: 0.92rem; color: rgba(255,255,255,0.6); line-height: 1.75; }
+.v2-benefit-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.v2-benefit-item { display: flex; align-items: flex-start; gap: 0.85rem; }
+.v2-benefit-item__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--yellow); flex-shrink: 0; margin-top: 0.55em; }
+.v2-benefit-item__text { font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.6; }
+
+/* ═══════════════════════════════════════ CONTACT PAGE */
+.v2-contact-info-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 0; }
+.v2-contact-info-card { background: rgba(245,182,37,0.06); border: 1px solid rgba(245,182,37,0.18); border-radius: 12px; padding: 1.35rem 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.v2-contact-info-card__icon { color: var(--navy-deep); margin-bottom: 0.35rem; }
+.v2-contact-info-card__label { font-size: 0.63rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: rgba(15,31,51,0.55); }
+.v2-contact-info-card__value { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--navy-deep); line-height: 1.3; }
+.v2-dept-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.v2-dept-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.75rem 1.75rem; display: flex; flex-direction: column; gap: 0.6rem; transition: background 220ms, border-color 220ms; }
+.v2-dept-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(245,182,37,0.3); }
+.v2-dept-card__icon { width: 46px; height: 46px; border-radius: 12px; background: rgba(245,182,37,0.14); display: flex; align-items: center; justify-content: center; color: var(--yellow); margin-bottom: 0.4rem; }
+.v2-dept-card__title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 800; text-transform: uppercase; color: #fff; letter-spacing: 0.04em; }
+.v2-dept-card__body { font-size: 0.84rem; color: rgba(255,255,255,0.58); line-height: 1.65; }
+.v2-dept-card__contact { font-size: 0.84rem; color: rgba(245,182,37,0.9); font-weight: 600; margin-top: 0.25rem; }
+
+/* ═══════════════════════════════════════ RESPONSIVE — new pages */
+@media (max-width: 960px) {
+  .v2-news-grid { grid-template-columns: 1fr 1fr; }
+  .v2-pillar-grid { grid-template-columns: 1fr 1fr; }
+  .v2-dept-grid { grid-template-columns: 1fr; }
+  .v2-contact-info-row { grid-template-columns: 1fr; gap: 0.75rem; }
+  .v2-benefit-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .v2-news-grid { grid-template-columns: 1fr; }
+  .v2-pillar-grid { grid-template-columns: 1fr; }
 }
