@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8">
@@ -56,7 +56,7 @@
   <a href="newsroom.html" data-en="Newsroom" data-fr="Actualités">Newsroom</a>
   <a href="careers.html" data-en="Careers" data-fr="Carrières">Careers</a>
   <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
-  <a href="stations.html" class="v2-mobile-nav__cta">Find a Station →</a>
+  <a href="stations.html" class="v2-mobile-nav__cta" data-i18n="mobile.cta">Find a Station →</a>
 </nav>
 
 <!-- ══════════════════════════════════════════════════════ PAGE HERO -->
@@ -67,10 +67,7 @@
   <div class="v2-page-hero__scrim" aria-hidden="true"></div>
   <div class="v2-page-hero__content">
     <div class="v2-wrap">
-      <h1 class="v2-page-hero__title anim-fade-up">
-        Offers &amp;
-        <em>Promotions</em>
-      </h1>
+      <h1 class="v2-page-hero__title anim-fade-up" data-i18n="promo.hero.h1">Offers &amp; <em>Promotions</em></h1>
     </div>
   </div>
 </section>
@@ -80,9 +77,9 @@
   <div class="v2-wrap">
 
     <div class="v2-ip-head anim-fade-up">
-      <span class="v2-label">Current Offers</span>
-      <h2>What's On <em>Right Now</em></h2>
-      <p class="v2-ip-head__lead">We're continually working on new deals and promotions for our customers. Check back regularly — new offers go live across our network throughout the year.</p>
+      <span class="v2-label" data-i18n="promo.current.label">Current Offers</span>
+      <h2 data-i18n="promo.current.h2">What's On <em>Right Now</em></h2>
+      <p class="v2-ip-head__lead" data-i18n="promo.current.lead">We're continually working on new deals and promotions for our customers. Check back regularly — new offers go live across our network throughout the year.</p>
     </div>
 
     <div class="v2-promo-grid">
@@ -158,7 +155,7 @@
       <!-- Left: copy -->
       <div class="v2-loyalty-copy anim-fade-up">
         <div>
-          <span class="v2-label">Loyalty Programme</span>
+          <span class="v2-label" data-i18n="promo.loyalty.label">Loyalty Programme</span>
           <h2>
             Earn as You
             <em>Fuel</em>
@@ -196,7 +193,7 @@
   <div class="v2-wrap">
 
     <div class="v2-ip-head anim-fade-up">
-      <span class="v2-label">What's Coming</span>
+      <span class="v2-label" data-i18n="promo.upcoming.label">What's Coming</span>
       <h2>More Offers <em>On the Way</em></h2>
       <p class="v2-ip-head__lead">We're preparing a range of promotions across our retail, food, and fuelling services. Here's a preview of what to expect across our network.</p>
     </div>
@@ -240,16 +237,13 @@
   <div class="v2-wrap">
     <div class="v2-notify-wrap anim-fade-up">
       <div>
-        <span class="v2-label">Stay in the Loop</span>
-        <h2>
-          Be First to
-          <em>Know</em>
-        </h2>
+        <span class="v2-label" data-i18n="promo.notify.label">Stay in the Loop</span>
+        <h2 data-i18n="promo.notify.h2">Be First to <em>Know</em></h2>
         <p>New promotions, loyalty rewards, and exclusive partner deals — straight to your inbox before anyone else. Enter your email below and we'll notify you when new offers go live.</p>
       </div>
       <form class="v2-notify-form" id="notifyForm">
-        <input type="email" class="v2-notify-input" placeholder="Your email address" aria-label="Email address" required>
-        <button type="submit" class="v2-btn v2-btn--yellow">Notify Me</button>
+        <input type="email" class="v2-notify-input" placeholder="Your email address" data-i18n-placeholder="ph.email" aria-label="Email address" required>
+        <button type="submit" class="v2-btn v2-btn--yellow" data-i18n="promo.notify.btn">Notify Me</button>
       </form>
       <p style="font-size:0.72rem;color:rgba(255,255,255,0.3);margin-top:-1rem;">No spam. Unsubscribe at any time. Read our <a href="#" style="color:rgba(255,255,255,0.45);text-decoration:underline;">Privacy Policy</a>.</p>
     </div>
@@ -265,7 +259,7 @@
         <a href="index.html" aria-label="Engen Mauritius home">
           <img src="assets/Logo-no-bg-white.png" alt="Engen Mauritius" class="v2-footer__logo">
         </a>
-        <p class="v2-footer__tagline">More Than Just Fuel</p>
+        <p class="v2-footer__tagline" data-i18n="footer.tagline">More Than Just Fuel</p>
         <div class="v2-footer__social">
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -275,51 +269,51 @@
       </div>
       <div class="v2-footer__cols">
         <div class="v2-footer__col">
-          <h4>Newsroom</h4>
+          <h4 data-i18n="footer.col.newsroom">Newsroom</h4>
           <ul>
-            <li><a href="newsroom.html">News &amp; Announcements</a></li>
-            <li><a href="newsroom.html">Press Releases</a></li>
-            <li><a href="newsroom.html">Media Resources</a></li>
+            <li><a href="newsroom.html" data-i18n="footer.link.news">News &amp; Announcements</a></li>
+            <li><a href="newsroom.html" data-i18n="footer.link.press">Press Releases</a></li>
+            <li><a href="newsroom.html" data-i18n="footer.link.media">Media Resources</a></li>
           </ul>
         </div>
         <div class="v2-footer__col">
-          <h4>Careers</h4>
+          <h4 data-i18n="footer.col.careers">Careers</h4>
           <ul>
-            <li><a href="careers.html">Why Work at Engen</a></li>
-            <li><a href="careers.html">Vacancies</a></li>
-            <li><a href="careers.html">Graduate Programs</a></li>
-            <li><a href="mailto:recruitment@engen.mu">Apply Online</a></li>
+            <li><a href="careers.html" data-i18n="footer.link.whywork">Why Work at Engen</a></li>
+            <li><a href="careers.html" data-i18n="footer.link.vacancies">Vacancies</a></li>
+            <li><a href="careers.html" data-i18n="footer.link.graduate">Graduate Programs</a></li>
+            <li><a href="mailto:recruitment@engen.mu" data-i18n="footer.link.apply">Apply Online</a></li>
           </ul>
         </div>
         <div class="v2-footer__col">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer.col.contact">Contact</h4>
           <ul>
-            <li><a href="contact.html">General Contact</a></li>
-            <li><a href="contact.html">Customer Feedback</a></li>
-            <li><a href="contact.html">Supplier Queries</a></li>
-            <li><a href="contact.html">Safety Reporting</a></li>
+            <li><a href="contact.html" data-i18n="footer.link.general">General Contact</a></li>
+            <li><a href="contact.html" data-i18n="footer.link.feedback">Customer Feedback</a></li>
+            <li><a href="contact.html" data-i18n="footer.link.supplier">Supplier Queries</a></li>
+            <li><a href="contact.html" data-i18n="footer.link.safety">Safety Reporting</a></li>
           </ul>
         </div>
         <div class="v2-footer__col">
-          <h4>Legal &amp; Utilities</h4>
+          <h4 data-i18n="footer.col.legal">Legal &amp; Utilities</h4>
           <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Cookie Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Accessibility</a></li>
-            <li><a href="#">Sitemap</a></li>
+            <li><a href="privacy-policy.html" data-i18n="footer.link.privacy">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html" data-i18n="footer.link.cookie">Cookie Policy</a></li>
+            <li><a href="terms.html" data-i18n="footer.link.terms">Terms of Use</a></li>
+            <li><a href="accessibility.html" data-i18n="footer.link.access">Accessibility</a></li>
+            <li><a href="#" data-i18n="footer.link.sitemap">Sitemap</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="v2-footer__bottom">
-      <p>&copy; 2026 Engen Mauritius. All rights reserved.</p>
+      <p data-i18n="footer.copyright">&copy; 2026 Engen Mauritius. All rights reserved.</p>
       <div class="v2-footer__legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Cookie Policy</a>
-        <a href="#">Terms of Use</a>
-        <a href="#">Accessibility</a>
-        <a href="#">Sitemap</a>
+        <a href="privacy-policy.html" data-i18n="footer.link.privacy">Privacy Policy</a>
+        <a href="cookie-policy.html" data-i18n="footer.link.cookie">Cookie Policy</a>
+        <a href="terms.html" data-i18n="footer.link.terms">Terms of Use</a>
+        <a href="accessibility.html" data-i18n="footer.link.access">Accessibility</a>
+        <a href="#" data-i18n="footer.link.sitemap">Sitemap</a>
       </div>
     </div>
   </div>

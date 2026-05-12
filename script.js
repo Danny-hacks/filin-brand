@@ -30,8 +30,12 @@
 
   toggle.addEventListener('click', () => {
     const next = toggle.dataset.pressed === 'en' ? 'fr' : 'en';
+    localStorage.setItem('lang', next);
     apply(next);
   });
+
+  const saved = localStorage.getItem('lang');
+  if (saved === 'fr') apply('fr');
 })();
 
 /* ─── Station locator map ───────────────────────────────────── */

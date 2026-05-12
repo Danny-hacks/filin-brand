@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility — Engen Mauritius</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Barlow+Condensed:ital,wght@0,600;0,700;0,900;1,700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-v2.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <a class="brand" href="index.html" aria-label="Engen Mauritius home">
+    <img src="assets/Logo-no-bg.png" alt="Engen Mauritius" class="brand-logo" width="534" height="264">
+  </a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="index.html" data-en="Home" data-fr="Accueil">Home</a>
+    <a href="products.html" data-en="Products &amp; Services" data-fr="Produits &amp; Services">Products &amp; Services</a>
+    <a href="stations.html" data-en="Stations" data-fr="Stations">Stations</a>
+    <a href="promotions.html" data-en="Promotions" data-fr="Promotions">Promotions</a>
+    <a href="about.html" data-en="About Engen Mauritius" data-fr="À propos">About Engen Mauritius</a>
+    <a href="b2b.html" data-en="Business (B2B)" data-fr="Entreprises">Business (B2B)</a>
+    <a href="newsroom.html" data-en="Newsroom" data-fr="Actualités">Newsroom</a>
+    <a href="careers.html" data-en="Careers" data-fr="Carrières">Careers</a>
+    <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
+  </nav>
+  <div class="site-actions">
+    <button class="lang-toggle" aria-label="Change language" data-pressed="en">
+      <span class="lang-en">EN</span><span class="lang-sep" aria-hidden="true">/</span><span class="lang-fr">FR</span>
+    </button>
+    <a href="stations.html" class="btn-find">
+      <span data-en="Find a station" data-fr="Trouver une station">Find a station</span>
+      <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <button class="v2-menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <svg class="icon-bars" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav class="v2-mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html" data-en="Home" data-fr="Accueil">Home</a>
+  <a href="products.html" data-en="Products &amp; Services" data-fr="Produits &amp; Services">Products &amp; Services</a>
+  <a href="stations.html" data-en="Stations" data-fr="Stations">Stations</a>
+  <a href="promotions.html" data-en="Promotions" data-fr="Promotions">Promotions</a>
+  <a href="about.html" data-en="About Engen Mauritius" data-fr="À propos">About Engen Mauritius</a>
+  <a href="b2b.html" data-en="Business (B2B)" data-fr="Entreprises">Business (B2B)</a>
+  <a href="newsroom.html" data-en="Newsroom" data-fr="Actualités">Newsroom</a>
+  <a href="careers.html" data-en="Careers" data-fr="Carrières">Careers</a>
+  <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
+  <a href="stations.html" class="v2-mobile-nav__cta" data-i18n="mobile.cta">Find a Station →</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="v2-page-hero">
+  <figure class="v2-page-hero__bg">
+    <img src="assets/editorial-forecourt.png" alt="" aria-hidden="true">
+  </figure>
+  <div class="v2-page-hero__scrim" aria-hidden="true"></div>
+  <div class="v2-page-hero__content">
+    <div class="v2-wrap">
+      <h1 class="v2-page-hero__title anim-fade-up" data-i18n="legal.access.hero.h1">Accessibility <em>Statement</em></h1>
+    </div>
+  </div>
+</section>
+
+<!-- ALL CONTENT — single white section -->
+<section class="v2-ip-sec v2-ip-sec--white" id="accessibility">
+  <div class="v2-wrap">
+    <div class="v2-legal-wrap anim-fade-up">
+
+      <p class="v2-legal-intro">At Engen Petroleum (Mauritius) Limited, we are committed to ensuring digital accessibility for all users, in line with international accessibility standards and best practices.</p>
+      <p class="v2-legal-updated">Last updated: May 2026</p>
+
+      <div class="v2-legal-section">
+        <h2><span class="v2-legal-num">1.</span> Our Commitment</h2>
+        <p>We aim to make our website accessible, inclusive, and user-friendly for all individuals, including persons with disabilities. We believe that everyone deserves equal access to information and services online, and we are committed to removing barriers that may prevent this.</p>
+      </div>
+
+      <div class="v2-legal-section">
+        <h2><span class="v2-legal-num">2.</span> Standards</h2>
+        <p>We strive to align with recognised standards such as:</p>
+        <ul class="v2-legal-list">
+          <li>Web Content Accessibility Guidelines (WCAG) — we aim to meet WCAG 2.1 Level AA conformance</li>
+          <li>International best practices for digital accessibility</li>
+          <li>Applicable Mauritian regulations and standards regarding digital inclusion</li>
+        </ul>
+        <p>Our accessibility features include semantic HTML markup, keyboard navigability, ARIA labels and roles, sufficient colour contrast, and alt text on all meaningful images.</p>
+      </div>
+
+      <div class="v2-legal-section">
+        <h2><span class="v2-legal-num">3.</span> Ongoing Improvements</h2>
+        <p>We continuously monitor and improve our website to enhance accessibility and usability. Our development team regularly reviews the site against accessibility guidelines and conducts testing to identify and address any barriers that may exist. We treat accessibility as an ongoing commitment rather than a one-time task.</p>
+      </div>
+
+      <div class="v2-legal-section">
+        <h2><span class="v2-legal-num">4.</span> Feedback</h2>
+        <p>If you encounter any accessibility barriers or require assistance accessing content on our website, please contact us. Your feedback is important and helps us improve the experience for all users. We aim to respond to accessibility queries within 5 business days.</p>
+        <p>Please reach out via our <a href="contact.html" style="color:var(--navy-deep);font-weight:600;">Contact page</a> or call us on <a href="tel:+2302066000" style="color:var(--navy-deep);font-weight:600;">+230 206 6000</a>.</p>
+      </div>
+
+      <div class="v2-legal-section">
+        <h2><span class="v2-legal-num">5.</span> Alternative Access</h2>
+        <p>We will make reasonable efforts to provide information in alternative formats upon request. If you are unable to access any content or functionality on our website due to a disability, please contact us and we will work with you to provide the information or service you need through an alternative means.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RELATED DOCUMENTS — only CTA -->
+<section class="v2-ip-sec v2-ip-sec--navy">
+  <div class="v2-wrap" style="text-align:center;">
+    <span class="v2-label" data-i18n="legal.related.label">Legal &amp; Utilities</span>
+    <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:900;text-transform:uppercase;color:#fff;margin:0.5rem 0 1.5rem;">Related <em style="color:var(--yellow);font-style:normal;">Documents</em></h2>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="privacy-policy.html" class="v2-btn v2-btn--ghost" data-i18n="legal.related.privacy">Privacy Policy</a>
+      <a href="cookie-policy.html" class="v2-btn v2-btn--ghost" data-i18n="legal.related.cookie">Cookie Policy</a>
+      <a href="terms.html" class="v2-btn v2-btn--ghost" data-i18n="legal.related.terms">Terms of Use</a>
+      <a href="contact.html" class="v2-btn v2-btn--yellow" data-i18n="legal.related.contact">Get in Touch →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="v2-footer">
+  <div class="v2-wrap">
+    <div class="v2-footer__top">
+      <div class="v2-footer__brand">
+        <a href="index.html" aria-label="Engen Mauritius home">
+          <img src="assets/Logo-no-bg-white.png" alt="Engen Mauritius" class="v2-footer__logo">
+        </a>
+        <p class="v2-footer__tagline" data-i18n="footer.tagline">More Than Just Fuel</p>
+        <div class="v2-footer__social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+        <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-top:0.5rem;">+230 206 6000<br>Quay D Road, Port Louis</p>
+      </div>
+      <div class="v2-footer__cols">
+        <div class="v2-footer__col">
+          <h4 data-i18n="footer.col.newsroom">Newsroom</h4>
+          <ul>
+            <li><a href="newsroom.html" data-i18n="footer.link.news">News &amp; Announcements</a></li>
+            <li><a href="newsroom.html" data-i18n="footer.link.press">Press Releases</a></li>
+            <li><a href="newsroom.html" data-i18n="footer.link.media">Media Resources</a></li>
+          </ul>
+        </div>
+        <div class="v2-footer__col">
+          <h4 data-i18n="footer.col.careers">Careers</h4>
+          <ul>
+            <li><a href="careers.html" data-i18n="footer.link.whywork">Why Work at Engen</a></li>
+            <li><a href="careers.html" data-i18n="footer.link.vacancies">Vacancies</a></li>
+            <li><a href="careers.html" data-i18n="footer.link.graduate">Graduate Programs</a></li>
+            <li><a href="mailto:recruitment@engen.mu" data-i18n="footer.link.apply">Apply Online</a></li>
+          </ul>
+        </div>
+        <div class="v2-footer__col">
+          <h4 data-i18n="footer.col.contact">Contact</h4>
+          <ul>
+            <li><a href="contact.html" data-i18n="footer.link.general">General Contact</a></li>
+            <li><a href="contact.html" data-i18n="footer.link.feedback">Customer Feedback</a></li>
+            <li><a href="contact.html" data-i18n="footer.link.supplier">Supplier Queries</a></li>
+            <li><a href="contact.html" data-i18n="footer.link.safety">Safety Reporting</a></li>
+          </ul>
+        </div>
+        <div class="v2-footer__col">
+          <h4 data-i18n="footer.col.legal">Legal &amp; Utilities</h4>
+          <ul>
+            <li><a href="privacy-policy.html" data-i18n="footer.link.privacy">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html" data-i18n="footer.link.cookie">Cookie Policy</a></li>
+            <li><a href="terms.html" data-i18n="footer.link.terms">Terms of Use</a></li>
+            <li><a href="accessibility.html" data-i18n="footer.link.access">Accessibility</a></li>
+            <li><a href="#" data-i18n="footer.link.sitemap">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="v2-footer__bottom">
+      <p data-i18n="footer.copyright">&copy; 2026 Engen Mauritius. All rights reserved.</p>
+      <div class="v2-footer__legal">
+        <a href="privacy-policy.html" data-i18n="footer.link.privacy">Privacy Policy</a>
+        <a href="cookie-policy.html" data-i18n="footer.link.cookie">Cookie Policy</a>
+        <a href="terms.html" data-i18n="footer.link.terms">Terms of Use</a>
+        <a href="accessibility.html" data-i18n="footer.link.access">Accessibility</a>
+        <a href="#" data-i18n="footer.link.sitemap">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+<script src="translations.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
