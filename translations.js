@@ -73,6 +73,18 @@ window.I18N = {
   'home.hap.c3.p':          { en: 'Visit one of our flagship stations — Bagatelle, Floreal, Phoenix and more.', fr: 'Visitez l\'une de nos stations phares — Bagatelle, Floréal, Phœnix et bien d\'autres.' },
   'home.hap.c3.btn':        { en: 'Find a Station',     fr: 'Trouver une station' },
 
+  /* ─── HOME — QUICK ACCESS TILES ─────────────────────────────── */
+  'home.qa.title':          { en: 'Quick Access',       fr: 'Accès rapide' },
+  'home.qa.locator':        { en: 'Station Locator',    fr: 'Localisateur de stations' },
+  'home.qa.locator.desc':   { en: 'Find your nearest Engen station across the island.', fr: 'Trouvez la station Engen la plus proche.' },
+  'home.qa.locator.btn':    { en: 'Find a Station',     fr: 'Trouver une station' },
+  'home.qa.cafe':           { en: 'Café 365',           fr: 'Café 365' },
+  'home.qa.cafe.desc':      { en: 'Coffee, food &amp; refreshments — at Engen stations, every day of the year.', fr: 'Café, restauration &amp; boissons — dans nos stations, 365 jours par an.' },
+  'home.qa.cafe.btn':       { en: 'Explore',            fr: 'Explorer' },
+  'home.qa.shop':           { en: 'QuickShop',          fr: 'QuickShop' },
+  'home.qa.shop.desc':      { en: 'Everyday essentials, snacks and drinks — right at the pump.', fr: 'Produits essentiels, snacks et boissons — directement à la pompe.' },
+  'home.qa.shop.btn':       { en: 'Shop Now',           fr: 'Acheter maintenant' },
+
   /* ─── HOME — PRODUCTS & SERVICES ────────────────────────────── */
   'home.svc.title':         { en: 'Products &amp; Services',   fr: 'Produits &amp; Services' },
   'home.svc.mogas.name':    { en: 'Mogas',                     fr: 'Mogas' },
