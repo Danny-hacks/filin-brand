@@ -58,17 +58,17 @@
     { id:7,  name:"Engen Grand Baie",           town:"Grand Baie",        addr:"Coast Road, Grand Baie",          district:"Rivière du Rempart",region:"North",      lon:57.5833, lat:-20.0100, services:[],                                 open24:false, flagship:false },
     { id:8,  name:"Engen Grand Gaube",          town:"Grand Gaube",       addr:"Royal Road, Grand Gaube",         district:"Rivière du Rempart",region:"North",      lon:57.6650, lat:-20.0114, services:[],                                 open24:false, flagship:false },
     { id:9,  name:"Engen La Caroline",          town:"Bel Air",           addr:"La Caroline, Bel Air",            district:"Flacq",             region:"East",       lon:57.7544, lat:-20.2511, services:[],                                 open24:false, flagship:false },
-    { id:10, name:"Engen La Caroline 2",        town:"Bel Air",           addr:"La Caroline, Bel Air",            district:"Flacq",             region:"East",       lon:57.6431, lat:-20.3031, services:[],                                 open24:false, flagship:false },
+    { id:10, name:"Engen La Caroline 2",        town:"Bel Air",           addr:"La Caroline, Bel Air",            district:"Flacq",             region:"East",       lon:57.740,  lat:-20.3031, services:[],                                 open24:false, flagship:false },
     { id:11, name:"Engen La Croisette",         town:"Grand Baie",        addr:"La Croisette, Grand Baie",        district:"Rivière du Rempart",region:"North",      lon:57.5819, lat:-20.0094, services:['ShopIn','SipIn','Café 365'],       open24:true,  flagship:true  },
     { id:12, name:"Engen La Louise",            town:"Quatre Bornes",     addr:"La Louise, Quatre Bornes",        district:"Plaines Wilhems",   region:"Central",    lon:57.4753, lat:-20.2719, services:[],                                 open24:false, flagship:false },
-    { id:13, name:"Engen La Preneuse",          town:"Rivière Noire",     addr:"La Preneuse, Rivière Noire",      district:"Black River",       region:"West",       lon:57.375,  lat:-20.39,   services:['ShopIn','SipIn','EatIn'],          open24:true,  flagship:false },
+    { id:13, name:"Engen La Preneuse",          town:"Rivière Noire",     addr:"La Preneuse, Rivière Noire",      district:"Black River",       region:"West",       lon:57.393,  lat:-20.390,  services:['ShopIn','SipIn','EatIn'],          open24:true,  flagship:false },
     { id:14, name:"Engen La Vigie",             town:"La Vigie",          addr:"Motorway M1, La Vigie",           district:"Plaines Wilhems",   region:"Central",    lon:57.5269, lat:-20.2539, services:['ShopIn'],                         open24:false, flagship:false },
     { id:15, name:"Engen Mahebourg",            town:"Mahebourg",         addr:"Flammand Street, Mahebourg",      district:"Grand Port",        region:"South",      lon:57.7083, lat:-20.4067, services:[],                                 open24:false, flagship:false },
     { id:16, name:"Engen Mesnil",               town:"Mesnil",            addr:"Royal Road, Mesnil",              district:"Plaines Wilhems",   region:"Central",    lon:57.5136, lat:-20.2908, services:[],                                 open24:false, flagship:false },
     { id:17, name:"Engen Morc St André",        town:"Morc St André",     addr:"Royal Road, Morc St André",       district:"Pamplemousses",     region:"North",      lon:57.5642, lat:-20.0775, services:[],                                 open24:false, flagship:false },
     { id:18, name:"Engen Pamplemousses",        town:"Pamplemousses",     addr:"Powder Mill Road, Beau Plan",     district:"Pamplemousses",     region:"North",      lon:57.5761, lat:-20.1028, services:['ShopIn','SipIn','EatIn'],          open24:true,  flagship:true  },
     { id:19, name:"Engen Petit Raffray",        town:"Petit Raffray",     addr:"Royal Road, Petit Raffray",       district:"Rivière du Rempart",region:"North",      lon:57.6322, lat:-20.0250, services:[],                                 open24:false, flagship:false },
-    { id:20, name:"Engen Petite Rivière",       town:"Petite Rivière",    addr:"Royal Road, Petite Rivière",      district:"Black River",       region:"West",       lon:57.364,  lat:-20.270,  services:[],                                 open24:false, flagship:false },
+    { id:20, name:"Engen Petite Rivière",       town:"Petite Rivière",    addr:"Royal Road, Petite Rivière",      district:"Black River",       region:"West",       lon:57.385,  lat:-20.270,  services:[],                                 open24:false, flagship:false },
     { id:21, name:"Engen Phoenix",              town:"Phoenix",           addr:"SSR Avenue, Phoenix",             district:"Plaines Wilhems",   region:"Central",    lon:57.4947, lat:-20.2775, services:['ShopIn','SipIn','EatIn'],          open24:false, flagship:true  },
     { id:22, name:"Engen Plaine Verte",         town:"Port Louis",        addr:"Noor E Islaam Street",            district:"Port Louis",        region:"Port Louis", lon:57.5217, lat:-20.1378, services:[],                                 open24:false, flagship:false },
     { id:23, name:"Engen Plaisance",            town:"Plaisance",         addr:"SSR Avenue, Plaisance",           district:"Grand Port",        region:"South",      lon:57.5831, lat:-20.4300, services:['ShopIn'],                         open24:true,  flagship:false },
@@ -150,14 +150,35 @@
     const rect    = posEl.getBoundingClientRect();
     const pinCx   = rect.left + rect.width / 2;
     const pinTop  = rect.top;
-    const tipRect = tip.getBoundingClientRect();
+    const tipW    = tip.offsetWidth  || 260;
+    const tipH    = tip.offsetHeight || 160;
     const vw      = window.innerWidth;
-    let left = pinCx - tipRect.width / 2;
-    let top  = pinTop - tipRect.height - 14;
+    const vh      = window.innerHeight;
+    const GAP     = 14;
+    const EDGE    = 12;
+    const header  = document.querySelector('.site-header');
+    const clearance = (header ? header.offsetHeight : 0) + EDGE;
+
+    let left    = pinCx - tipW / 2;
+    let top     = pinTop - tipH - GAP;
     let flipped = false;
-    if (top < 12) { top = pinTop + rect.height + 14; flipped = true; }
-    if (left < 12) left = 12;
-    if (left + tipRect.width > vw - 12) left = vw - tipRect.width - 12;
+
+    // Flip below pin when not enough space above the fixed header
+    if (top < clearance) { top = pinTop + rect.height + GAP; flipped = true; }
+
+    // Clamp horizontal
+    if (left < EDGE) left = EDGE;
+    if (left + tipW > vw - EDGE) left = vw - tipW - EDGE;
+
+    // Clamp bottom
+    if (top + tipH > vh - EDGE) top = vh - tipH - EDGE;
+
+    // Move caret to always point at the pin, clamped 16 px from each edge
+    const rawOff    = pinCx - (left + tipW / 2);
+    const maxOff    = tipW / 2 - 16;
+    const caretPct  = 50 + (Math.max(-maxOff, Math.min(maxOff, rawOff)) / tipW) * 100;
+    tip.style.setProperty('--caret', caretPct.toFixed(1) + '%');
+
     tip.style.left = left + 'px';
     tip.style.top  = top  + 'px';
     tip.classList.toggle('is-flipped', flipped);

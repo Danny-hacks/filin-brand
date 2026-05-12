@@ -1139,7 +1139,7 @@ ol, ul { list-style: none; }
 .map-tip::after {
   content: "";
   position: absolute;
-  left: 50%; bottom: -6px;
+  left: var(--caret, 50%); bottom: -6px;
   transform: translateX(-50%) rotate(45deg);
   width: 12px; height: 12px;
   background: var(--paper);
