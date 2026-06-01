@@ -2,15 +2,38 @@
 .DS_Store
 __MACOSX/
 
-# Internal documents — not needed for the live site
-*.pdf
-*.xlsx
-
-# Design references — working files only
-index-v2-design-ref.png
-index-v1.html
-
-# Editor/OS
+# Editor / OS
 Thumbs.db
 *.swp
 .vscode/
+
+# Internal documents — not for the live site
+*.pdf
+*.xlsx
+*.pptx
+*.docx
+*.zip
+*.rar
+
+# Extracted archives
+xlsx_extract1/
+xlsx_extract2/
+engen_extract/
+req_extract/
+
+# QA / screenshot sessions
+qa-*/
+screenshots/
+screenshot.mjs
+
+# Dev scripts & temp files
+parse_xlsx.ps1
+translations.js
+styles-v2.css
+temp.zip
+Engen-brand-colors.png
+req.zip
+engen.zip
+
+# Claude project files
+.claude/

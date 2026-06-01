@@ -1,18 +1,27 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products &amp; Services — Engen Mauritius</title>
+  <meta name="description" content="Engen Mauritius products and services - retail fuels, lubricants, aviation fuel, marine fuel, QuickShop and Cafe 365 across 37 Fillin stations island-wide.">
+  <meta property="og:title" content="Products &amp; Services - Fillin / Engen Mauritius">
+  <meta property="og:description" content="Fuels, lubricants, specialist aviation and marine supply, and convenience retail at Fillin / Engen Mauritius stations across Mauritius.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Products &amp; Services - Fillin / Engen Mauritius">
+  <meta name="twitter:description" content="Fuels, lubricants, specialist aviation and marine supply, and convenience retail at Fillin / Engen Mauritius stations.">
+  <title>Fuels, Lubricants and Convenience - Fillin / Engen Mauritius</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Barlow+Condensed:ital,wght@0,600;0,700;0,900;1,700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="styles-v2.css">
+  <style>
+    .page-products .v2-b2b-stat-box strong { font-size: 1.4rem; line-height: 1.2; }
+  </style>
 </head>
-<body>
+<body class="page-products">
 
-<!-- ══════════════════════════════════════════════════════ HEADER -->
+<!-- ─────────────────────────────────────────── HEADER -->
 <header class="site-header" id="top">
   <a class="brand" href="index.html" aria-label="Engen Mauritius home">
     <img src="assets/Logo-no-bg.png" alt="Engen Mauritius" class="brand-logo" width="534" height="264">
@@ -22,10 +31,10 @@
     <a href="products.html" aria-current="page" data-en="Products &amp; Services" data-fr="Produits &amp; Services">Products &amp; Services</a>
     <a href="stations.html" data-en="Stations" data-fr="Stations">Stations</a>
     <a href="promotions.html" data-en="Promotions" data-fr="Promotions">Promotions</a>
-    <a href="about.html" data-en="About Engen Mauritius" data-fr="À propos">About Engen Mauritius</a>
+    <a href="about.html" data-en="About Engen Mauritius" data-fr="A propos">About Engen Mauritius</a>
     <a href="b2b.html" data-en="Business (B2B)" data-fr="Entreprises">Business (B2B)</a>
-    <a href="newsroom.html" data-en="Newsroom" data-fr="Actualités">Newsroom</a>
-    <a href="careers.html" data-en="Careers" data-fr="Carrières">Careers</a>
+    <a href="newsroom.html" data-en="Newsroom" data-fr="Actualites">Newsroom</a>
+    <a href="careers.html" data-en="Careers" data-fr="Carrieres">Careers</a>
     <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
   </nav>
   <div class="site-actions">
@@ -35,7 +44,7 @@
       <span class="lang-fr">FR</span>
     </button>
     <a href="stations.html" class="btn-find">
-      <span data-en="Find a station" data-fr="Trouver une station">Find a station</span>
+      <span data-en="Find A Station" data-fr="Trouver une station">Find A Station</span>
       <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
     <button class="v2-menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
@@ -51,466 +60,390 @@
   <a href="products.html" aria-current="page" data-en="Products &amp; Services" data-fr="Produits &amp; Services">Products &amp; Services</a>
   <a href="stations.html" data-en="Stations" data-fr="Stations">Stations</a>
   <a href="promotions.html" data-en="Promotions" data-fr="Promotions">Promotions</a>
-  <a href="about.html" data-en="About Engen Mauritius" data-fr="À propos">About Engen Mauritius</a>
+  <a href="about.html" data-en="About Engen Mauritius" data-fr="A propos">About Engen Mauritius</a>
   <a href="b2b.html" data-en="Business (B2B)" data-fr="Entreprises">Business (B2B)</a>
-  <a href="newsroom.html" data-en="Newsroom" data-fr="Actualités">Newsroom</a>
-  <a href="careers.html" data-en="Careers" data-fr="Carrières">Careers</a>
+  <a href="newsroom.html" data-en="Newsroom" data-fr="Actualites">Newsroom</a>
+  <a href="careers.html" data-en="Careers" data-fr="Carrieres">Careers</a>
   <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
-  <a href="stations.html" class="v2-mobile-nav__cta" data-i18n="mobile.cta">Find a Station →</a>
+  <a href="stations.html" class="v2-mobile-nav__cta">Find A Station</a>
 </nav>
 
-<!-- ══════════════════════════════════════════════════════ PAGE HERO -->
+<!-- ─────────────────────────────────────────── PAGE HERO -->
 <section class="v2-page-hero">
   <figure class="v2-page-hero__bg">
-    <img src="assets/slider2.png" alt="" aria-hidden="true">
+    <img src="assets/slider4.png" alt="" aria-hidden="true">
   </figure>
   <div class="v2-page-hero__scrim" aria-hidden="true"></div>
   <div class="v2-page-hero__content">
     <div class="v2-wrap">
-      <h1 class="v2-page-hero__title anim-fade-up" data-i18n="prod.hero.h1">Products &amp; <em>Services</em></h1>
+      <h1 class="v2-page-hero__title anim-fade-up">Products &amp; <em>Services</em></h1>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ FUELS -->
-<section class="v2-ip-sec v2-ip-sec--white" id="fuels">
+<!-- ─────────────────────────────────────────── OVERVIEW -->
+<section class="v2-ip-sec v2-ip-sec--white" id="overview">
   <div class="v2-wrap">
 
-    <div class="v2-ip-head anim-fade-up">
-      <span class="v2-label" data-i18n="prod.fuels.label">Fuel Products</span>
-      <h2 data-i18n="prod.fuels.h2">Powering Every <em>Journey</em></h2>
-      <p class="v2-ip-head__lead" data-i18n="prod.fuels.lead">At Engen Petroleum (Mauritius) Limited, we deliver a comprehensive range of high-quality fuels to power mobility, aviation, industrial activity, and maritime operations across the island. Backed by robust terminal infrastructure and a reliable supply chain, our fuels meet stringent international standards while supporting the evolving needs of Mauritius' economy.</p>
+    <!-- Split: copy + stats left, image right -->
+    <div class="v2-b2b-split v2-b2b-split--spaced">
+      <div class="v2-b2b-split__primary anim-fade-left">
+        <span class="v2-label">Our Offering</span>
+        <h2>Useful energy for <em>everyday Mauritius</em></h2>
+        <p>From the family car and school run to delivery routes, workshops, ports and airport operations, Fillin brings fuel, lubricants and convenience closer to the people and businesses that keep the island moving.</p>
+        <div class="v2-btn-row" style="margin-top:0.5rem;">
+          <div class="v2-b2b-stat-box">
+            <strong data-count="4">4</strong>
+            <span>Fuel Grades</span>
+          </div>
+          <div class="v2-b2b-stat-box">
+            <strong data-count="37">37</strong>
+            <span>Fillin Stations</span>
+          </div>
+          <div class="v2-b2b-stat-box">
+            <strong>All-island</strong>
+            <span>Coverage</span>
+          </div>
+          <div class="v2-b2b-stat-box">
+            <strong data-count="24" data-count-suffix="/7">24/7</strong>
+            <span>Key Sites</span>
+          </div>
+        </div>
+      </div>
+      <div class="v2-b2b-split__secondary anim-fade-right">
+        <div class="v2-img-frame v2-img-frame--flex v2-img-frame--shadow v2-img-frame--h380">
+          <img src="assets/services-overview.png" alt="Engen Mauritius products and services">
+        </div>
+      </div>
     </div>
 
-    <div class="v2-fuel-grid">
+    <!-- Navigation tiles -->
+    <div class="v2-b2b-tiles" data-stagger="0.09">
 
-      <!-- MOGAS -->
-      <!-- REPLACE: product-mogas.png — petrol nozzle refuelling a car at Engen station, warm daylight -->
-      <div class="v2-fuel-card anim-fade-up anim-delay-1">
-        <div class="v2-fuel-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="6" width="16" height="20" rx="2"/><path d="M20 12h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"/><circle cx="26" cy="25" r="2"/><path d="M7 14h10"/></svg>
-        </div>
-        <span class="v2-fuel-card__cat" data-i18n="prod.fuels.mogas.cat">Retail Fuel</span>
-        <h3 class="v2-fuel-card__name" data-i18n="prod.fuels.mogas.h3">Mogas<br><small style="font-size:0.65em;opacity:0.6;">Unleaded Petrol</small></h3>
-        <p class="v2-fuel-card__desc" data-i18n="prod.fuels.mogas.p">Formulated for optimal engine performance, fuel efficiency, and reliability for everyday motorists. Distributed through our nationwide network of service stations.</p>
-        <ul class="v2-fuel-card__specs">
-          <li>Smooth engine performance</li>
-          <li>Optimised fuel efficiency</li>
-          <li>Trusted quality across our network</li>
-        </ul>
-      </div>
+      <a href="#fuels" class="v2-b2b-tile anim-scale-in">
+        <h3>Fuels</h3>
+        <p>Mogas, Gasoil, Jet A-1 and marine fuels for daily journeys, commercial routes and specialist operations.</p>
+        <span class="v2-tile-btn">Explore Fuels</span>
+      </a>
 
-      <!-- GASOIL -->
-      <div class="v2-fuel-card anim-fade-up anim-delay-2">
-        <div class="v2-fuel-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="1" y="2" width="14" height="12" rx="1"/><polygon points="15 7 19 7 22 10 22 14 15 14 15 7"/><circle cx="5" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M4 14v2M17 14v2"/></svg>
-        </div>
-        <span class="v2-fuel-card__cat" data-i18n="prod.fuels.gasoil.cat">Retail / Commercial</span>
-        <h3 class="v2-fuel-card__name" data-i18n="prod.fuels.gasoil.h3">Gasoil<br><small style="font-size:0.65em;opacity:0.6;">Diesel</small></h3>
-        <p class="v2-fuel-card__desc" data-i18n="prod.fuels.gasoil.p">Designed for performance and durability across transport fleets, logistics operators, industrial and agricultural users. Delivers efficiency under demanding conditions.</p>
-        <ul class="v2-fuel-card__specs">
-          <li>High efficiency for long-distance operations</li>
-          <li>Engine protection for fleets</li>
-          <li>Consistent supply across our network</li>
-        </ul>
-      </div>
+      <a href="#lubricants" class="v2-b2b-tile anim-scale-in">
+        <h3>Lubricants</h3>
+        <p>Automotive, fleet and industrial grades that help vehicles, equipment and workshops keep performing.</p>
+        <span class="v2-tile-btn">Explore Lubricants</span>
+      </a>
 
-      <!-- JET A-1 -->
-      <div class="v2-fuel-card anim-fade-up anim-delay-3">
-        <div class="v2-fuel-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 22l5-6 3 3 8-10 4 4-7 9 3 3-7 5-1-4-5 2 1-6z"/><path d="M26 6l3 3"/></svg>
-        </div>
-        <span class="v2-fuel-card__cat" data-i18n="prod.fuels.jet.cat">Aviation</span>
-        <h3 class="v2-fuel-card__name" data-i18n="prod.fuels.jet.h3">Jet A-1<br><small style="font-size:0.65em;opacity:0.6;">Aviation Fuel</small></h3>
-        <p class="v2-fuel-card__desc" data-i18n="prod.fuels.jet.p">Complies with DefStan 91-091 and EI 1530 specifications. Rigorous quality control and secure logistics ensure safety and operational continuity for every flight.</p>
-        <ul class="v2-fuel-card__specs">
-          <li>Strict quality control at every stage</li>
-          <li>Reliable supply backed by infrastructure</li>
-          <li>Full compliance with global aviation standards</li>
-        </ul>
+      <a href="#aviation" class="v2-b2b-tile anim-scale-in">
+        <h3>Aviation &amp; Marine</h3>
+        <p>Carefully handled supply for operators who need reliability, compliance and coordination.</p>
+        <span class="v2-tile-btn">Explore Specialist Fuels</span>
+      </a>
+
+      <a href="#convenience" class="v2-b2b-tile anim-scale-in">
+        <h3>Convenience</h3>
+        <p>QuickShop and Cafe 365 make selected stations more useful for food, coffee and everyday essentials.</p>
+        <span class="v2-tile-btn">Explore Convenience</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── FUELS -->
+<section class="v2-ip-sec v2-ip-sec--dark" id="fuels">
+  <div class="v2-wrap">
+    <div class="v2-b2b-split">
+
+      <div class="v2-b2b-split__primary anim-fade-left">
+        <span class="v2-label">Fuel Products</span>
+        <h2>Powering Every <em>Journey</em></h2>
+        <p>The school run to Quatre Bornes. The delivery lorry leaving before dawn. The fishing boat heading out before sunrise. The airport serving the island's gateway. Fillin fuels the journeys that keep Mauritius moving — from the forecourt to the port.</p>
+
         <div>
-          <span class="v2-fuel-card__badge">DefStan 91-091</span>
-          <span class="v2-fuel-card__badge" style="margin-left:0.35rem;">EI 1530</span>
+          <p class="v2-section-eyebrow">Fuels We Supply</p>
+          <ul class="v2-feat-list">
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span><div class="v2-feat-list__content"><strong>Mogas (Petrol)</strong><span>The everyday fuel for private cars, motorbikes and light vehicles — consistent quality at every Fillin station across the island.</span></div></li>
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span><div class="v2-feat-list__content"><strong>Gasoil (Diesel)</strong><span>Powering the delivery trucks, minibuses and commercial fleets that move goods and people across every district of Mauritius.</span></div></li>
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span><div class="v2-feat-list__content"><strong>Jet A-1</strong><span>Aviation-grade fuel supplied to SSR International Airport, handled under strict international safety and quality standards.</span></div></li>
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span><div class="v2-feat-list__content"><strong>Marine HFO / MGO</strong><span>Bunker fuel for port operations and ocean-going vessels, coordinated reliably through the local supply chain.</span></div></li>
+          </ul>
         </div>
+
       </div>
 
-      <!-- MARINE / HFO -->
-      <div class="v2-fuel-card anim-fade-up anim-delay-4">
-        <div class="v2-fuel-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 24h26M6 24l3-10h14l3 10"/><path d="M14 14V8a2 2 0 0 1 4 0v6"/><path d="M9 24l1-6M23 24l-1-6"/></svg>
+      <div class="v2-b2b-split__secondary anim-fade-right">
+
+        <div class="v2-img-frame v2-img-frame--shrink0 v2-img-frame--h220">
+          <img src="assets/editorial-forecourt.png" alt="Engen Mauritius fuel supply">
         </div>
-        <span class="v2-fuel-card__cat" data-i18n="prod.fuels.marine.cat">Marine / Industrial</span>
-        <h3 class="v2-fuel-card__name" data-i18n="prod.fuels.marine.h3">Marine<br><small style="font-size:0.65em;opacity:0.6;">HFO &amp; MGO</small></h3>
-        <p class="v2-fuel-card__desc" data-i18n="prod.fuels.marine.p">Marine Fuel Oil (RMG 180) and Marine Gas Oil supplied in compliance with ISO 8217 standards. Dedicated bunkering facilities for reliable marine fueling operations.</p>
-        <ul class="v2-fuel-card__specs">
-          <li>Efficient solutions for vessels of all sizes</li>
-          <li>Reliable bunkering operations</li>
-          <li>Strong terminal &amp; storage capabilities</li>
-        </ul>
-        <span class="v2-fuel-card__badge">ISO 8217</span>
+
+        <div class="v2-why-box">
+          <h3>Why Mauritius Runs on Fillin Fuel</h3>
+          <ul class="v2-feat-list">
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span>Same grade, same standards — consistent quality at all 37 stations across the island</li>
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span>Available 24/7 at key sites for fleet operators and drivers who can't afford to wait</li>
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span>Supplied through a local terminal and distribution network built for the island's scale</li>
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span>Backed by decades of fuel retail experience — from the forecourt to the port</li>
+          </ul>
+        </div>
+
       </div>
 
     </div>
 
-    <!-- Infrastructure stats -->
-    <div class="v2-infra-strip anim-fade-up">
-      <div class="v2-infra-stat">
-        <strong>37</strong>
-        <span data-i18n="prod.infra.stations">Service Stations</span>
-      </div>
-      <div class="v2-infra-stat">
-        <strong>8</strong>
-        <span data-i18n="prod.infra.247">Open 24/7</span>
-      </div>
-      <div class="v2-infra-stat">
-        <strong>6</strong>
-        <span data-i18n="prod.infra.tanks">Bulk Storage Tanks</span>
-      </div>
-      <div class="v2-infra-stat">
-        <strong>16,000 MT</strong>
-        <span data-i18n="prod.infra.capacity">Total Storage Capacity</span>
-      </div>
-      <div class="v2-infra-stat">
-        <strong>3-Bay</strong>
-        <span data-i18n="prod.infra.rack">Loading Rack — simultaneous loading of three tanker trucks</span>
-      </div>
-    </div>
-
-    <div style="background:var(--navy-deep);border-radius:12px;padding:1.5rem 2rem;margin-top:2rem;" class="anim-fade-up">
-      <p style="color:rgba(255,255,255,0.8);font-size:0.95rem;line-height:1.7;margin:0;text-align:center;">With six bulk storage tanks, a capacity of 16,000 MT, and modern loading infrastructure, Engen Petroleum (Mauritius) Limited ensures consistent product availability and seamless distribution across all segments. We are committed to delivering energy solutions that are efficient, reliable, and aligned with international standards — supporting businesses, industries, and communities across Mauritius.</p>
+    <!-- CTA: outside split so it sits at section bottom on all screen sizes -->
+    <div class="v2-cta-center anim-fade-up">
+      <a href="stations.html" class="v2-btn v2-btn--yellow">Find fuel near you</a>
     </div>
 
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ FLEET & COMMERCIAL -->
-<section class="v2-ip-sec v2-ip-sec--dark v2-sec-angled-r" id="fleet">
+<!-- ─────────────────────────────────────────── LUBRICANTS -->
+<section class="v2-ip-sec v2-ip-sec--offwht" id="lubricants">
   <div class="v2-wrap">
 
     <div class="v2-ip-head anim-fade-up">
-      <span class="v2-label" data-i18n="prod.fleet.label">Commercial Solutions</span>
-      <h2 data-i18n="prod.fleet.h2">Fleet, Card &amp; <em>Bulk Supply</em></h2>
-      <p class="v2-ip-head__lead">Our fleet and commercial solutions are designed to support businesses with reliable, efficient, and secure fuel management across their operations. Through our card system and digital payment platform, we provide a flexible and scalable solution that enables organisations to manage fuel consumption, control costs, and enhance operational efficiency — whether on a prepaid or postpaid basis.</p>
+      <span class="v2-label">Lubricants</span>
+      <h2>Protection for Engines, <em>Equipment and Fleets</em></h2>
+      <p class="v2-ip-head__lead">Fillin lubricants support every engine that keeps Mauritius moving — from the family saloon on the school run and the delivery van crossing the island to the workshop in Quatre Bornes and the construction site running through midday heat.</p>
     </div>
 
-    <div class="v2-fleet-grid">
+    <div class="v2-lub-grid">
 
-      <!-- Engen 1Card / Fleet Management -->
-      <div class="v2-fleet-block anim-fade-up anim-delay-1">
-        <div class="v2-fleet-block__head">
-          <div class="v2-fleet-block__icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="8" width="26" height="16" rx="3"/><path d="M3 13h26"/><path d="M8 19h4"/></svg>
-          </div>
-          <h3 data-i18n="prod.fleet.1card.h3">Engen 1Card &amp; Fleet Management</h3>
+      <!-- top-left: station image -->
+      <div class="v2-lub-grid__cell anim-fade-left">
+        <div class="v2-img-frame v2-img-frame--shrink0 v2-img-frame--h260">
+          <img src="assets/portrait-safety.png" alt="Fillin station lubricant service">
         </div>
-        <p>Advanced fleet management solutions giving businesses full control over fuel usage, operational efficiency, and security — on a prepaid or postpaid basis.</p>
-        <ul class="v2-feature-list">
-          <li>Fuel consumption control by vehicle, driver, or department</li>
-          <li>Transaction limits and controls to prevent misuse</li>
-          <li>Real-time monitoring with full visibility across operations</li>
-          <li>Customised reporting and analytics for decision-making</li>
-          <li>RFID-enabled security for enhanced protection</li>
-          <li>Nationwide acceptance across our network, including 24/7 sites</li>
-          <li>Flexible prepaid and postpaid options to suit your business</li>
-        </ul>
-        <a href="contact.html" class="v2-btn v2-btn--yellow" style="align-self:flex-start;margin-top:0.5rem;" data-i18n="prod.fleet.btn1">Apply for a Card →</a>
       </div>
 
-      <!-- Bulk Supply -->
-      <div class="v2-fleet-block anim-fade-up anim-delay-2">
-        <div class="v2-fleet-block__head">
-          <div class="v2-fleet-block__icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="2" y="14" width="28" height="12" rx="2"/><path d="M6 14V10a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4"/><path d="M10 20h4M18 20h4"/><circle cx="8" cy="28" r="2"/><circle cx="24" cy="28" r="2"/></svg>
+      <!-- top-right: context text -->
+      <div class="v2-lub-grid__cell anim-fade-right">
+        <p>The right lubricant is not just a maintenance decision — it is about keeping a vehicle on the road, a workshop productive, or a fleet on schedule. Fillin lubricants are matched to the conditions of island driving: humidity, heat, salt air and roads that demand consistent engine protection.</p>
+        <p>Whether you are a car owner, a workshop manager or a fleet operator, Fillin can help you select and supply the correct grade — reducing wear, extending service life and cutting unnecessary downtime.</p>
+      </div>
+
+      <!-- bottom-left: fleet feature cards -->
+      <div class="v2-lub-grid__cell anim-fade-left">
+        <div class="v2-fleet-grid" data-stagger="0.1">
+
+          <div class="v2-fleet-feat">
+            <div>
+              <strong>Automotive</strong>
+              <p>Engine protection for private cars, motorbikes and light commercials — from the morning commute to the weekend drive.</p>
+            </div>
           </div>
-          <h3 data-i18n="prod.fleet.bulk.h3">Commercial Bulk Supply</h3>
+
+          <div class="v2-fleet-feat">
+            <div>
+              <strong>Commercial Fleet</strong>
+              <p>High-mileage performance for transport, delivery and business vehicles covering every district of the island.</p>
+            </div>
+          </div>
+
+          <div class="v2-fleet-feat">
+            <div>
+              <strong>Industrial</strong>
+              <p>Specialist grades for construction machinery, workshops and heavy-use equipment operating in Mauritius's climate.</p>
+            </div>
+          </div>
+
+          <div class="v2-fleet-feat">
+            <div>
+              <strong>Product Guidance</strong>
+              <p>Help matching the right grade and supply route to your vehicle, fleet or operation — just ask the team.</p>
+            </div>
+          </div>
+
         </div>
-        <p>Reliable bulk fuel supply of Mogas, Gasoil, and Heavy Fuel Oil — supporting transport, construction, manufacturing, power generation, and large-scale commercial operations.</p>
-        <ul class="v2-feature-list">
-          <li>Bulk Mogas, Gasoil, and HFO for industrial users</li>
-          <li>Supports transport, construction &amp; manufacturing sectors</li>
-          <li>Advanced terminal infrastructure for efficient dispatch</li>
-          <li>Three-bay loading rack for rapid simultaneous loading</li>
-          <li>Dedicated commercial and operations team</li>
-          <li>Long-term supply agreements with competitive terms</li>
-          <li>Supply planning and account management support</li>
-        </ul>
-        <a href="contact.html" class="v2-btn v2-btn--yellow" style="align-self:flex-start;margin-top:0.5rem;" data-i18n="prod.fleet.btn2">Request a Quote →</a>
+      </div>
+
+      <!-- bottom-right: portrait image, fills row height set by fleet cards -->
+      <div class="v2-lub-grid__cell v2-lub-grid__cell--img anim-fade-right">
+        <div class="v2-img-frame">
+          <img src="assets/portrait-care.png" alt="Fillin lubricant and engine care" loading="lazy">
+        </div>
       </div>
 
     </div>
 
-    <div class="v2-fleet-stats anim-fade-up">
-      <div class="v2-fleet-stat">
-        <strong>37</strong>
-        <span>Service Stations</span>
-      </div>
-      <div class="v2-fleet-stat">
-        <strong>8</strong>
-        <span>Sites Open 24/7</span>
-      </div>
-      <div class="v2-fleet-stat">
-        <strong>16,000 MT</strong>
-        <span>Terminal Capacity</span>
-      </div>
-      <div class="v2-fleet-stat">
-        <strong>Prepaid<br>&amp; Postpaid</strong>
-        <span>Flexible Payment Options</span>
-      </div>
-    </div>
-
-    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.5rem 2rem;margin-top:2rem;" class="anim-fade-up">
-      <p style="color:rgba(255,255,255,0.75);font-size:0.92rem;line-height:1.7;margin:0;">Our solutions are tailored to support a wide range of industries, including transport and logistics, construction, corporate fleets, and other commercial sectors requiring dependable fuel supply and management. By partnering with us, businesses benefit from improved cost control, strengthened accountability, enhanced operational efficiency, and reliable access to fuel across Mauritius, supported by a robust network and infrastructure. <a href="b2b.html" style="color:var(--yellow);text-decoration:none;font-weight:600;">Explore our full B2B solutions →</a></p>
+    <!-- CTA: outside split -->
+    <div class="v2-cta-center anim-fade-up">
+      <a href="contact.html" class="v2-btn v2-btn--navy">Send lubricant enquiry</a>
     </div>
 
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ LUBRICANTS -->
-<section class="v2-ip-sec v2-ip-sec--offwht v2-sec-angled-l" id="lubricants">
+<!-- ─────────────────────────────────────────── AVIATION & MARINE -->
+<section class="v2-ip-sec v2-ip-sec--teal" id="aviation">
   <div class="v2-wrap">
 
     <div class="v2-ip-head anim-fade-up">
-      <span class="v2-label" data-i18n="prod.lube.label">Lubricants</span>
-      <h2 data-i18n="prod.lube.h2">Keep Every Engine at Its <em>Best</em></h2>
-      <p class="v2-ip-head__lead">Proven formulations and technical expertise for automotive and industrial applications — designed to maximise equipment efficiency, reduce wear, and extend service life.</p>
+      <span class="v2-label">Specialised Fuels</span>
+      <h2>Aviation &amp; Marine <em>Fuel Supply</em></h2>
+      <p class="v2-ip-head__lead">SSR International Airport and the Port of Port Louis depend on fuel that arrives precisely, meets every standard, and is handled without margin for error. Fillin's specialist supply team understands that operational pressure — and plans accordingly.</p>
     </div>
 
-    <div class="v2-lube-grid">
+    <!-- Image placeholder -->
+    <div class="v2-img-placeholder v2-img-placeholder--dark anim-fade-up" style="margin-bottom:2.5rem;">
+      <svg viewBox="0 0 48 48" fill="none" stroke="rgba(255,204,50,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="48" height="48"><path d="M6 36l10-10 6 6 8-12 12 16H6z"/><circle cx="34" cy="14" r="4"/><rect x="2" y="4" width="44" height="40" rx="4"/></svg>
+      <p>Aviation &amp; Marine Operations Photo Needed<br><span style="font-weight:400;opacity:0.7;">Add aircraft refuelling or vessel bunkering photography</span></p>
+    </div>
 
-      <div class="v2-lube-range anim-fade-up anim-delay-1">
-        <div class="v2-lube-range__head">
-          <div class="v2-lube-range__head-icon" aria-hidden="true">
-            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M10 4h8v5l3 4v10H7V13l3-4V4z"/><path d="M7 17h14"/></svg>
-          </div>
-          <div>
-            <h3 data-i18n="prod.lube.auto.h3">Automotive Range</h3>
-            <p data-i18n="prod.lube.auto.p">For passenger vehicles, commercial fleets, and heavy-duty transport — ensuring smoother performance and longer service life.</p>
-          </div>
+    <div class="v2-avi-grid" data-stagger="0.1">
+
+      <!-- Aviation card -->
+      <div class="v2-avi-card anim-scale-in">
+        <div class="v2-avi-card__hd">
+          <h3>Aviation Fuel</h3>
+          <span>Jet A-1 · Commercial &amp; Private</span>
         </div>
-        <div class="v2-lube-range__body">
-          <ul>
-            <li>Smoother engine performance across all driving conditions</li>
-            <li>Reduced friction and mechanical wear</li>
-            <li>Extended service intervals and oil life</li>
-            <li>Compatible with all petrol and diesel passenger vehicles</li>
-            <li>Solutions for light commercial and heavy-duty transport</li>
-            <li>Available at selected stations and commercial channels</li>
+        <p>Jet A-1 supply to SSR International Airport — coordinated for operators who need precision handling, unbroken chain-of-custody and zero compromise on safety every time an aircraft is prepared for service.</p>
+        <div class="v2-avi-why">
+          <ul class="v2-feat-list">
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span>Strict quality control and chain-of-custody procedures</li>
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span>Compliance with global aviation standards</li>
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span>Reliable supply coordination for operators</li>
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span>Compliant with DefStan 91-091 and EI 1530</li>
           </ul>
         </div>
+        <a href="contact.html" class="v2-btn v2-btn--navy v2-btn--sm v2-btn--auto-top">Enquire Now</a>
       </div>
 
-      <div class="v2-lube-range anim-fade-up anim-delay-2">
-        <div class="v2-lube-range__head">
-          <div class="v2-lube-range__head-icon" aria-hidden="true">
-            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="4" y="8" width="20" height="16" rx="2"/><path d="M10 8V6a4 4 0 0 1 8 0v2"/><path d="M14 14v4"/><circle cx="14" cy="13" r="1.5"/></svg>
-          </div>
-          <div>
-            <h3 data-i18n="prod.lube.ind.h3">Industrial Range</h3>
-            <p data-i18n="prod.lube.ind.p">For manufacturing, construction, and mechanical systems — supporting continuous operation and long-term equipment reliability.</p>
-          </div>
+      <!-- Marine card -->
+      <div class="v2-avi-card anim-scale-in">
+        <div class="v2-avi-card__hd">
+          <h3>Marine Fuel</h3>
+          <span>HFO / MGO · ISO 8217</span>
         </div>
-        <div class="v2-lube-range__body">
-          <ul>
-            <li>High-performance formulations for industrial machinery</li>
-            <li>Supports manufacturing, construction, and agriculture</li>
-            <li>Maintains efficiency in high-load, high-temperature environments</li>
-            <li>Minimises downtime and unplanned maintenance</li>
-            <li>Consistent quality aligned with international standards</li>
-            <li>Bulk supply available for large-scale industrial users</li>
+        <p>Bunker fuel for vessels operating through the Port of Port Louis and ocean-going maritime routes — supplied through a local logistics chain built for the island's scale and operational demands.</p>
+        <div class="v2-avi-why">
+          <ul class="v2-feat-list">
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span>Efficient solutions for vessels of all types</li>
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span>Reliable bunkering with dedicated infrastructure</li>
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span>ISO 8217 compliant products throughout</li>
+            <li><span class="v2-feat-list__chk" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" width="10" height="10"><polyline points="2 6 5 9 10 3"/></svg></span>Port logistics and delivery coordination</li>
           </ul>
         </div>
+        <a href="contact.html" class="v2-btn v2-btn--navy v2-btn--sm v2-btn--auto-top">Enquire Now</a>
       </div>
 
-    </div>
-
-    <!-- Performance benefits bar -->
-    <div class="v2-lube-perf anim-fade-up">
-      <div class="v2-lube-perf__label">
-        <h4 data-i18n="prod.lube.perf.h4">Why Choose Engen Lubricants</h4>
-      </div>
-      <div class="v2-lube-perf-grid">
-        <div class="v2-lube-perf-item">
-          <div class="v2-lube-perf-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" width="26" height="26"><path d="M16 4l3 8 9 .5-7 5.5 2.5 9-7.5-4.5L8.5 27l2.5-9L4 12.5l9-.5z"/></svg>
-          </div>
-          <strong>Peak Performance</strong>
-          <span>Maximise engine output and efficiency</span>
-        </div>
-        <div class="v2-lube-perf-item">
-          <div class="v2-lube-perf-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" width="26" height="26"><path d="M16 4L6 9v7c0 6.6 4.2 12.7 10 14.9C21.8 28.7 26 22.6 26 16V9L16 4z"/><path d="M12 16l3 3 5-5"/></svg>
-          </div>
-          <strong>Engine Protection</strong>
-          <span>Reduce friction and mechanical wear</span>
-        </div>
-        <div class="v2-lube-perf-item">
-          <div class="v2-lube-perf-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" width="26" height="26"><circle cx="16" cy="16" r="12"/><path d="M16 10v6l4 4"/></svg>
-          </div>
-          <strong>Longer Service Life</strong>
-          <span>Extended intervals, lower maintenance cost</span>
-        </div>
-        <div class="v2-lube-perf-item">
-          <div class="v2-lube-perf-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" width="26" height="26"><path d="M4 24l7-7 4 4 6-8 7 7"/><path d="M4 28h24"/></svg>
-          </div>
-          <strong>Consistent Quality</strong>
-          <span>International standards, every batch</span>
-        </div>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:2.5rem;" class="anim-fade-up">
-      <a href="contact.html" class="v2-btn v2-btn--navy" data-i18n="prod.lube.btn">Commercial Lubricant Enquiries →</a>
     </div>
 
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ AVIATION & MARINE -->
-<section class="v2-ip-sec v2-ip-sec--navy v2-sec-angled-r" id="aviation">
+<!-- ─────────────────────────────────────────── CONVENIENCE -->
+<section class="v2-ip-sec v2-ip-sec--teal-light" id="convenience">
   <div class="v2-wrap">
+    <div class="v2-b2b-split">
 
-    <div class="v2-ip-head anim-fade-up">
-      <span class="v2-label" data-i18n="prod.avi.label">Specialised Fuels</span>
-      <h2 data-i18n="prod.avi.h2">Aviation &amp; <em>Marine</em></h2>
-      <p class="v2-ip-head__lead">Specialised fuel solutions for aviation and maritime operations — backed by strong infrastructure, strict quality control, and dependable logistics to keep your operations moving safely.</p>
-    </div>
+      <div class="v2-b2b-split__primary anim-fade-left">
+        <span class="v2-label">QuickShop + Cafe 365</span>
+        <h2>Convenience Built Into <em>Every Stop</em></h2>
+        <p>Most stops at a Fillin station last about three minutes. QuickShop and Cafe 365 make sure those three minutes can do more — a coffee before the morning commute, lunch grabbed between deliveries, essentials picked up on the way home, or a meal at 2am when the rest of the island is quiet.</p>
 
-    <div class="v2-avi-grid">
+        <div class="v2-fleet-grid" data-stagger="0.1">
 
-      <!-- Aviation -->
-      <div class="v2-avi-panel anim-fade-up anim-delay-1">
-        <span class="v2-avi-panel__cat" data-i18n="prod.avi.jet.cat">Aviation Fuel</span>
-        <h3 data-i18n="prod.avi.jet.h3">Jet A-1</h3>
-        <p class="v2-avi-panel__desc">We supply Jet A-1 aviation fuel that meets the most stringent international standards, ensuring safety and operational excellence for every flight. Rigorous quality assurance and handling procedures at every stage — from terminal to aircraft.</p>
-        <ul class="v2-avi-list">
-          <li>Jet A-1 compliant with international aviation standards</li>
-          <li>Rigorous quality assurance and handling procedures</li>
-          <li>Dedicated aviation facilities and logistics</li>
-          <li>Support for commercial airlines, private operators, and charter services</li>
-          <li>Reliable supply backed by terminal infrastructure</li>
-        </ul>
-        <div class="v2-avi-badges">
-          <span class="v2-avi-badge">DefStan 91-091</span>
-          <span class="v2-avi-badge">EI 1530</span>
-        </div>
-      </div>
-
-      <!-- Marine -->
-      <div class="v2-avi-panel anim-fade-up anim-delay-2">
-        <span class="v2-avi-panel__cat" data-i18n="prod.avi.marine.cat">Marine Fuels</span>
-        <h3 data-i18n="prod.avi.marine.h3">Marine &amp; Bunkering</h3>
-        <p class="v2-avi-panel__desc">Comprehensive marine fuel solutions for vessels operating across Mauritius and the Indian Ocean region. Our dedicated bunkering facilities ensure safe, efficient fueling operations with the reliability your maritime activity demands.</p>
-        <ul class="v2-avi-list">
-          <li>Marine Fuel Oil (RMG 180) for heavy marine applications</li>
-          <li>Marine Gas Oil (MGO) for cleaner marine operations</li>
-          <li>Seamless coordination of marine fuel deliveries</li>
-          <li>Safe and efficient bunkering operations</li>
-          <li>Reliable supply supported by strong storage and logistics capacity</li>
-        </ul>
-        <div class="v2-avi-badges">
-          <span class="v2-avi-badge">ISO 8217</span>
-          <span class="v2-avi-badge">RMG 180</span>
-          <span class="v2-avi-badge">MGO</span>
-        </div>
-      </div>
-
-    </div>
-
-    <div style="text-align:center;margin-top:3rem;" class="anim-fade-up">
-      <a href="contact.html" class="v2-btn v2-btn--yellow" data-i18n="prod.avi.btn">Aviation &amp; Marine Enquiries →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════════════ ShopIn SipIn EatIn -->
-<section class="v2-ip-sec v2-ip-sec--white v2-sec-angled-l" id="retail">
-  <div class="v2-wrap">
-
-    <div class="v2-ip-head anim-fade-up">
-      <span class="v2-label" data-i18n="prod.retail.label">Convenience Retail</span>
-      <h2 data-i18n="prod.retail.h2">More Than a Stop —<br><em>A Destination</em></h2>
-      <p class="v2-ip-head__lead">Our ShopIn, SipIn, and EatIn concepts offer more than just a stop — they deliver a complete retail and food experience for customers on the move. Whether you are picking up everyday essentials, enjoying a freshly brewed coffee, or taking a moment to relax with local food and chilled beverages, our outlets are built to serve you quickly, efficiently, and consistently.</p>
-    </div>
-
-    <div class="v2-retail-grid">
-
-      <!-- ShopIn -->
-      <article class="v2-retail-card v2-retail-card--shopin anim-fade-up anim-delay-1">
-        <div class="v2-retail-card__band" aria-hidden="true"></div>
-        <div class="v2-retail-card__body">
-          <!-- Using loyalty-card.png — ShopIn interior ✓ -->
-          <div style="aspect-ratio:16/9;overflow:hidden;border-radius:10px;margin-bottom:0.5rem;">
-            <img src="assets/loyalty-card.png" alt="ShopIn convenience store" style="width:100%;height:100%;object-fit:cover;">
+          <div class="v2-fleet-feat">
+            <div>
+              <strong>ShopIn</strong>
+              <p>Snacks, drinks, household essentials and practical items — a quick stop that actually covers what you need.</p>
+            </div>
           </div>
-          <span class="v2-retail-card__tag" data-i18n="prod.retail.shopin.tag">Convenience Store</span>
-          <h3 class="v2-retail-card__name" data-i18n="prod.retail.shopin.h3">ShopIn</h3>
-          <p class="v2-retail-card__desc">A modern convenience retail experience open whenever you need it — stocked with everyday essentials, fresh produce, snacks, and household items.</p>
-          <ul class="v2-retail-card__items">
-            <li>Wide selection of snacks, beverages &amp; essentials</li>
-            <li>Fresh produce and household items</li>
-            <li>Quick and easy checkout</li>
-          </ul>
-        </div>
-      </article>
 
-      <!-- SipIn -->
-      <!-- REPLACE: product-sipin.png — SipIn drinks and coffee counter at Engen station -->
-      <article class="v2-retail-card v2-retail-card--sipin anim-fade-up anim-delay-2">
-        <div class="v2-retail-card__band" aria-hidden="true"></div>
-        <div class="v2-retail-card__body">
-          <div style="aspect-ratio:16/9;overflow:hidden;border-radius:10px;margin-bottom:0.5rem;background:linear-gradient(135deg,var(--navy-deep),var(--teal));display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:0.75rem;">Replace with product-sipin.png</div>
-          <span class="v2-retail-card__tag" data-i18n="prod.retail.sipin.tag">Coffee &amp; Drinks</span>
-          <h3 class="v2-retail-card__name" data-i18n="prod.retail.sipin.h3">SipIn</h3>
-          <p class="v2-retail-card__desc">Freshly brewed coffee and a range of hot and cold beverages, prepared to deliver quality and consistency at every visit — from barista coffee to chilled drinks.</p>
-          <ul class="v2-retail-card__items">
-            <li>Freshly brewed coffee and espresso drinks</li>
-            <li>Chilled juices, cold drinks, and smoothies</li>
-            <li>Quick service for customers on the go</li>
-          </ul>
-        </div>
-      </article>
+          <div class="v2-fleet-feat">
+            <div>
+              <strong>SipIn</strong>
+              <p>Fresh coffee, chilled drinks and cold beverages — whether you are starting the day or powering through the afternoon.</p>
+            </div>
+          </div>
 
-      <!-- EatIn -->
-      <!-- REPLACE: product-eatin.png — EatIn food counter with fresh hot meals at Engen station -->
-      <article class="v2-retail-card v2-retail-card--eatin anim-fade-up anim-delay-3">
-        <div class="v2-retail-card__band" aria-hidden="true"></div>
-        <div class="v2-retail-card__body">
-          <div style="aspect-ratio:16/9;overflow:hidden;border-radius:10px;margin-bottom:0.5rem;background:linear-gradient(135deg,var(--navy),var(--navy-deep));display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:0.75rem;">Replace with product-eatin.png</div>
-          <span class="v2-retail-card__tag" data-i18n="prod.retail.eatin.tag">Food &amp; Bakery</span>
-          <h3 class="v2-retail-card__name" data-i18n="prod.retail.eatin.h3">EatIn</h3>
-          <p class="v2-retail-card__desc">Comfortable spaces where customers can sit, relax, and enjoy a selection of local food, bakery items, viennoiserie, and ready-to-eat meals — fresh, honest food you can count on.</p>
-          <ul class="v2-retail-card__items">
-            <li>Hot meals, wraps, and sandwiches made fresh</li>
-            <li>Bakery items and viennoiserie selection</li>
-            <li>Local food options and ready-to-eat meals</li>
-          </ul>
+          <div class="v2-fleet-feat">
+            <div>
+              <strong>EatIn</strong>
+              <p>Hot meals, local favourites and food options for drivers, workers and anyone who can't stop for long.</p>
+            </div>
+          </div>
+
+          <div class="v2-fleet-feat">
+            <div>
+              <strong>24/7 at Key Sites</strong>
+              <p>Flagship stations open around the clock — fuel, food and retail available at any hour across the island.</p>
+            </div>
+          </div>
+
         </div>
-      </article>
+      </div>
+
+      <div class="v2-b2b-split__secondary anim-fade-right">
+        <div class="v2-img-placeholder v2-img-placeholder--teal">
+          <svg viewBox="0 0 48 48" fill="none" stroke="rgba(36,149,155,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="48" height="48"><path d="M6 2L3 6v38a2 2 0 0 0 2 2h38a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="10" x2="45" y2="10"/><circle cx="24" cy="28" r="8"/></svg>
+          <p>QuickShop &amp; Cafe 365 Photo Needed<br><span style="font-weight:400;">Add ShopIn shelves, Cafe 365, or station retail photography</span></p>
+        </div>
+      </div>
 
     </div>
 
-    <p class="v2-retail-note anim-fade-up">Many Engen locations operate <strong>24 hours a day, 7 days a week</strong> — ensuring you have access to quality products and services whenever you need them. From quick stops to relaxed breaks, we provide a seamless experience — delivering convenience, quality, and comfort at every visit.</p>
+    <!-- CTA: outside split -->
+    <div class="v2-cta-center anim-fade-up">
+      <a href="stations.html" class="v2-btn v2-btn--navy">Find convenience stops</a>
+    </div>
 
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ CTA BANNER -->
-<section class="v2-ip-sec v2-ip-sec--navy v2-sec-angled-r">
-  <div class="v2-wrap" style="text-align:center;">
-    <span class="v2-label anim-fade-up" data-i18n="prod.cta.label">Get Started</span>
-    <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;text-transform:uppercase;color:#fff;margin:0.5rem 0 1rem;" class="anim-fade-up" data-i18n="prod.cta.h2">Ready to Become a <em style="color:var(--yellow);font-style:normal;">Customer?</em></h2>
-    <p style="color:rgba(255,255,255,0.7);max-width:520px;margin:0 auto 2rem;font-size:1rem;line-height:1.7;" class="anim-fade-up" data-i18n="prod.cta.p">Request a quotation for bulk fuel, fleet management, lubricants, or aviation and marine fuels. Our commercial team is ready to help.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;" class="anim-fade-up">
-      <a href="b2b.html#quote" class="v2-btn v2-btn--yellow" data-i18n="prod.cta.btn1">Request a Quote →</a>
-      <a href="stations.html" class="v2-btn v2-btn--ghost" data-i18n="prod.cta.btn2">Find a Station</a>
+<!-- ─────────────────────────────────────────── CTA BANNER -->
+<section class="v2-page-enquiry" id="page-enquiry">
+  <div class="v2-wrap">
+    <div class="v2-page-enquiry__grid">
+      <div class="v2-page-enquiry__copy anim-fade-left">
+        <span class="v2-label">Product enquiries</span>
+        <h2>Ask about <em>products &amp; services</em></h2>
+        <p>Tell us what you need and we'll direct your enquiry to the right team — whether it's everyday fuel, lubricants, QuickShop, Cafe 365, aviation or marine supply.</p>
+        <ul class="v2-page-enquiry__checks">
+          <li><div><strong>Fuel products</strong><span>Mogas, Gasoil, Jet A-1 and marine fuel enquiries.</span></div></li>
+          <li><div><strong>Lubricants</strong><span>Automotive, commercial fleet and industrial oil requirements.</span></div></li>
+          <li><div><strong>Convenience retail</strong><span>QuickShop, Cafe 365 and station retail enquiries.</span></div></li>
+          <li><div><strong>Specialist supply</strong><span>Aviation, marine and technical product guidance.</span></div></li>
+        </ul>
+        <div class="v2-page-enquiry__note">
+          <strong>Before we respond</strong>
+          <p>Share the product type, expected volume or business use, and preferred location so the team can respond with useful next steps.</p>
+        </div>
+      </div>
+      <div class="v2-page-enquiry__form anim-fade-right" data-enquiry-box>
+        <h3>Send us a message</h3>
+        <form class="js-enquiry-form" data-default-enquiry="lubricants">
+          <div class="v2-page-enquiry__row">
+            <div class="v2-quote-field"><label for="prodName">Full name</label><input id="prodName" class="v2-quote-input" type="text" placeholder="Your name" required></div>
+            <div class="v2-quote-field"><label for="prodCompany">Company</label><input id="prodCompany" class="v2-quote-input" type="text" placeholder="Company name"></div>
+          </div>
+          <div class="v2-page-enquiry__row">
+            <div class="v2-quote-field"><label for="prodEmail">Email address</label><input id="prodEmail" class="v2-quote-input" type="email" placeholder="you@company.com" required></div>
+            <div class="v2-quote-field"><label for="prodPhone">Phone number</label><input id="prodPhone" class="v2-quote-input" type="tel" placeholder="+230 ..."></div>
+          </div>
+          <div class="v2-quote-field">
+            <label for="prodType">Solution of interest</label>
+            <select id="prodType" class="v2-quote-input v2-quote-select" data-enquiry-type required>
+              <option value="lubricants">Lubricants</option>
+              <option value="general">Fuel / product support</option>
+              <option value="quickshopCafe">Cafe 365 / QuickShop</option>
+              <option value="marine">Aviation / marine supply</option>
+              <option value="fleet">Fleet / corporate supply</option>
+            </select>
+          </div>
+          <div class="v2-quote-field"><label for="prodMsg">Your Message &amp; Additional Info</label><textarea id="prodMsg" class="v2-quote-input" rows="5" placeholder="Tell us about your product requirements..." required></textarea></div>
+          <button type="submit" class="v2-btn v2-btn--yellow v2-btn--full" data-enquiry-submit>Send enquiry</button>
+        </form>
+        <p class="v2-page-enquiry__privacy">We'll respond within 1-2 business days. Read our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ FOOTER -->
+<!-- ─────────────────────────────────────────── FOOTER -->
 <footer class="v2-footer">
   <div class="v2-wrap">
     <div class="v2-footer__top">
@@ -518,61 +451,61 @@
         <a href="index.html" aria-label="Engen Mauritius home">
           <img src="assets/Logo-no-bg-white.png" alt="Engen Mauritius" class="v2-footer__logo">
         </a>
-        <p class="v2-footer__tagline" data-i18n="footer.tagline">More Than Just Fuel</p>
+        <p class="v2-footer__tagline">More Than Just Fuel</p>
         <div class="v2-footer__social">
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
           <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
         </div>
-        <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-top:0.5rem;">+230 206 6000<br>Quay D Road, Port Louis</p>
+        <p class="v2-footer__contact-meta">+230 206 6000<br>Quay D Road, Port Louis</p>
       </div>
       <div class="v2-footer__cols">
         <div class="v2-footer__col">
-          <h4 data-i18n="footer.col.newsroom">Newsroom</h4>
+          <h4>Newsroom</h4>
           <ul>
-            <li><a href="newsroom.html" data-i18n="footer.link.news">News &amp; Announcements</a></li>
-            <li><a href="newsroom.html" data-i18n="footer.link.press">Press Releases</a></li>
-            <li><a href="newsroom.html" data-i18n="footer.link.media">Media Resources</a></li>
+            <li><a href="newsroom.html">News &amp; Announcements</a></li>
+            <li><a href="newsroom.html">Press Releases</a></li>
+            <li><a href="newsroom.html">Media Resources</a></li>
           </ul>
         </div>
         <div class="v2-footer__col">
-          <h4 data-i18n="footer.col.careers">Careers</h4>
+          <h4>Careers</h4>
           <ul>
-            <li><a href="careers.html" data-i18n="footer.link.whywork">Why Work at Engen</a></li>
-            <li><a href="careers.html" data-i18n="footer.link.vacancies">Vacancies</a></li>
-            <li><a href="careers.html" data-i18n="footer.link.graduate">Graduate Programs</a></li>
-            <li><a href="mailto:recruitment@engen.mu" data-i18n="footer.link.apply">Apply Online</a></li>
+            <li><a href="careers.html">Why Work at Engen</a></li>
+            <li><a href="careers.html">Vacancies</a></li>
+            <li><a href="careers.html">Graduate Programs</a></li>
+            <li><a href="mailto:recruitment@engen.mu">Apply Online</a></li>
           </ul>
         </div>
         <div class="v2-footer__col">
-          <h4 data-i18n="footer.col.contact">Contact</h4>
+          <h4>Contact</h4>
           <ul>
-            <li><a href="contact.html" data-i18n="footer.link.general">General Contact</a></li>
-            <li><a href="contact.html" data-i18n="footer.link.feedback">Customer Feedback</a></li>
-            <li><a href="contact.html" data-i18n="footer.link.supplier">Supplier Queries</a></li>
-            <li><a href="contact.html" data-i18n="footer.link.safety">Safety Reporting</a></li>
+            <li><a href="contact.html">General Contact</a></li>
+            <li><a href="contact.html">Customer Feedback</a></li>
+            <li><a href="contact.html">Supplier Queries</a></li>
+            <li><a href="contact.html">Safety Reporting</a></li>
           </ul>
         </div>
         <div class="v2-footer__col">
-          <h4 data-i18n="footer.col.legal">Legal &amp; Utilities</h4>
+          <h4>Legal &amp; Utilities</h4>
           <ul>
-            <li><a href="privacy-policy.html" data-i18n="footer.link.privacy">Privacy Policy</a></li>
-            <li><a href="cookie-policy.html" data-i18n="footer.link.cookie">Cookie Policy</a></li>
-            <li><a href="terms.html" data-i18n="footer.link.terms">Terms of Use</a></li>
-            <li><a href="accessibility.html" data-i18n="footer.link.access">Accessibility</a></li>
-            <li><a href="#" data-i18n="footer.link.sitemap">Sitemap</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="#">Sitemap</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="v2-footer__bottom">
-      <p data-i18n="footer.copyright">&copy; 2026 Engen Mauritius. All rights reserved.</p>
+      <p>&copy; 2026 Engen Petroleum (Mauritius) Limited. All rights reserved.</p>
       <div class="v2-footer__legal">
-        <a href="privacy-policy.html" data-i18n="footer.link.privacy">Privacy Policy</a>
-        <a href="cookie-policy.html" data-i18n="footer.link.cookie">Cookie Policy</a>
-        <a href="terms.html" data-i18n="footer.link.terms">Terms of Use</a>
-        <a href="accessibility.html" data-i18n="footer.link.access">Accessibility</a>
-        <a href="#" data-i18n="footer.link.sitemap">Sitemap</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="#">Sitemap</a>
       </div>
     </div>
   </div>
@@ -581,8 +514,16 @@
 <button class="back-to-top" id="backToTop" aria-label="Back to top">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
-
-<script src="translations.js" defer></script>
 <script src="script.js" defer></script>
+<script>
+(function () {
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('is-visible', window.scrollY > 400);
+  }, { passive: true });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+})();
+</script>
+
 </body>
 </html>

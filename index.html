@@ -1,21 +1,27 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Engen Mauritius — More Than Just Fuel</title>
+  <meta name="description" content="Fillin / Engen Mauritius connects service stations, quality fuel, lubricants, QuickShop, Cafe 365, and business energy solutions across Mauritius.">
+  <meta property="og:title" content="Fillin / Engen Mauritius - More Than Fuel">
+  <meta property="og:description" content="Find Fillin / Engen service stations in Mauritius for fuel, QuickShop, Cafe 365, lubricants, and business energy solutions.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fillin / Engen Mauritius - More Than Fuel">
+  <meta name="twitter:description" content="Find Fillin / Engen service stations in Mauritius for fuel, QuickShop, Cafe 365, lubricants, and business energy solutions.">
+  <title>Fillin / Engen Mauritius - Service Stations, Fuel, QuickShop and Cafe 365</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Fraunces + Instrument (v1 hero/locator) + Barlow Condensed/Barlow (v2 sections) -->
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital,wght@0,400;1,400&family=Barlow+Condensed:ital,wght@0,600;0,700;0,900;1,700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Poppins site-wide font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <!-- V1 base styles — used by hero + locator sections -->
   <link rel="stylesheet" href="styles.css">
   <!-- V2 styles — used by all new sections; loaded second so v2 rules win -->
-  <link rel="stylesheet" href="styles-v2.css">
 </head>
-<body>
+<body class="page-home">
 
-<!-- ══════════════════════════════════════════════════════ HEADER (from index.html) -->
+<!-- ------------------------------------------------------ HEADER (from index.html) -->
 <header class="site-header" id="top">
   <a class="brand" href="index.html" aria-label="Engen Mauritius home">
     <img src="assets/Logo-no-bg.png" alt="Engen Mauritius" class="brand-logo" width="534" height="264">
@@ -40,7 +46,7 @@
       <span class="lang-fr">FR</span>
     </button>
     <a href="stations.html" class="btn-find">
-      <span data-en="Find a station" data-fr="Trouver une station">Find a station</span>
+      <span data-en="Find A Station" data-fr="Trouver une station">Find A Station</span>
       <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
     <button class="v2-menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
@@ -61,219 +67,70 @@
   <a href="newsroom.html" data-en="Newsroom" data-fr="Actualités">Newsroom</a>
   <a href="careers.html" data-en="Careers" data-fr="Carrières">Careers</a>
   <a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a>
-  <a href="stations.html" class="v2-mobile-nav__cta" data-i18n="mobile.cta">Find a Station →</a>
+  <a href="stations.html" class="v2-mobile-nav__cta">Find A Station</a>
 </nav>
 
-<!-- ══════════════════════════════════════════════════════ HERO SLIDER -->
-<section class="v2-slider" id="hero" aria-label="Hero slideshow">
-  <div class="v2-slider__track">
-
-    <!-- Slide 1 — Brand identity -->
-    <div class="v2-slide v2-slide--active" role="group" aria-label="Slide 1 of 4">
-      <figure class="v2-slide__media v2-slide__media--vid">
-        <video class="v2-slide__vid" src="assets/first-slide-video.mp4" autoplay muted loop playsinline></video>
-        <div class="v2-slide__scrim" aria-hidden="true"></div>
-      </figure>
-      <div class="v2-slide__content">
-        <div class="v2-wrap">
-          <span class="v2-slide__label" data-i18n="home.s1.label">Engen Mauritius</span>
-          <h1 class="v2-slide__heading">
-            <span class="line-1" data-i18n="home.s1.line1">More Than</span>
-            <em data-i18n="home.s1.em">Just Fuel.</em>
-          </h1>
-          <p class="v2-slide__sub" data-i18n="home.s1.sub">Quality fuel, modern convenience, and service you can count on — at every Engen station across Mauritius.</p>
-        </div>
+<!-- ------------------------------------------------------ HERO -->
+<section class="v2-home-hero" id="hero" aria-label="Engen Mauritius homepage hero">
+  <figure class="v2-home-hero__media">
+    <!-- TODO: Replace hero image with authentic Mauritian Fillin / Engen photography showing a premium service station forecourt, local customers or staff, and clear brand presence. Avoid generic international stock photography. -->
+    <img class="v2-home-hero__img" src="assets/editorial-forecourt.png" alt="Fillin Engen Mauritius service station forecourt with branded pylon and convenience store" decoding="async" fetchpriority="high">
+    <div class="v2-home-hero__scrim" aria-hidden="true"></div>
+  </figure>
+  <div class="v2-home-hero__content">
+    <div class="v2-wrap">
+      <div class="v2-home-hero__copy">
+        <h1 class="v2-home-hero__heading">
+          <span>More Than Fuel</span>
+          <span><em>Made for Mauritius</em><i>.</i></span>
+        </h1>
+        <p class="v2-home-hero__lead">Whether it's fuel before work, coffee on the go, quick essentials or business energy support, Fillin is built around the everyday rhythm of Mauritius.</p>
       </div>
     </div>
-
-    <!-- Slide 2 — Daytime forecourt -->
-    <div class="v2-slide" role="group" aria-label="Slide 2 of 4">
-      <figure class="v2-slide__media">
-        <img class="v2-slide__img" src="assets/slider2.png" alt="Engen station forecourt by day" loading="lazy" decoding="async">
-        <div class="v2-slide__scrim" aria-hidden="true"></div>
-      </figure>
-      <div class="v2-slide__content">
-        <div class="v2-wrap">
-          <span class="v2-slide__label" data-i18n="home.s2.label">Quality You Can Trust</span>
-          <h1 class="v2-slide__heading">
-            <span class="line-1" data-i18n="home.s2.line1">Reliable Fuel,</span>
-            <em data-i18n="home.s2.em">Every Time.</em>
-          </h1>
-          <p class="v2-slide__sub" data-i18n="home.s2.sub">Mogas, Gasoil, and premium lubricants — formulated for performance and consistency across our network.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 3 — Team & community -->
-    <div class="v2-slide" role="group" aria-label="Slide 3 of 4">
-      <figure class="v2-slide__media">
-        <img class="v2-slide__img" src="assets/slider3.png" alt="Engen station convenience and ShopIn" loading="lazy" decoding="async">
-        <div class="v2-slide__scrim" aria-hidden="true"></div>
-      </figure>
-      <div class="v2-slide__content">
-        <div class="v2-wrap">
-          <span class="v2-slide__label" data-i18n="home.s3.label">ShopIn · SipIn · EatIn</span>
-          <h1 class="v2-slide__heading">
-            <span class="line-1" data-i18n="home.s3.line1">Convenience</span>
-            <em data-i18n="home.s3.em">At Every Stop.</em>
-          </h1>
-          <p class="v2-slide__sub" data-i18n="home.s3.sub">Fresh coffee, chilled drinks, everyday essentials — all under one roof at Engen stations across the island.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 4 — Dusk station -->
-    <div class="v2-slide" role="group" aria-label="Slide 4 of 4">
-      <figure class="v2-slide__media">
-        <img class="v2-slide__img" src="assets/slider4.png" alt="Engen station at dusk" loading="lazy" decoding="async">
-        <div class="v2-slide__scrim" aria-hidden="true"></div>
-      </figure>
-      <div class="v2-slide__content">
-        <div class="v2-wrap">
-          <span class="v2-slide__label" data-i18n="home.s4.label">Open. Always.</span>
-          <h1 class="v2-slide__heading">
-            <span class="line-1" data-i18n="home.s4.line1">Where Mauritius</span>
-            <em data-i18n="home.s4.em">Refuels.</em>
-          </h1>
-          <p class="v2-slide__sub" data-i18n="home.s4.sub">Selected flagship stations operate 24/7 — fuel, retail, and food services whenever you need them.</p>
-        </div>
-      </div>
-    </div>
-
   </div>
-
-  <!-- Prev / Next arrows -->
-  <button class="v2-slider__arrow v2-slider__arrow--prev" aria-label="Previous slide">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-  </button>
-  <button class="v2-slider__arrow v2-slider__arrow--next" aria-label="Next slide">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-  </button>
-
-  <!-- Dot navigation -->
-  <div class="v2-slider__nav" role="tablist" aria-label="Slides">
-    <button class="v2-slider__dot v2-slider__dot--active" data-slide="0" aria-label="Slide 1" role="tab"></button>
-    <button class="v2-slider__dot" data-slide="1" aria-label="Slide 2" role="tab"></button>
-    <button class="v2-slider__dot" data-slide="2" aria-label="Slide 3" role="tab"></button>
-    <button class="v2-slider__dot" data-slide="3" aria-label="Slide 4" role="tab"></button>
-  </div>
-
-  <!-- Progress bar -->
-  <div class="v2-slider__progress" aria-hidden="true">
-    <div class="v2-slider__progress-fill"></div>
-  </div>
-
 </section>
 
-<!-- ══════════════════════════════════════════════════════ FEATURE BAR -->
-<div class="v2-feature-bar">
-  <div class="v2-wrap">
-    <div class="v2-feature-bar__grid">
-
-      <div class="v2-feature-item">
-        <span class="v2-feature-item__icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="6" y="8" width="24" height="32" rx="2"/>
-            <path d="M30 16h5a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-5"/>
-            <circle cx="38" cy="35" r="3"/>
-            <path d="M14 40v4M22 40v4"/>
-            <path d="M10 20h16"/>
-          </svg>
-        </span>
-        <div class="v2-feature-item__text">
-          <strong data-i18n="home.feat.fuel.strong">Quality Fuel</strong>
-          <span data-i18n="home.feat.fuel.span">High performance fuel you can depend on.</span>
-        </div>
-      </div>
-
-      <div class="v2-feature-item">
-        <span class="v2-feature-item__icon v2-feature-item__icon--shield" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M24 4L8 10v14c0 9 7 17 16 20 9-3 16-11 16-20V10L24 4z" stroke="currentColor" stroke-width="2"/>
-            <path d="M16 24l5 5 11-11" stroke="#F5B625" stroke-width="2.5"/>
-          </svg>
-        </span>
-        <div class="v2-feature-item__text">
-          <strong data-i18n="home.feat.safety.strong">Safety First</strong>
-          <span data-i18n="home.feat.safety.span">Your safety is our top priority.</span>
-        </div>
-      </div>
-
-      <div class="v2-feature-item">
-        <span class="v2-feature-item__icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="24" cy="14" r="7"/>
-            <path d="M10 42c0-7.7 6.3-14 14-14s14 6.3 14 14"/>
-            <path d="M34 30l4-2 4 4-3 4"/>
-            <path d="M36 40h4"/>
-          </svg>
-        </span>
-        <div class="v2-feature-item__text">
-          <strong data-i18n="home.feat.care.strong">Customer Care</strong>
-          <span data-i18n="home.feat.care.span">Friendly service, every time.</span>
-        </div>
-      </div>
-
-      <div class="v2-feature-item">
-        <span class="v2-feature-item__icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M24 40c0 0-18-10-18-24a18 18 0 0 1 36 0c0 14-18 24-18 24z"/>
-            <path d="M24 16c-4 4-4 10 0 14"/>
-            <path d="M24 16c4 4 4 10 0 14"/>
-            <line x1="24" y1="12" x2="24" y2="30"/>
-          </svg>
-        </span>
-        <div class="v2-feature-item__text">
-          <strong data-i18n="home.feat.network.strong">Across Mauritius</strong>
-          <span data-i18n="home.feat.network.span">Strategically located in key urban centres island-wide.</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════════ QUICK ACCESS -->
+<!-- ------------------------------------------------------ QUICK ACCESS -->
 <section class="v2-quick-access" id="quick-access">
   <div class="v2-wrap">
-    <div class="v2-section-head">
-      <h2 class="v2-sh-title" data-i18n="home.qa.title">Quick Access</h2>
+    <div class="v2-qa__head anim-fade-up">
+      <h2>Quick Access</h2>
     </div>
     <div class="v2-qa__grid">
 
-      <!-- Card 1 — Navy — Station Locator -->
-      <a href="stations.html" class="v2-qa-card v2-qa-card--navy">
+      <!-- Card 1 - Navy - Station Locator -->
+      <a href="stations.html" class="v2-qa-card v2-qa-card--navy anim-scale-in">
         <div class="v2-qa-card__content">
-          <h3 data-i18n="home.qa.locator">Station Locator</h3>
-          <p data-i18n="home.qa.locator.desc">Find your nearest Engen station across the island.</p>
-          <span class="v2-btn v2-btn--yellow v2-btn--sm" data-i18n="home.qa.locator.btn">Find a Station</span>
+          <h3>Station Locator</h3>
+          <p>Find fuel, convenience and station services before you arrive.</p>
+          <span class="v2-qa-card__link">Find the right station</span>
         </div>
         <figure class="v2-qa-card__fig">
           <img src="assets/editorial-forecourt.png" alt="Engen station forecourt" loading="lazy">
         </figure>
       </a>
 
-      <!-- Card 2 — Yellow — QuickShop -->
-      <a href="products.html#retail" class="v2-qa-card v2-qa-card--yellow">
+      <!-- Card 2 - Yellow - QuickShop -->
+      <a href="products.html#retail" class="v2-qa-card v2-qa-card--amber anim-scale-in anim-delay-1">
         <div class="v2-qa-card__content">
-          <h3 data-i18n="home.qa.shop">QuickShop</h3>
-          <p data-i18n="home.qa.shop.desc">Everyday essentials, snacks and drinks — right at the pump.</p>
-          <span class="v2-btn v2-btn--outline-dark v2-btn--sm" data-i18n="home.qa.shop.btn">Shop Now</span>
+          <h3>QuickShop</h3>
+          <p>Daily essentials, snacks and drinks for quick island stops.</p>
+          <span class="v2-qa-card__link">Explore QuickShop</span>
         </div>
         <figure class="v2-qa-card__fig">
           <img src="assets/loyalty-card.png" alt="Engen QuickShop convenience" loading="lazy">
         </figure>
       </a>
 
-            <!-- Card  — Navy— Café 365 -->
-      <a href="stations.html" class="v2-qa-card v2-qa-card--navy">
+      <!-- Card 3 - Teal - Cafe 365 -->
+      <a href="stations.html" class="v2-qa-card v2-qa-card--teal anim-scale-in anim-delay-2">
         <div class="v2-qa-card__content">
-          <h3 data-i18n="home.qa.cafe">Café 365</h3>
-          <p data-i18n="home.qa.cafe.desc">Coffee, food &amp; refreshments — at Engen stations, every day of the year.</p>
-          <span class="v2-btn v2-btn--yellow v2-btn--sm" data-i18n="home.qa.cafe.btn">Explore</span>
+          <h3>Cafe 365</h3>
+          <p>Coffee, hot food and cool drinks for every kind of journey.</p>
+          <span class="v2-qa-card__link">Find Cafe 365 stops</span>
         </div>
         <figure class="v2-qa-card__fig">
-          <img src="assets/slider4.png" alt="Engen Café 365 and ShopIn" loading="lazy">
+          <img src="assets/slider4.png" alt="Engen Cafe 365 and ShopIn" loading="lazy">
         </figure>
       </a>
 
@@ -281,98 +138,134 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ SERVICES + LOYALTY (v2) -->
-<section class="v2-sl" id="services">
-  <div class="v2-wrap v2-sl__inner">
-
-    <div class="v2-svc">
-      <h2 class="v2-sh-title" data-i18n="home.svc.title">Products &amp; Services</h2>
-      <div class="v2-svc__grid">
-
-        <a href="products.html#fuels" class="v2-svc-tile">
-          <span class="v2-svc-tile__icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="6" y="6" width="18" height="26" rx="2"/>
-              <path d="M24 13h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-4"/>
-              <circle cx="30" cy="27" r="2"/>
-              <path d="M12 32v3M18 32v3"/>
-            </svg>
-          </span>
-          <strong class="v2-svc-tile__name" data-i18n="home.svc.mogas.name">Mogas</strong>
-          <span class="v2-svc-tile__desc" data-i18n="home.svc.mogas.desc">Petrol for everyday driving</span>
-        </a>
-
-        <a href="products.html#fuels" class="v2-svc-tile">
-          <span class="v2-svc-tile__icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-              <circle cx="5.5" cy="20.5" r="2.5"/><circle cx="18.5" cy="20.5" r="2.5"/>
-              <path d="M4 16v2M19 16v2"/>
-            </svg>
-          </span>
-          <strong class="v2-svc-tile__name" data-i18n="home.svc.gasoil.name">Gasoil</strong>
-          <span class="v2-svc-tile__desc" data-i18n="home.svc.gasoil.desc">Diesel for fleets &amp; heavy-duty</span>
-        </a>
-
-        <a href="products.html#lubricants" class="v2-svc-tile">
-          <span class="v2-svc-tile__icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="13" y="5" width="14" height="20" rx="3"/>
-              <path d="M13 14h14"/>
-              <path d="M17 25v10M23 25v10"/>
-              <path d="M14 35h12"/>
-            </svg>
-          </span>
-          <strong class="v2-svc-tile__name" data-i18n="home.svc.lube.name">Lubricants</strong>
-          <span class="v2-svc-tile__desc" data-i18n="home.svc.lube.desc">Automotive &amp; industrial oils</span>
-        </a>
-
-        <a href="products.html#retail" class="v2-svc-tile">
-          <span class="v2-svc-tile__icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M12 8h16l2 20H10L12 8z"/>
-              <path d="M16 8V6a2 2 0 0 1 4 0v2"/>
-              <path d="M15 19h10M15 24h6"/>
-            </svg>
-          </span>
-          <strong class="v2-svc-tile__name" data-i18n="home.svc.shopin.name">ShopIn</strong>
-          <span class="v2-svc-tile__desc" data-i18n="home.svc.shopin.desc">Convenience retail &amp; essentials</span>
-        </a>
-
-        <a href="products.html#retail" class="v2-svc-tile">
-          <span class="v2-svc-tile__icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M8 34c0-6.6 5.4-12 12-12s12 5.4 12 12"/>
-              <path d="M20 8v4M14 10l2 3M26 10l-2 3"/>
-              <ellipse cx="20" cy="18" rx="6" ry="4"/>
-              <path d="M28 22c2 1 4 3 4 6"/>
-            </svg>
-          </span>
-          <strong class="v2-svc-tile__name" data-i18n="home.svc.sipin.name">SipIn &amp; EatIn</strong>
-          <span class="v2-svc-tile__desc" data-i18n="home.svc.sipin.desc">Coffee, drinks &amp; fresh food</span>
-        </a>
-
+<!-- ------------------------------------------------------ PROMOTIONS -->
+<section class="v2-promotions" id="promotions">
+  <div class="v2-wrap">
+    <div class="v2-section-head anim-fade-up">
+      <div>
+        <span class="v2-label">Campaigns and Offers</span>
+        <h2 class="v2-sh-title">Small reasons to<br><em>make the stop</em></h2>
+        <p class="v2-section-lead">From forecourt safety checks to retail rewards and loyalty moments — our campaigns are built around the real stops Mauritians make every day. Simple offers that add value without the fuss.</p>
       </div>
-      <a href="products.html" class="v2-btn v2-btn--outline-navy v2-svc__view-all" data-i18n="home.svc.viewall">View All Products &amp; Services</a>
+      <a href="promotions.html" class="v2-btn v2-btn--outline-navy v2-btn--sm">View all campaigns</a>
     </div>
+    <div class="v2-promo-grid" data-stagger="0.1">
 
-    <div class="v2-loyalty-card" id="loyalty">
-      <div class="v2-loyalty-card__copy">
-        <span class="v2-loyalty-card__label" data-i18n="home.loyalty.label">Cards &amp; Payments</span>
-        <h3 data-i18n="home.loyalty.h3">Fleet &amp; Commercial<br>Solutions</h3>
-        <p class="v2-loyalty-card__sub" data-i18n="home.loyalty.sub">Dedicated solutions for your business.</p>
-        <p data-i18n="home.loyalty.p">From fleet fuel cards to bulk supply — Engen provides reliable commercial fuel solutions across Mauritius.</p>
-        <a href="b2b.html" class="v2-btn v2-btn--yellow" data-i18n="home.loyalty.btn">Learn More</a>
-      </div>
-      <figure class="v2-loyalty-card__fig">
-        <img src="assets/portrait-care.png" alt="Engen commercial fleet solutions">
-      </figure>
+      <!-- Card 1: Forecourt Care — Active -->
+      <article class="v2-promo-card anim-scale-in">
+        <div class="v2-promo-card__img">
+          <img src="assets/promo-tyre-check.png" alt="Free tyre check at Fillin station" loading="lazy">
+          <span class="v2-promo-card__tag">Active</span>
+        </div>
+        <div class="v2-promo-card__body">
+          <span class="v2-promo-card__cat">Station Services</span>
+          <h3 class="v2-promo-card__title">Free Tyre Check</h3>
+          <p class="v2-promo-card__desc">Free tyre pressure checks from our trained forecourt attendants. Stop by any participating station — no appointment needed.</p>
+          <div class="v2-promo-card__footer">
+            <span class="v2-promo-card__validity">Year-round · Participating stations</span>
+            <a href="promotions.html#offers" class="v2-btn v2-btn--yellow v2-btn--sm">See This Offer</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Earn As You Fuel — Coming Soon -->
+      <article class="v2-promo-card v2-promo-card--soon anim-scale-in anim-delay-1">
+        <div class="v2-promo-card__img">
+          <img src="assets/loyalty-card.png" alt="Earn as you fuel loyalty programme" loading="lazy">
+          <span class="v2-promo-card__tag v2-promo-card__tag--soon">Coming Soon</span>
+        </div>
+        <div class="v2-promo-card__body">
+          <span class="v2-promo-card__cat">Loyalty</span>
+          <h3 class="v2-promo-card__title">Earn As You Fuel</h3>
+          <p class="v2-promo-card__desc">A rewards programme built for everyday Mauritians. Fill up, shop and earn points that work for your daily routine at Fillin stations.</p>
+          <div class="v2-promo-card__footer">
+            <span class="v2-promo-card__validity">Launching soon</span>
+            <a href="promotions.html#loyalty" class="v2-btn v2-btn--outline-navy v2-btn--sm">Learn More</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: QuickShop & Cafe 365 — Coming Soon -->
+      <article class="v2-promo-card v2-promo-card--soon anim-scale-in anim-delay-2">
+        <div class="v2-promo-card__img">
+          <img src="assets/slider4.png" alt="QuickShop and Cafe 365 retail offers" loading="lazy">
+          <span class="v2-promo-card__tag v2-promo-card__tag--soon">Coming Soon</span>
+        </div>
+        <div class="v2-promo-card__body">
+          <span class="v2-promo-card__cat">Retail Offers</span>
+          <h3 class="v2-promo-card__title">Coffee &amp; Quick Essentials</h3>
+          <p class="v2-promo-card__desc">Planned offers for QuickShop and Cafe 365 that make everyday stops more useful — from the morning rush to the way home.</p>
+          <div class="v2-promo-card__footer">
+            <span class="v2-promo-card__validity">Launching soon</span>
+            <a href="promotions.html#upcoming" class="v2-btn v2-btn--outline-navy v2-btn--sm">See What's Coming</a>
+          </div>
+        </div>
+      </article>
+
     </div>
-
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ LOCATOR -->
+<!-- ------------------------------------------------------ SERVICES OVERVIEW -->
+<section class="v2-sl v2-sl--teal-light" id="services">
+  <div class="v2-wrap">
+    <div class="v2-services-editorial">
+      <div class="v2-services-editorial__content anim-fade-left">
+        <span class="v2-label">Services Overview</span>
+        <h2 class="v2-sh-title">Built around <em>the way the day moves</em></h2>
+        <p class="v2-svc__intro">From the first fill before work to a quick coffee, a top-up on essentials or lubricant advice for your vehicle — Fillin brings everything into one island-wide network. Consistent service, familiar stops, no detours.</p>
+
+        <ul class="v2-service-checklist" aria-label="Fillin products and services">
+          <li>
+            <a href="products.html#fuels">
+              <strong>Mogas</strong>
+              <span>Petrol for morning commutes, school runs, family errands and island travel.</span>
+            </a>
+          </li>
+          <li>
+            <a href="products.html#fuels">
+              <strong>Gasoil</strong>
+              <span>Diesel for tradespeople, delivery routes, fleet movement and heavier daily work.</span>
+            </a>
+          </li>
+          <li>
+            <a href="products.html#lubricants">
+              <strong>Lubricants</strong>
+              <span>Automotive and industrial oils that help vehicles and equipment keep going.</span>
+            </a>
+          </li>
+          <li>
+            <a href="products.html#retail">
+              <strong>QuickShop</strong>
+              <span>Everyday essentials, snacks and drinks for quick stops between destinations.</span>
+            </a>
+          </li>
+          <li>
+            <a href="products.html#retail">
+              <strong>Cafe 365</strong>
+              <span>Coffee, food and refreshments for early starts, lunch breaks and late journeys.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="v2-services-editorial__image-stack">
+        <figure class="v2-svc-img v2-svc-img--back anim-fade-right">
+          <img src="assets/portrait-safety.png" alt="Fillin station forecourt service" loading="lazy">
+        </figure>
+        <figure class="v2-svc-img v2-svc-img--front anim-fade-up">
+          <img src="assets/portrait-care.png" alt="Fillin services across fuel retail and convenience" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="v2-services-editorial__actions">
+        <a href="products.html" class="v2-btn v2-btn--navy v2-services-editorial__all">View products and services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ------------------------------------------------------ LOCATOR -->
 <section class="locator v2-locator-sec" id="locator">
   <div class="v2-wrap">
     <div class="v2-loc-grid">
@@ -380,17 +273,18 @@
       <div class="v2-loc-copy">
         <span class="v2-label">Station Locator</span>
         <h2 class="v2-loc-heading">
-          Find an Engen
+          Plan the right stop
+          <span class="v2-loc-heading__mobile-copy">before you arrive.</span>
           <em data-en="near you." data-fr="près de chez vous.">near you.</em>
         </h2>
-        <p class="v2-loc-lede" data-en="Strategically located across Mauritius — quality fuel and convenience wherever you are." data-fr="Présents partout à Maurice — carburant de qualité et commodité où que vous soyez.">Strategically located across Mauritius — quality fuel and convenience wherever you are.</p>
+        <p class="v2-loc-lede" data-en="Find fuel, QuickShop, Cafe 365 and station services before you arrive, so every stop works better for your journey." data-fr="Find fuel, QuickShop, Cafe 365 and station services before you arrive, so every stop works better for your journey.">Find fuel, QuickShop, Cafe 365 and station services before you arrive, so every stop works better for your journey.</p>
 
         <form class="v2-loc-search" id="homeLocForm">
           <div class="v2-loc-search__wrap">
             <svg class="v2-loc-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
               <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
             </svg>
-            <input type="text" id="homeLocSearch" class="v2-loc-search__input" placeholder="Station name or town…" data-en="Station name or town…" data-fr="Nom ou ville…" autocomplete="off">
+            <input type="text" id="homeLocSearch" class="v2-loc-search__input" placeholder="Station name or town..." data-en="Station name or town..." data-fr="Station name or town..." autocomplete="off">
             <ul class="v2-loc-autocomplete" id="homeLocAc" role="listbox" aria-label="Station suggestions"></ul>
           </div>
           <button type="submit" class="v2-btn v2-btn--yellow" data-en="Search" data-fr="Rechercher">Search</button>
@@ -408,6 +302,44 @@
           <div class="v2-loc-stat">
             <strong data-stat="flagship">6</strong>
             <span data-en="Flagship" data-fr="Phares">Flagship</span>
+          </div>
+        </div>
+
+        <div class="v2-loc-features">
+          <p class="v2-loc-features__label">Available across the network</p>
+          <div class="v2-loc-chips">
+            <span class="v2-loc-chip">Mogas &amp; Gasoil</span>
+            <span class="v2-loc-chip">QuickShop</span>
+            <span class="v2-loc-chip">Cafe 365</span>
+            <span class="v2-loc-chip">Tyre &amp; Air</span>
+            <span class="v2-loc-chip">Lubricants</span>
+            <span class="v2-loc-chip">24/7 Sites</span>
+          </div>
+        </div>
+
+        <div class="v2-loc-flagships">
+          <p class="v2-loc-features__label">Flagship stations</p>
+          <div class="v2-flagship-cards">
+            <button class="v2-flagship-card" data-station-id="11" type="button" aria-label="View Engen La Croisette on map">
+              <span class="v2-flagship-card__region">North</span>
+              <strong class="v2-flagship-card__name">La Croisette</strong>
+              <span class="v2-flagship-card__services">Grand Baie &middot; Café 365 &middot; 24/7</span>
+            </button>
+            <button class="v2-flagship-card" data-station-id="18" type="button" aria-label="View Engen Pamplemousses on map">
+              <span class="v2-flagship-card__region">North</span>
+              <strong class="v2-flagship-card__name">Pamplemousses</strong>
+              <span class="v2-flagship-card__services">Pamplemousses &middot; EatIn &middot; 24/7</span>
+            </button>
+            <button class="v2-flagship-card" data-station-id="1" type="button" aria-label="View Engen Bagatelle on map">
+              <span class="v2-flagship-card__region">Central</span>
+              <strong class="v2-flagship-card__name">Bagatelle</strong>
+              <span class="v2-flagship-card__services">Moka &middot; Café 365 &middot; Car Wash</span>
+            </button>
+            <button class="v2-flagship-card" data-station-id="21" type="button" aria-label="View Engen Phoenix on map">
+              <span class="v2-flagship-card__region">Central</span>
+              <strong class="v2-flagship-card__name">Phoenix</strong>
+              <span class="v2-flagship-card__services">Phoenix &middot; ShopIn &middot; EatIn</span>
+            </button>
           </div>
         </div>
 
@@ -450,7 +382,7 @@
           </div>
         </div>
         <p class="v2-loc-map__caption">
-          <em data-en="Hover a pin to see the station · tap to open directions" data-fr="Survolez une épingle pour voir la station · tapez pour l'itinéraire">Hover a pin to see the station · tap to open directions</em>
+          <em data-en="Hover a pin to see the station or tap to open directions" data-fr="Hover a pin to see the station or tap to open directions">Hover a pin to see the station or tap to open directions</em>
         </p>
       </div>
 
@@ -458,67 +390,75 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ ABOUT (added per requirements) -->
-<section class="v2-about" id="about">
+<!-- ------------------------------------------------------ SUSTAINABILITY & SAFETY -->
+<section class="v2-ip-sec v2-ip-sec--teal v2-sustainability v2-about" id="sustainability-safety">
   <div class="v2-wrap v2-about__inner">
 
-    <div class="v2-about__copy">
-      <span class="v2-label v2-label--dark" data-i18n="home.about.label">About Engen Mauritius</span>
-      <h2 data-i18n="home.about.h2">Committed to Quality.<br>Trusted Across Mauritius.</h2>
-      <p class="v2-about__lead" data-i18n="home.about.lead">Engen Mauritius operates a network of service stations delivering high-quality fuels, lubricants, and convenience retail to motorists and businesses across the island.</p>
-      <p data-i18n="home.about.p2">With a strong focus on health, safety, environment, and quality (HSEQ), Engen Mauritius combines international standards with local knowledge to serve every customer reliably and responsibly.</p>
+    <div class="v2-about__copy anim-fade-left">
+      <span class="v2-label">Sustainability &amp; Safety</span>
+      <h2>Care in every<br><em>Fillin stop.</em></h2>
+      <p class="v2-about__lead">Behind every visit is a simple promise: safer forecourts, attentive teams and responsible operations that respect the people who move Mauritius.</p>
+      <p>From daily safety checks to the HSEQ standards that guide every team member, Fillin is built to feel reliable, human and locally aware — a brand that earns its place on the island by getting the basics right, every time.</p>
 
       <ul class="v2-about__pillars">
-        <li class="v2-about__pillar">
-          <svg class="v2-about__pillar-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-            <path d="M14 4L4 9v7c0 5 4.5 9.7 10 11 5.5-1.3 10-6 10-11V9L14 4z"/><path d="M10 14l3 3 5-5"/>
-          </svg>
-          <strong data-i18n="home.about.pillar1.strong">Safety</strong>
-          <span data-i18n="home.about.pillar1.span">HSEQ at the core of every operation across our network.</span>
+        <li class="v2-about__pillar v2-sust-pillar-anim">
+          <div class="v2-about__pillar-icon">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" width="20" height="20">
+              <path d="M14 4L4 9v7c0 5 4.5 9.7 10 11 5.5-1.3 10-6 10-11V9L14 4z"/><path d="M10 14l3 3 5-5"/>
+            </svg>
+          </div>
+          <strong>Safer visits</strong>
+          <span>Clear HSEQ practices help protect customers, staff and station partners. From fire safety protocols to spill response, every team follows documented standards at every stop.</span>
         </li>
-        <li class="v2-about__pillar">
-          <svg class="v2-about__pillar-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-            <circle cx="14" cy="10" r="5"/><path d="M6 24c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
-          </svg>
-          <strong data-i18n="home.about.pillar2.strong">Service</strong>
-          <span data-i18n="home.about.pillar2.span">Customer-focused service delivered by skilled local teams.</span>
+        <li class="v2-about__pillar v2-sust-pillar-anim">
+          <div class="v2-about__pillar-icon">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" width="20" height="20">
+              <circle cx="14" cy="10" r="5"/><path d="M6 24c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+            </svg>
+          </div>
+          <strong>People-first service</strong>
+          <span>Trained attendants, well-maintained forecourts and a culture built around getting it right for the customer — every visit, every station.</span>
         </li>
-        <li class="v2-about__pillar">
-          <svg class="v2-about__pillar-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-            <path d="M14 24c0 0-10-5.6-10-13.4A7 7 0 0 1 14 4a7 7 0 0 1 10 6.6C24 18.4 14 24 14 24z"/>
-          </svg>
-          <strong data-i18n="home.about.pillar3.strong">Sustainability</strong>
-          <span data-i18n="home.about.pillar3.span">Committed to responsible operations and community well-being.</span>
+        <li class="v2-about__pillar v2-sust-pillar-anim">
+          <div class="v2-about__pillar-icon">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" width="20" height="20">
+              <path d="M14 24c0 0-10-5.6-10-13.4A7 7 0 0 1 14 4a7 7 0 0 1 10 6.6C24 18.4 14 24 14 24z"/>
+            </svg>
+          </div>
+          <strong>Made for Mauritius</strong>
+          <span>Island-aware planning, local hiring and station placement that puts service where people in Mauritius actually go — every day.</span>
         </li>
       </ul>
 
-      <dl class="v2-about__stats">
-        <div><dd>24+</dd><dt data-i18n="home.about.stat.stations">Stations</dt></div>
-        <div><dd>9</dd><dt data-i18n="home.about.stat.districts">Districts</dt></div>
-        <div><dd>6</dd><dt data-i18n="home.about.stat.flagship">Flagship Sites</dt></div>
-        <div><dd>24/7</dd><dt data-i18n="home.about.stat.247">Selected Sites</dt></div>
-      </dl>
-      <a href="about.html" class="v2-btn v2-btn--navy" data-i18n="home.about.btn">Learn More About Us →</a>
+      <div class="v2-btn-row">
+        <a href="about.html#hseq" class="v2-btn v2-btn--navy">View HSEQ commitment</a>
+      </div>
     </div>
 
-    <figure class="v2-about__img">
-      <img src="assets/BornInMauritius.png" alt="Engen Mauritius forecourt" loading="lazy">
-    </figure>
+    <div class="v2-sust-img-stack">
+      <figure class="v2-sust-img v2-sust-img--back anim-fade-right">
+        <img src="assets/BornInMauritius.png" alt="Fillin team — committed to safety at every station" loading="lazy">
+      </figure>
+      <figure class="v2-sust-img v2-sust-img--front anim-fade-up">
+        <img src="assets/portrait-safety.png" alt="Fillin safety and service at the forecourt" loading="lazy">
+      </figure>
+    </div>
 
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ PROMOTIONS -->
-<section class="v2-promotions" id="promotions">
+<!-- ------------------------------------------------------ LEGACY PROMOTIONS (removed from homepage flow) -->
+<section class="v2-promotions" id="legacy-promotions" hidden>
   <div class="v2-wrap">
-    <div class="v2-section-head">
+    <div class="v2-section-head anim-fade-up">
       <div>
-        <h2 class="v2-sh-title" data-i18n="home.promo.title">Promotions</h2>
-        <p class="v2-section-lead" data-i18n="home.promo.lead">We're preparing new offers for you. Visit again shortly.</p>
+        <span class="v2-label">Campaigns and Highlights</span>
+        <h2 class="v2-sh-title">Useful updates for your next stop</h2>
+        <p class="v2-section-lead">A home for offers, retail updates, flagship station highlights and customer campaigns across the Fillin network.</p>
       </div>
-      <a href="promotions.html" class="v2-link-more" data-i18n="home.promo.viewall">View all →</a>
+      <a href="promotions.html" class="v2-btn v2-btn--outline-navy v2-btn--sm">View campaigns</a>
     </div>
-    <div class="v2-promos__grid">
+    <div class="v2-promos__grid" data-stagger="0.1">
 
       <article class="v2-promo-card">
         <figure class="v2-promo-card__img">
@@ -526,11 +466,11 @@
         </figure>
         <div class="v2-promo-card__body">
           <div class="v2-promo-card__meta">
-            <span class="v2-promo-card__tag" data-i18n="home.promo.tag1">Current Offers</span>
-            <span class="v2-promo-card__valid" data-i18n="home.promo.valid1">Coming soon</span>
+            <span class="v2-promo-card__tag">Customer Care</span>
+            <span class="v2-promo-card__valid">At station</span>
           </div>
-          <h3 data-i18n="home.promo.h3.1">New Offers Coming Soon</h3>
-          <p data-i18n="home.promo.p1">We're preparing new offers for you. Visit again shortly.</p>
+          <h3>Everyday support at the forecourt</h3>
+          <p>Service, air, convenience and helpful teams for the daily routines that keep Mauritius moving.</p>
         </div>
       </article>
 
@@ -540,11 +480,11 @@
         </figure>
         <div class="v2-promo-card__body">
           <div class="v2-promo-card__meta">
-            <span class="v2-promo-card__tag" data-i18n="home.promo.tag2">Loyalty &amp; Rewards</span>
-            <span class="v2-promo-card__valid" data-i18n="home.promo.valid2">Coming soon</span>
+            <span class="v2-promo-card__tag">Convenience</span>
+            <span class="v2-promo-card__valid">In progress</span>
           </div>
-          <h3 data-i18n="home.promo.h3.2">A New Loyalty Experience</h3>
-          <p data-i18n="home.promo.p2">We are currently working on a new loyalty experience. More rewards are coming soon.</p>
+          <h3>Retail moments made easier</h3>
+          <p>QuickShop and Cafe 365 updates will help customers discover useful stops across the island.</p>
         </div>
       </article>
 
@@ -554,11 +494,11 @@
         </figure>
         <div class="v2-promo-card__body">
           <div class="v2-promo-card__meta">
-            <span class="v2-promo-card__tag" data-i18n="home.promo.tag3">Flagship Stations</span>
-            <span class="v2-promo-card__valid" data-i18n="home.promo.valid3">Ongoing</span>
+            <span class="v2-promo-card__tag">Flagship Stations</span>
+            <span class="v2-promo-card__valid">Ongoing</span>
           </div>
-          <h3 data-i18n="home.promo.h3.3">Enhanced Experience at Flagship Sites</h3>
-          <p data-i18n="home.promo.p3">Visit Bagatelle, Floreal, Phoenix, Curepipe, La Croisette, or Pamplemousses for our full service offering.</p>
+          <h3>Enhanced experience at flagship sites</h3>
+          <p>Visit selected flagship locations for a fuller mix of fuel, convenience and station services.</p>
         </div>
       </article>
 
@@ -566,19 +506,22 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ B2B (Business Solutions) -->
-<section class="v2-b2b" id="business">
+<!-- ------------------------------------------------------ LEGACY B2B (removed from homepage flow) -->
+<section class="v2-b2b" id="legacy-business" hidden>
   <div class="v2-wrap">
     <div class="v2-b2b__inner">
 
-      <div class="v2-b2b__copy">
-        <span class="v2-label" data-i18n="home.b2b.label">Business (B2B)</span>
+      <div class="v2-b2b__copy anim-fade-left">
+        <span class="v2-label">Business Solutions</span>
         <h2 class="v2-b2b__heading">
-          <span data-i18n="home.b2b.h2.line">Fuel your</span>
-          <em data-i18n="home.b2b.h2.em">business.</em>
+          <span>Power your</span>
+          <em>business.</em>
         </h2>
-        <p class="v2-b2b__lead" data-i18n="home.b2b.lead">From commercial fuels and fleet management to lubricant solutions and aviation supply — Engen Mauritius delivers reliable energy solutions for businesses of every size.</p>
-        <a href="b2b.html#quote" class="v2-btn v2-btn--yellow" data-i18n="home.b2b.btn">Request a Quote →</a>
+        <p class="v2-b2b__lead">From commercial fuels and fleet management to lubricant solutions and marine supply — Engen Mauritius is the energy partner businesses across the island depend on.</p>
+        <div class="v2-btn-row">
+          <a href="b2b.html#quote" class="v2-btn v2-btn--yellow">Send business enquiry</a>
+          <a href="b2b.html" class="v2-btn v2-btn--ghost">Explore business solutions</a>
+        </div>
       </div>
 
       <div class="v2-b2b__offers">
@@ -590,8 +533,8 @@
             </svg>
           </span>
           <div>
-            <strong data-i18n="home.b2b.o1.strong">Commercial Fuels</strong>
-            <p data-i18n="home.b2b.o1.p">Bulk fuel supply — Mogas, Gasoil, Jet A-1, and Marine/HFO for all industries.</p>
+            <strong>Commercial Fuels</strong>
+            <p>Bulk fuel supply — Mogas, Gasoil, Jet A-1, and Marine/HFO for all industries.</p>
           </div>
         </div>
 
@@ -603,8 +546,8 @@
             </svg>
           </span>
           <div>
-            <strong data-i18n="home.b2b.o2.strong">Fleet Management</strong>
-            <p data-i18n="home.b2b.o2.p">Dedicated fleet solutions and fuel cards to manage your commercial vehicles.</p>
+            <strong>Fleet Management</strong>
+            <p>Dedicated fleet solutions and fuel cards to manage your commercial vehicles.</p>
           </div>
         </div>
 
@@ -616,8 +559,8 @@
             </svg>
           </span>
           <div>
-            <strong data-i18n="home.b2b.o3.strong">Lubricant Solutions</strong>
-            <p data-i18n="home.b2b.o3.p">Automotive and industrial lubricants for commercial and manufacturing needs.</p>
+            <strong>Lubricant Solutions</strong>
+            <p>Automotive and industrial lubricants for commercial and manufacturing needs.</p>
           </div>
         </div>
 
@@ -629,8 +572,8 @@
             </svg>
           </span>
           <div>
-            <strong data-i18n="home.b2b.o4.strong">Aviation &amp; Marine</strong>
-            <p data-i18n="home.b2b.o4.p">Jet A-1 and Heavy Fuel Oil supply meeting international aviation and maritime standards.</p>
+            <strong>Aviation &amp; Marine</strong>
+            <p>Jet A-1 and Heavy Fuel Oil supply meeting international aviation and maritime standards.</p>
           </div>
         </div>
 
@@ -639,70 +582,91 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ NEWSROOM (added per requirements) -->
+<!-- ------------------------------------------------------ NEWS & UPDATES -->
 <section class="v2-newsroom" id="newsroom">
   <div class="v2-wrap">
-    <div class="v2-section-head">
+    <div class="v2-section-head anim-fade-up">
       <div>
-        <h2 class="v2-sh-title" data-i18n="home.news.title">Newsroom</h2>
-        <p class="v2-section-lead" data-i18n="home.news.lead">We're preparing updates and announcements. Check back soon.</p>
+        <span class="v2-label">News &amp; Updates</span>
+        <h2 class="v2-sh-title">Stories from<br><em>the network</em></h2>
+        <p class="v2-section-lead">From station milestones and team stories to safety updates and community moments — the Fillin newsroom tracks the everyday pulse of a network built to keep Mauritius moving. Real stories, local context, no noise.</p>
       </div>
-      <a href="newsroom.html" class="v2-link-more" data-i18n="home.news.link">Full newsroom →</a>
+      <a href="newsroom.html" class="v2-btn v2-btn--outline-navy v2-btn--sm">View newsroom</a>
     </div>
     <div class="v2-news__grid">
 
-      <article class="v2-news-card v2-news-card--lead">
-        <figure class="v2-news-card__img">
-          <img src="assets/newsroom-opening.png" alt="Engen Mauritius news and announcements" loading="lazy">
-        </figure>
-        <div class="v2-news-card__body">
-          <div class="v2-news-card__meta">
-            <span class="v2-news-tag" data-i18n="home.news.tag1">Announcements</span>
-          </div>
-          <h3 data-i18n="home.news.h3.1">News &amp; Announcements</h3>
-          <p data-i18n="home.news.p1">We're preparing updates and announcements. Check back soon.</p>
-          <a href="newsroom.html" class="v2-link-arrow" data-i18n="home.news.visit">Visit newsroom →</a>
-        </div>
-      </article>
+      <!-- Left column: 2 cards -->
+      <div class="v2-news__main">
 
+        <article class="v2-news-card v2-news-card--side v2-news-card--featured">
+          <figure class="v2-news-card__img">
+            <img src="assets/newsroom-opening.png" alt="Engen Mauritius news and announcements" loading="lazy">
+          </figure>
+          <div class="v2-news-card__body">
+            <div class="v2-news-card__meta">
+              <span class="v2-news-tag">Announcements</span>
+            </div>
+            <h3>News from across the network</h3>
+            <p>Station upgrades, safety milestones and community moments — told from the people keeping Mauritius moving every day.</p>
+            <a href="newsroom.html" class="v2-btn v2-btn--sm v2-btn--outline-navy">Visit Newsroom</a>
+          </div>
+        </article>
+
+        <article class="v2-news-card v2-news-card--side">
+          <figure class="v2-news-card__img">
+            <img src="assets/news-cleanup.png" alt="Fillin community initiatives across Mauritius" loading="lazy">
+          </figure>
+          <div class="v2-news-card__body">
+            <div class="v2-news-card__meta">
+              <span class="v2-news-tag">Community</span>
+            </div>
+            <h3>Local initiatives across the island</h3>
+            <p>From beach clean-ups and school partnerships to local hiring — how Fillin's network becomes a neighbour across every corner of Mauritius.</p>
+            <a href="newsroom.html" class="v2-btn v2-btn--sm v2-btn--outline-navy">Explore Initiatives</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Right column: 3 cards -->
       <div class="v2-news__sidebar">
 
         <article class="v2-news-card v2-news-card--side">
           <figure class="v2-news-card__img">
-            <img src="assets/news-cleanup.png" alt="Engen Mauritius press releases" loading="lazy">
+            <img src="assets/editorial-forecourt.png" alt="Engen Mauritius press releases" loading="lazy">
           </figure>
           <div class="v2-news-card__body">
             <div class="v2-news-card__meta">
-              <span class="v2-news-tag" data-i18n="home.news.tag2">Press Releases</span>
+              <span class="v2-news-tag">Press Releases</span>
             </div>
-            <h3 data-i18n="home.news.h3.2">Press releases will be available here as they are issued.</h3>
-            <a href="#" class="v2-link-arrow" data-i18n="home.news.readmore">Read more →</a>
+            <h3>Official statements and network updates</h3>
+            <a href="newsroom.html" class="v2-btn v2-btn--sm v2-btn--outline-navy">See Updates</a>
           </div>
         </article>
 
         <article class="v2-news-card v2-news-card--side">
           <figure class="v2-news-card__img">
-            <img src="assets/news-attendant.png" alt="Engen Mauritius media resources" loading="lazy">
+            <img src="assets/news-attendant.png" alt="Engen Mauritius team stories" loading="lazy">
           </figure>
           <div class="v2-news-card__body">
             <div class="v2-news-card__meta">
-              <span class="v2-news-tag" data-i18n="home.news.tag3">Media Resources</span>
+              <span class="v2-news-tag">People</span>
             </div>
-            <h3 data-i18n="home.news.h3.3">Media resources will be available soon.</h3>
-            <a href="#" class="v2-link-arrow" data-i18n="home.news.readmore">Read more →</a>
+            <h3>The teams behind every stop</h3>
+            <a href="newsroom.html" class="v2-btn v2-btn--sm v2-btn--outline-navy">Read Stories</a>
           </div>
         </article>
 
         <article class="v2-news-card v2-news-card--side">
           <figure class="v2-news-card__img">
-            <img src="assets/services-overview.png" alt="Engen Mauritius sustainability" loading="lazy">
+            <img src="assets/careers-team.png" alt="Engen Mauritius media resources" loading="lazy">
           </figure>
           <div class="v2-news-card__body">
             <div class="v2-news-card__meta">
-              <span class="v2-news-tag" data-i18n="home.news.tag4">Sustainability</span>
+              <span class="v2-news-tag">Media Resources</span>
             </div>
-            <h3 data-i18n="home.news.h3.4">Engen Mauritius sustainability and CSR initiatives.</h3>
-            <a href="#" class="v2-link-arrow" data-i18n="home.news.readmore">Read more →</a>
+            <h3>Resources for media partners</h3>
+            <a href="newsroom.html" class="v2-btn v2-btn--sm v2-btn--outline-navy">View Resources</a>
           </div>
         </article>
 
@@ -712,44 +676,47 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ CAREERS (added per requirements) -->
-<section class="v2-careers" id="careers">
+<!-- ------------------------------------------------------ LEGACY CAREERS (removed from homepage flow) -->
+<section class="v2-careers" id="legacy-careers" hidden>
   <div class="v2-wrap v2-careers__inner">
 
     <figure class="v2-careers__img">
-      <!-- careers-team.png ✓ -->
+      <!-- Existing careers/team visual; replace with authentic Mauritian team photography if client supplies a stronger image. -->
       <img src="assets/careers-team.png" alt="Engen team at the forecourt" loading="lazy">
     </figure>
 
     <div class="v2-careers__copy">
-      <span class="v2-label" data-i18n="home.car.label">Careers</span>
-      <h2><span data-i18n="home.car.h2">Grow with</span><em data-i18n="home.car.h2.em">Engen.</em></h2>
-      <p class="v2-careers__lead" data-i18n="home.car.lead">Join a team committed to quality, safety, and service excellence. Engen Mauritius offers meaningful careers across operations, retail, technical, and management functions.</p>
+      <span class="v2-label">Careers</span>
+      <h2><span>Grow with</span><em>Fillin.</em></h2>
+      <p class="v2-careers__lead">Join a team committed to quality, safety and service excellence across the Fillin / Engen Mauritius network.</p>
       <blockquote class="v2-careers__quote">
-        <p data-i18n="home.car.quote">"There are currently no vacancies available. We invite you to check back soon and explore future opportunities with us."</p>
-        <cite data-i18n="home.car.cite">— Engen Mauritius People Team</cite>
+        <p>"There are currently no vacancies available. We invite you to check back soon and explore future opportunities with us."</p>
+        <cite>— Engen Mauritius People Team</cite>
       </blockquote>
       <ul class="v2-careers__links">
-        <li><a href="careers.html"><span data-i18n="home.car.link1">Why Work at Engen</span> <span>→</span></a></li>
-        <li><a href="careers.html"><span data-i18n="home.car.link2">Current Vacancies</span> <span>→</span></a></li>
-        <li><a href="careers.html"><span data-i18n="home.car.link3">Graduate Programmes</span> <span>→</span></a></li>
-        <li><a href="mailto:recruitment@engen.mu"><span data-i18n="home.car.link4">Apply Online</span> <span>→</span></a></li>
+        <li><a href="careers.html"><span>Why Work at Fillin</span></a></li>
+        <li><a href="careers.html"><span>Current Vacancies</span></a></li>
+        <li><a href="careers.html"><span>Graduate Programmes</span></a></li>
+        <li><a href="mailto:recruitment@engen.mu"><span>Apply Online</span></a></li>
       </ul>
     </div>
 
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ CONTACT (added per requirements) -->
-<section class="v2-contact" id="contact">
+<!-- ------------------------------------------------------ CONTACT CTA -->
+<section class="v2-final-cta" id="contact">
   <div class="v2-wrap">
-    <div class="v2-section-head">
-      <div>
-        <h2 class="v2-sh-title" data-i18n="home.con.title">Get in Touch</h2>
-        <p class="v2-section-lead">+230 206 6000 &nbsp;·&nbsp; Quay D Road, Port Louis</p>
+    <div class="v2-final-cta__inner anim-fade-up">
+      <span class="v2-label">Get in touch</span>
+      <h2>Ready to visit or <em>get in touch?</em></h2>
+      <p>Whether it's a station query, product enquiry, or customer feedback, our team is here to help.</p>
+      <div class="v2-final-cta__actions">
+        <a href="contact.html#contact-form" class="v2-btn v2-btn--yellow">Contact us</a>
+        <a href="stations.html" class="v2-btn v2-btn--ghost">Find A Station</a>
       </div>
     </div>
-    <div class="v2-contact__grid">
+    <div class="v2-contact__grid" data-stagger="0.08" hidden>
 
       <a href="tel:+2302066000" class="v2-contact-card">
         <span class="v2-contact-card__icon" aria-hidden="true">
@@ -757,9 +724,9 @@
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
           </svg>
         </span>
-        <h3 data-i18n="home.con.c1.h3">General Contact</h3>
-        <p data-i18n="home.con.c1.p">Call us on +230 206 6000 or reach our team for any questions and enquiries.</p>
-        <span class="v2-link-arrow" data-i18n="home.con.c1.link">Contact us →</span>
+        <h3>General Enquiries</h3>
+        <p>For general questions about Fillin / Engen Mauritius, our network and services.</p>
+        <span class="v2-link-arrow">Contact the team</span>
       </a>
 
       <a href="#" class="v2-contact-card">
@@ -768,9 +735,9 @@
             <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
           </svg>
         </span>
-        <h3 data-i18n="home.con.c2.h3">Customer Feedback</h3>
-        <p data-i18n="home.con.c2.p">Tell us about your experience at any of our stations. Our team will assist you.</p>
-        <span class="v2-link-arrow" data-i18n="home.con.c2.link">Share feedback →</span>
+        <h3>Customer Feedback</h3>
+        <p>Tell us about your experience at any of our stations. Our team will assist you.</p>
+        <span class="v2-link-arrow">Submit station feedback</span>
       </a>
 
       <a href="#" class="v2-contact-card">
@@ -780,9 +747,9 @@
             <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
           </svg>
         </span>
-        <h3 data-i18n="home.con.c3.h3">Supplier Queries</h3>
-        <p data-i18n="home.con.c3.p">For all supplier-related enquiries, please contact our team. We will assist you accordingly.</p>
-        <span class="v2-link-arrow" data-i18n="home.con.c3.link">Get in touch →</span>
+        <h3>Supplier Queries</h3>
+        <p>For all supplier-related enquiries, please contact our team. We will assist you accordingly.</p>
+        <span class="v2-link-arrow">Send supplier query</span>
       </a>
 
       <a href="#" class="v2-contact-card v2-contact-card--yellow">
@@ -792,16 +759,17 @@
             <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
           </svg>
         </span>
-        <h3 data-i18n="home.con.c4.h3">Safety Reporting</h3>
-        <p data-i18n="home.con.c4.p">For any emergency or safety concern, please contact our team immediately. We take every report seriously.</p>
-        <span class="v2-link-arrow" data-i18n="home.con.c4.link">Report now →</span>
+        <h3>Safety Reporting</h3>
+        <p>For any emergency or safety concern, please contact our team immediately. We take every report seriously.</p>
+        <span class="v2-link-arrow">Report safety concern</span>
       </a>
 
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ FOOTER (v2) -->
+<!-- Brand color divider -->
+<!-- ------------------------------------------------------ FOOTER (v2) -->
 <footer class="v2-footer">
   <div class="v2-wrap">
 
@@ -810,7 +778,7 @@
         <a href="index.html" aria-label="Engen Mauritius home">
           <img src="assets/Logo-no-bg-white.png" alt="Engen Mauritius" class="v2-footer__logo">
         </a>
-        <p class="v2-footer__tagline" data-i18n="footer.tagline">More Than Just Fuel</p>
+        <p class="v2-footer__tagline">More Than Just Fuel</p>
         <div class="v2-footer__social">
           <a href="#" aria-label="Facebook">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -822,141 +790,63 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
         </div>
-        <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-top:0.5rem;">+230 206 6000<br>Quay D Road, Port Louis</p>
+        <p class="v2-footer__contact-meta">+230 206 6000<br>Quay D Road, Port Louis</p>
       </div>
 
       <div class="v2-footer__cols">
         <div class="v2-footer__col">
-          <h4 data-i18n="footer.col.newsroom">Newsroom</h4>
+          <h4>Newsroom</h4>
           <ul>
-            <li><a href="newsroom.html" data-i18n="footer.link.news">News &amp; Announcements</a></li>
-            <li><a href="newsroom.html" data-i18n="footer.link.press">Press Releases</a></li>
-            <li><a href="newsroom.html" data-i18n="footer.link.media">Media Resources</a></li>
+            <li><a href="newsroom.html">News &amp; Announcements</a></li>
+            <li><a href="newsroom.html">Press Releases</a></li>
+            <li><a href="newsroom.html">Media Resources</a></li>
           </ul>
         </div>
         <div class="v2-footer__col">
-          <h4 data-i18n="footer.col.careers">Careers</h4>
+          <h4>Careers</h4>
           <ul>
-            <li><a href="careers.html" data-i18n="footer.link.whywork">Why Work at Engen</a></li>
-            <li><a href="careers.html" data-i18n="footer.link.vacancies">Vacancies</a></li>
-            <li><a href="careers.html" data-i18n="footer.link.graduate">Graduate Programs</a></li>
-            <li><a href="mailto:recruitment@engen.mu" data-i18n="footer.link.apply">Apply Online</a></li>
+            <li><a href="careers.html">Why Work at Engen</a></li>
+            <li><a href="careers.html">Vacancies</a></li>
+            <li><a href="careers.html">Graduate Programs</a></li>
+            <li><a href="mailto:recruitment@engen.mu">Apply Online</a></li>
           </ul>
         </div>
         <div class="v2-footer__col">
-          <h4 data-i18n="footer.col.contact">Contact</h4>
+          <h4>Contact</h4>
           <ul>
-            <li><a href="contact.html" data-i18n="footer.link.general">General Contact</a></li>
-            <li><a href="contact.html" data-i18n="footer.link.feedback">Customer Feedback</a></li>
-            <li><a href="contact.html" data-i18n="footer.link.supplier">Supplier Queries</a></li>
-            <li><a href="contact.html" data-i18n="footer.link.safety">Safety Reporting</a></li>
+            <li><a href="contact.html">General Contact</a></li>
+            <li><a href="contact.html">Customer Feedback</a></li>
+            <li><a href="contact.html">Supplier Queries</a></li>
+            <li><a href="contact.html">Safety Reporting</a></li>
           </ul>
         </div>
         <div class="v2-footer__col">
-          <h4 data-i18n="footer.col.legal">Legal &amp; Utilities</h4>
+          <h4>Legal &amp; Utilities</h4>
           <ul>
-            <li><a href="privacy-policy.html" data-i18n="footer.link.privacy">Privacy Policy</a></li>
-            <li><a href="cookie-policy.html" data-i18n="footer.link.cookie">Cookie Policy</a></li>
-            <li><a href="terms.html" data-i18n="footer.link.terms">Terms of Use</a></li>
-            <li><a href="accessibility.html" data-i18n="footer.link.access">Accessibility</a></li>
-            <li><a href="#" data-i18n="footer.link.sitemap">Sitemap</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="#">Sitemap</a></li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="v2-footer__bottom">
-      <p data-i18n="footer.copyright">&copy; 2026 Engen Mauritius. All rights reserved.</p>
+      <p>&copy; 2026 Engen Petroleum (Mauritius) Limited. All rights reserved.</p>
       <div class="v2-footer__legal">
-        <a href="privacy-policy.html" data-i18n="footer.link.privacy">Privacy Policy</a>
-        <a href="cookie-policy.html" data-i18n="footer.link.cookie">Cookie Policy</a>
-        <a href="terms.html" data-i18n="footer.link.terms">Terms of Use</a>
-        <a href="accessibility.html" data-i18n="footer.link.access">Accessibility</a>
-        <a href="#" data-i18n="footer.link.sitemap">Sitemap</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="#">Sitemap</a>
       </div>
     </div>
 
   </div>
 </footer>
-
-<script src="translations.js" defer></script>
 <script src="script.js" defer></script>
-<script>
-// ── Hero Slider ──────────────────────────────────────────────────────────────
-(function () {
-  const slides   = Array.from(document.querySelectorAll('.v2-slide'));
-  const dots     = Array.from(document.querySelectorAll('.v2-slider__dot'));
-  const fill     = document.querySelector('.v2-slider__progress-fill');
-  const DURATION = 6000;
-  let current    = 0;
-  let autoTimer  = null;
-
-  // iOS Safari ignores autoplay on hidden elements — drive video manually
-  function handleVideo(slideEl, play) {
-    const v = slideEl.querySelector('video');
-    if (!v) return;
-    if (play) {
-      v.play().catch(() => {});
-    } else {
-      v.pause();
-      v.currentTime = 0;
-    }
-  }
-
-  function goTo(idx) {
-    const from = current;
-    current = ((idx % slides.length) + slides.length) % slides.length;
-    if (from === current) return;
-
-    handleVideo(slides[from], false);
-
-    slides[from].classList.remove('v2-slide--active');
-    slides[from].classList.add('v2-slide--exit');
-    dots[from].classList.remove('v2-slider__dot--active');
-
-    slides[current].classList.remove('v2-slide--exit');
-    slides[current].classList.add('v2-slide--active');
-    dots[current].classList.add('v2-slider__dot--active');
-
-    handleVideo(slides[current], true);
-
-    setTimeout(() => slides[from].classList.remove('v2-slide--exit'), 1000);
-    startProgress();
-  }
-
-  function startProgress() {
-    if (!fill) return;
-    fill.style.transition = 'none';
-    fill.style.width = '0%';
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      fill.style.transition = 'width ' + DURATION + 'ms linear';
-      fill.style.width = '100%';
-    }));
-  }
-
-  function startAuto() { stopAuto(); autoTimer = setInterval(() => goTo(current + 1), DURATION); }
-  function stopAuto()  { clearInterval(autoTimer); }
-
-  dots.forEach((dot, i) => dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); }));
-
-  const btnPrev = document.querySelector('.v2-slider__arrow--prev');
-  const btnNext = document.querySelector('.v2-slider__arrow--next');
-  if (btnPrev) btnPrev.addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
-  if (btnNext) btnNext.addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
-
-  const sliderEl = document.querySelector('.v2-slider');
-  if (sliderEl) {
-    sliderEl.addEventListener('mouseenter', stopAuto);
-    sliderEl.addEventListener('mouseleave', startAuto);
-  }
-
-  // Explicitly play slide 1 video on load (required for iOS autoplay policy)
-  handleVideo(slides[0], true);
-
-  startProgress();
-  startAuto();
-})();
-</script>
 
 <!-- Back to top -->
 <button class="back-to-top" id="backToTop" aria-label="Back to top">
@@ -973,3 +863,8 @@
 </script>
 </body>
 </html>
+
+
+
+
+
