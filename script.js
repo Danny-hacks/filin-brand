@@ -120,43 +120,43 @@ window.ENQUIRY_ROUTES = ENQUIRY_ROUTES;
   // Engen Mauritius — 37 operating stations
   // phone: '' = contact details pending confirmation — update when available
   const STATIONS = [
-    { id:0,  name:"Engen Abercrombie",          town:"Port Louis",        addr:"Royal Road, Abercrombie",         district:"Port Louis",        region:"Port Louis", lon:57.5389, lat:-20.1725, services:['ShopIn','LPG'],                          phone:'', open24:false, flagship:false },
-    { id:1,  name:"Engen Bagatelle",            town:"Moka",              addr:"Bagatelle Mall, Moka",            district:"Moka",              region:"Central",    lon:57.4972, lat:-20.2239, services:['ShopIn','SipIn','EatIn','Café 365','Car Wash'], phone:'', open24:false, flagship:true  },
-    { id:2,  name:"Engen Beau Bassin",          town:"Beau Bassin",       addr:"8 Suffren Street",                district:"Plaines Wilhems",   region:"Central",    lon:57.4681, lat:-20.2275, services:['LPG'],                                    phone:'', open24:false, flagship:false },
-    { id:3,  name:"Engen Chemin Grenier",       town:"Chemin Grenier",    addr:"Chemin Grenier",                  district:"Savanne",           region:"South",      lon:57.48,   lat:-20.49,   services:[],                                         phone:'', open24:false, flagship:false },
-    { id:4,  name:"Engen Coromandel",           town:"Coromandel",        addr:"Royal Road, Coromandel",          district:"Plaines Wilhems",   region:"Central",    lon:57.5258, lat:-20.1961, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:5,  name:"Engen Curepipe",             town:"Curepipe",          addr:"Royal Street, Curepipe",          district:"Plaines Wilhems",   region:"Central",    lon:57.5258, lat:-20.3203, services:['ShopIn','SipIn','EatIn','Car Wash','LPG'],  phone:'', open24:true,  flagship:true  },
-    { id:6,  name:"Engen Floreal",              town:"Floreal",           addr:"Floreal Road B5",                 district:"Plaines Wilhems",   region:"Central",    lon:57.5069, lat:-20.3061, services:['ShopIn','SipIn','Café 365','Car Wash'],    phone:'', open24:true,  flagship:true  },
-    { id:7,  name:"Engen Grand Baie",           town:"Grand Baie",        addr:"Coast Road, Grand Baie",          district:"Rivière du Rempart",region:"North",      lon:57.5833, lat:-20.0100, services:['LPG'],                                    phone:'', open24:false, flagship:false },
-    { id:8,  name:"Engen Grand Gaube",          town:"Grand Gaube",       addr:"Royal Road, Grand Gaube",         district:"Rivière du Rempart",region:"North",      lon:57.6650, lat:-20.0114, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:9,  name:"Engen La Caroline",          town:"Bel Air",           addr:"La Caroline, Bel Air",            district:"Flacq",             region:"East",       lon:57.7544, lat:-20.2511, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:10, name:"Engen La Caroline 2",        town:"Bel Air",           addr:"La Caroline, Bel Air",            district:"Flacq",             region:"East",       lon:57.740,  lat:-20.3031, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:11, name:"Engen La Croisette",         town:"Grand Baie",        addr:"La Croisette, Grand Baie",        district:"Rivière du Rempart",region:"North",      lon:57.5819, lat:-20.0094, services:['ShopIn','SipIn','Café 365','Car Wash'],    phone:'', open24:true,  flagship:true  },
-    { id:12, name:"Engen La Louise",            town:"Quatre Bornes",     addr:"La Louise, Quatre Bornes",        district:"Plaines Wilhems",   region:"Central",    lon:57.4753, lat:-20.2719, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:13, name:"Engen La Preneuse",          town:"Rivière Noire",     addr:"La Preneuse, Rivière Noire",      district:"Black River",       region:"West",       lon:57.393,  lat:-20.390,  services:['ShopIn','SipIn','EatIn'],                 phone:'', open24:true,  flagship:false },
-    { id:14, name:"Engen La Vigie",             town:"La Vigie",          addr:"Motorway M1, La Vigie",           district:"Plaines Wilhems",   region:"Central",    lon:57.5269, lat:-20.2539, services:['ShopIn'],                                 phone:'', open24:false, flagship:false },
-    { id:15, name:"Engen Mahebourg",            town:"Mahebourg",         addr:"Flammand Street, Mahebourg",      district:"Grand Port",        region:"South",      lon:57.7083, lat:-20.4067, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:16, name:"Engen Mesnil",               town:"Mesnil",            addr:"Royal Road, Mesnil",              district:"Plaines Wilhems",   region:"Central",    lon:57.5136, lat:-20.2908, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:17, name:"Engen Morc St André",        town:"Morc St André",     addr:"Royal Road, Morc St André",       district:"Pamplemousses",     region:"North",      lon:57.5642, lat:-20.0775, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:18, name:"Engen Pamplemousses",        town:"Pamplemousses",     addr:"Powder Mill Road, Beau Plan",     district:"Pamplemousses",     region:"North",      lon:57.5761, lat:-20.1028, services:['ShopIn','SipIn','EatIn','Car Wash','LPG'],  phone:'', open24:true,  flagship:true  },
-    { id:19, name:"Engen Petit Raffray",        town:"Petit Raffray",     addr:"Royal Road, Petit Raffray",       district:"Rivière du Rempart",region:"North",      lon:57.6322, lat:-20.0250, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:20, name:"Engen Petite Rivière",       town:"Petite Rivière",    addr:"Royal Road, Petite Rivière",      district:"Black River",       region:"West",       lon:57.385,  lat:-20.270,  services:[],                                         phone:'', open24:false, flagship:false },
-    { id:21, name:"Engen Phoenix",              town:"Phoenix",           addr:"SSR Avenue, Phoenix",             district:"Plaines Wilhems",   region:"Central",    lon:57.4947, lat:-20.2775, services:['ShopIn','SipIn','EatIn','Car Wash'],       phone:'', open24:false, flagship:true  },
-    { id:22, name:"Engen Plaine Verte",         town:"Port Louis",        addr:"Noor E Islaam Street",            district:"Port Louis",        region:"Port Louis", lon:57.5217, lat:-20.1378, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:23, name:"Engen Plaisance",            town:"Plaisance",         addr:"SSR Avenue, Plaisance",           district:"Grand Port",        region:"South",      lon:57.5831, lat:-20.4300, services:['ShopIn'],                                 phone:'', open24:true,  flagship:false },
-    { id:24, name:"Engen Poste de Flacq",       town:"Poste de Flacq",    addr:"Poste de Flacq",                  district:"Flacq",             region:"East",       lon:57.7306, lat:-20.1631, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:25, name:"Engen Quatre Bornes",        town:"Quatre Bornes",     addr:"Ollier Avenue, Quatre Bornes",    district:"Plaines Wilhems",   region:"Central",    lon:57.4764, lat:-20.2531, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:26, name:"Engen Reduit",               town:"Reduit",            addr:"Ebene Road, Reduit",              district:"Moka",              region:"Central",    lon:57.4983, lat:-20.2383, services:['ShopIn'],                                 phone:'', open24:true,  flagship:false },
-    { id:27, name:"Engen Riche Terre",          town:"Terre Rouge",       addr:"Motorway M2, Riche Terre",        district:"Pamplemousses",     region:"North",      lon:57.4761, lat:-20.1603, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:28, name:"Engen Rivière des Anguilles",town:"Rivière des Anguilles",addr:"Rivière des Anguilles",        district:"Savanne",           region:"South",      lon:57.39,   lat:-20.42,   services:[],                                         phone:'', open24:false, flagship:false },
-    { id:29, name:"Engen Roches Brunes",        town:"Roches Brunes",     addr:"Route Hugnin, Roches Brunes",     district:"Plaines Wilhems",   region:"Central",    lon:57.4725, lat:-20.2364, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:30, name:"Engen Rose Belle",           town:"Rose Belle",        addr:"Royal Road, Rose Belle",          district:"Grand Port",        region:"South",      lon:57.5975, lat:-20.3994, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:31, name:"Engen Rose Hill",            town:"Rose Hill",         addr:"Royal Road, Rose Hill",           district:"Plaines Wilhems",   region:"Central",    lon:57.4725, lat:-20.2392, services:['ShopIn','SipIn','EatIn','LPG'],            phone:'', open24:true,  flagship:false },
-    { id:32, name:"Engen Saint Jean",           town:"Quatre Bornes",     addr:"Royal Road, St Jean",             district:"Plaines Wilhems",   region:"Central",    lon:57.4803, lat:-20.2644, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:33, name:"Engen Saint Léon",           town:"Quartier Militaire",addr:"Royal Road, Quartier Militaire",  district:"Moka",              region:"Central",    lon:57.5967, lat:-20.2472, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:34, name:"Engen Sainte Ursule",        town:"Flacq",             addr:"Ste Ursule, Centre de Flacq",     district:"Flacq",             region:"East",       lon:57.7219, lat:-20.1900, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:35, name:"Engen Vacoas",               town:"Vacoas",            addr:"John Kennedy Avenue, Vacoas",     district:"Plaines Wilhems",   region:"Central",    lon:57.4928, lat:-20.2969, services:[],                                         phone:'', open24:false, flagship:false },
-    { id:36, name:"Engen Tribeca",              town:"Ebene",             addr:"Ebene",                           district:"Moka",              region:"Central",    lon:57.4978, lat:-20.2428, services:[],                                         phone:'', open24:false, flagship:false },
+    { id:0,  name:"FillinAbercrombie",          town:"Port Louis",        addr:"Royal Road, Abercrombie",         district:"Port Louis",        region:"Port Louis", lon:57.5389, lat:-20.1725, services:['ShopIn','LPG'],                           phone:'+230 206 6000', open24:false, flagship:false },
+    { id:1,  name:"FillinBagatelle",            town:"Moka",              addr:"Bagatelle Mall, Moka",            district:"Moka",              region:"Central",    lon:57.4972, lat:-20.2239, services:['ShopIn','SipIn','EatIn','Cafe 365','Car Wash'], phone:'+230 206 6000', open24:false, flagship:true  },
+    { id:2,  name:"FillinBeau Bassin",          town:"Beau Bassin",       addr:"8 Suffren Street",                district:"Plaines Wilhems",   region:"Central",    lon:57.4681, lat:-20.2275, services:['LPG'],                                     phone:'+230 206 6000', open24:false, flagship:false },
+    { id:3,  name:"FillinChemin Grenier",       town:"Chemin Grenier",    addr:"Chemin Grenier",                  district:"Savanne",           region:"South",      lon:57.48,   lat:-20.49,   services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:4,  name:"FillinCoromandel",           town:"Coromandel",        addr:"Royal Road, Coromandel",          district:"Plaines Wilhems",   region:"Central",    lon:57.5258, lat:-20.1961, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:5,  name:"FillinCurepipe",             town:"Curepipe",          addr:"Royal Street, Curepipe",          district:"Plaines Wilhems",   region:"Central",    lon:57.5258, lat:-20.3203, services:['ShopIn','SipIn','EatIn','Car Wash','LPG'],   phone:'+230 206 6000', open24:true,  flagship:true  },
+    { id:6,  name:"FillinFloreal",              town:"Floreal",           addr:"Floreal Road B5",                 district:"Plaines Wilhems",   region:"Central",    lon:57.5069, lat:-20.3061, services:['ShopIn','SipIn','Cafe 365','Car Wash'],     phone:'+230 206 6000', open24:true,  flagship:true  },
+    { id:7,  name:"FillinGrand Baie",           town:"Grand Baie",        addr:"Coast Road, Grand Baie",          district:"Rivière du Rempart",region:"North",      lon:57.5833, lat:-20.0100, services:['LPG'],                                     phone:'+230 206 6000', open24:false, flagship:false },
+    { id:8,  name:"FillinGrand Gaube",          town:"Grand Gaube",       addr:"Royal Road, Grand Gaube",         district:"Rivière du Rempart",region:"North",      lon:57.6650, lat:-20.0114, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:9,  name:"FillinLa Caroline",          town:"Bel Air",           addr:"La Caroline, Bel Air",            district:"Flacq",             region:"East",       lon:57.7544, lat:-20.2511, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:10, name:"FillinLa Caroline 2",        town:"Bel Air",           addr:"La Caroline, Bel Air",            district:"Flacq",             region:"East",       lon:57.740,  lat:-20.3031, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:11, name:"FillinLa Croisette",         town:"Grand Baie",        addr:"La Croisette, Grand Baie",        district:"Rivière du Rempart",region:"North",      lon:57.5819, lat:-20.0094, services:['ShopIn','SipIn','Cafe 365','Car Wash'],     phone:'+230 206 6000', open24:true,  flagship:true  },
+    { id:12, name:"FillinLa Louise",            town:"Quatre Bornes",     addr:"La Louise, Quatre Bornes",        district:"Plaines Wilhems",   region:"Central",    lon:57.4753, lat:-20.2719, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:13, name:"FillinLa Preneuse",          town:"Rivière Noire",     addr:"La Preneuse, Rivière Noire",      district:"Black River",       region:"West",       lon:57.393,  lat:-20.390,  services:['ShopIn','SipIn','EatIn'],                  phone:'+230 206 6000', open24:true,  flagship:false },
+    { id:14, name:"FillinLa Vigie",             town:"La Vigie",          addr:"Motorway M1, La Vigie",           district:"Plaines Wilhems",   region:"Central",    lon:57.5269, lat:-20.2539, services:['ShopIn'],                                  phone:'+230 206 6000', open24:false, flagship:false },
+    { id:15, name:"FillinMahebourg",            town:"Mahebourg",         addr:"Flammand Street, Mahebourg",      district:"Grand Port",        region:"South",      lon:57.7083, lat:-20.4067, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:16, name:"FillinMesnil",               town:"Mesnil",            addr:"Royal Road, Mesnil",              district:"Plaines Wilhems",   region:"Central",    lon:57.5136, lat:-20.2908, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:17, name:"FillinMorc St André",        town:"Morc St André",     addr:"Royal Road, Morc St André",       district:"Pamplemousses",     region:"North",      lon:57.5642, lat:-20.0775, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:18, name:"FillinPamplemousses",        town:"Pamplemousses",     addr:"Powder Mill Road, Beau Plan",     district:"Pamplemousses",     region:"North",      lon:57.5761, lat:-20.1028, services:['ShopIn','SipIn','EatIn','Car Wash','LPG'],   phone:'+230 206 6000', open24:true,  flagship:true  },
+    { id:19, name:"FillinPetit Raffray",        town:"Petit Raffray",     addr:"Royal Road, Petit Raffray",       district:"Rivière du Rempart",region:"North",      lon:57.6322, lat:-20.0250, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:20, name:"FillinPetite Rivière",       town:"Petite Rivière",    addr:"Royal Road, Petite Rivière",      district:"Black River",       region:"West",       lon:57.385,  lat:-20.270,  services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:21, name:"FillinPhoenix",              town:"Phoenix",           addr:"SSR Avenue, Phoenix",             district:"Plaines Wilhems",   region:"Central",    lon:57.4947, lat:-20.2775, services:['ShopIn','SipIn','EatIn','Car Wash'],        phone:'+230 206 6000', open24:false, flagship:true  },
+    { id:22, name:"FillinPlaine Verte",         town:"Port Louis",        addr:"Noor E Islaam Street",            district:"Port Louis",        region:"Port Louis", lon:57.5217, lat:-20.1378, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:23, name:"FillinPlaisance",            town:"Plaisance",         addr:"SSR Avenue, Plaisance",           district:"Grand Port",        region:"South",      lon:57.5831, lat:-20.4300, services:['ShopIn'],                                  phone:'+230 206 6000', open24:true,  flagship:false },
+    { id:24, name:"FillinPoste de Flacq",       town:"Poste de Flacq",    addr:"Poste de Flacq",                  district:"Flacq",             region:"East",       lon:57.7306, lat:-20.1631, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:25, name:"FillinQuatre Bornes",        town:"Quatre Bornes",     addr:"Ollier Avenue, Quatre Bornes",    district:"Plaines Wilhems",   region:"Central",    lon:57.4764, lat:-20.2531, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:26, name:"FillinReduit",               town:"Reduit",            addr:"Ebene Road, Reduit",              district:"Moka",              region:"Central",    lon:57.4983, lat:-20.2383, services:['ShopIn'],                                  phone:'+230 206 6000', open24:true,  flagship:false },
+    { id:27, name:"FillinRiche Terre",          town:"Terre Rouge",       addr:"Motorway M2, Riche Terre",        district:"Pamplemousses",     region:"North",      lon:57.4761, lat:-20.1603, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:28, name:"FillinRivière des Anguilles",town:"Rivière des Anguilles",addr:"Rivière des Anguilles",        district:"Savanne",           region:"South",      lon:57.39,   lat:-20.42,   services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:29, name:"FillinRoches Brunes",        town:"Roches Brunes",     addr:"Route Hugnin, Roches Brunes",     district:"Plaines Wilhems",   region:"Central",    lon:57.4725, lat:-20.2364, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:30, name:"FillinRose Belle",           town:"Rose Belle",        addr:"Royal Road, Rose Belle",          district:"Grand Port",        region:"South",      lon:57.5975, lat:-20.3994, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:31, name:"FillinRose Hill",            town:"Rose Hill",         addr:"Royal Road, Rose Hill",           district:"Plaines Wilhems",   region:"Central",    lon:57.4725, lat:-20.2392, services:['ShopIn','SipIn','EatIn','LPG'],             phone:'+230 206 6000', open24:true,  flagship:false },
+    { id:32, name:"FillinSaint Jean",           town:"Quatre Bornes",     addr:"Royal Road, St Jean",             district:"Plaines Wilhems",   region:"Central",    lon:57.4803, lat:-20.2644, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:33, name:"FillinSaint Léon",           town:"Quartier Militaire",addr:"Royal Road, Quartier Militaire",  district:"Moka",              region:"Central",    lon:57.5967, lat:-20.2472, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:34, name:"FillinSainte Ursule",        town:"Flacq",             addr:"Ste Ursule, Centre de Flacq",     district:"Flacq",             region:"East",       lon:57.7219, lat:-20.1900, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:35, name:"FillinVacoas",               town:"Vacoas",            addr:"John Kennedy Avenue, Vacoas",     district:"Plaines Wilhems",   region:"Central",    lon:57.4928, lat:-20.2969, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
+    { id:36, name:"FillinTribeca",              town:"Ebene",             addr:"Ebene",                           district:"Moka",              region:"Central",    lon:57.4978, lat:-20.2428, services:[],                                          phone:'+230 206 6000', open24:false, flagship:false },
   ];
 
   const STATION_TODO = {
@@ -294,6 +294,19 @@ window.ENQUIRY_ROUTES = ENQUIRY_ROUTES;
     tipRegion.textContent = s.region + (s.flagship ? ' · Flagship' : '');
     tipAddr.textContent   = `${s.town}, Mauritius`;
     tipCta.href = `https://www.google.com/maps/search/?api=1&query=${s.lat},${s.lon}`;
+    const tipSvcs = document.getElementById('tipSvcs');
+    if (tipSvcs) {
+      const top3 = (s.services || []).slice(0, 3);
+      tipSvcs.innerHTML = top3.map(sv => `<span class="tip-svc">${sv}</span>`).join('') +
+        (s.open24 ? '<span class="tip-svc tip-svc--24">24/7</span>' : '');
+    }
+    const tipPhone = document.getElementById('tipPhone');
+    if (tipPhone) {
+      const hasPhone = s.phone && !s.phone.toLowerCase().includes('confirm');
+      tipPhone.textContent = hasPhone ? s.phone : '';
+      tipPhone.href = hasPhone ? `tel:${s.phone.replace(/\s/g,'')}` : '#';
+      tipPhone.style.display = hasPhone ? '' : 'none';
+    }
   }
 
   // ── auto-cycle state ──
@@ -498,17 +511,24 @@ window.ENQUIRY_ROUTES = ENQUIRY_ROUTES;
 
   function getFiltered() {
     const q = filterSearch.toLowerCase();
-    return STATIONS.filter(s => {
+    let result = STATIONS.filter(s => {
       if (filterRegion !== 'all' && s.region !== filterRegion) return false;
       if (filterServices.has('flagship') && !s.flagship) return false;
       if (filterServices.has('open24') && !s.open24) return false;
-      if (filterServices.has('shopIn') && !s.services.includes('ShopIn')) return false;
-      if (filterServices.has('Cafe 365') && !s.services.includes('Cafe 365')) return false;
-      if (filterServices.has('Car Wash') && !s.services.includes('Car Wash')) return false;
-      if (filterServices.has('LPG') && !s.services.includes('LPG')) return false;
+      for (const svc of filterServices) {
+        if (svc === 'flagship' || svc === 'open24') continue;
+        if (!s.services.includes(svc)) return false;
+      }
       if (q && !s.name.toLowerCase().includes(q) && !s.town.toLowerCase().includes(q) && !s.district.toLowerCase().includes(q)) return false;
       return true;
     });
+    if (userCoords) {
+      result = result.map(s => ({
+        ...s,
+        _dist: haversine(userCoords.lat, userCoords.lon, s.lat, s.lon)
+      })).sort((a, b) => a._dist - b._dist);
+    }
+    return result;
   }
 
   function renderList(filtered) {
@@ -520,7 +540,16 @@ window.ENQUIRY_ROUTES = ENQUIRY_ROUTES;
     });
 
     const countEl = document.getElementById('locCount');
-    if (countEl) countEl.innerHTML = `Showing <strong>${filtered.length}</strong> of <strong>${STATIONS.length}</strong> stations`;
+    if (countEl) {
+      const strong = countEl.querySelector('strong');
+      const current = strong ? parseInt(strong.textContent) : -1;
+      if (strong && current !== filtered.length) {
+        strong.classList.add('v2-count-flip');
+        setTimeout(() => { strong.textContent = filtered.length; strong.classList.remove('v2-count-flip'); }, 160);
+      } else if (!strong) {
+        countEl.innerHTML = `Showing <strong>${filtered.length}</strong> of <strong>${STATIONS.length}</strong> stations`;
+      }
+    }
 
     const listEl = document.getElementById('stationList');
     if (!listEl) return;
@@ -531,24 +560,51 @@ window.ENQUIRY_ROUTES = ENQUIRY_ROUTES;
       return;
     }
 
-    listEl.innerHTML = filtered.map(s => `
-      <div class="v2-st-card" data-id="${s.id}" tabindex="0" role="button" aria-label="View ${s.name} on map">
+    const FUEL_SVCS    = new Set(['Mogas', 'Gasoil', 'HFO', 'Jet A-1', 'LPG']);
+    const CONV_SVCS    = new Set(['ShopIn', 'SipIn', 'EatIn', 'Cafe 365']);
+    const AMENITY_SVCS = new Set(['Car Wash', 'Lubricants', 'EV Charging']);
+
+    listEl.innerHTML = filtered.map(s => {
+      const hasPhone = s.phone && !s.phone.toLowerCase().includes('confirm');
+      const hasHours = s.hours && !s.hours.toLowerCase().includes('confirm');
+      const fuelSvcs    = (s.fuelTypes || []).filter(sv => FUEL_SVCS.has(sv));
+      const convSvcs    = (s.services  || []).filter(sv => CONV_SVCS.has(sv));
+      const amenitySvcs = (s.services  || []).filter(sv => AMENITY_SVCS.has(sv));
+      const extraSvcs   = (s.services  || []).filter(sv => !CONV_SVCS.has(sv) && !AMENITY_SVCS.has(sv) && !FUEL_SVCS.has(sv));
+
+      const distStr = s._dist != null
+        ? (s._dist < 1 ? Math.round(s._dist * 1000) + 'm' : s._dist.toFixed(1) + 'km') + ' away'
+        : '';
+
+      return `
+      <div class="v2-st-card" data-id="${s.id}" data-region="${s.region}" tabindex="0" role="button" aria-label="View ${s.name} on map">
         <div class="v2-st-card__main">
-          ${s.flagship ? '<span class="v2-st-card__flagship">Flagship</span>' : ''}
-          <strong class="v2-st-card__name">${s.name.replace('Engen ', '')}</strong>
+          ${s.flagship ? '<span class="v2-st-card__flagship">★ Flagship</span>' : ''}
+          <strong class="v2-st-card__name">${s.name.replace('Fillin ', '')}</strong>
           <span class="v2-st-card__addr">${s.addr}, ${s.town}</span>
-          <span class="v2-st-card__hours">${s.hours}</span>
-          <span class="v2-st-card__contact">${s.phone}</span>
+          ${hasHours ? `<span class="v2-st-card__hours"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>${s.hours}</span>` : ''}
+          ${hasPhone ? `<a href="tel:${s.phone.replace(/\s/g,'')}" class="v2-st-card__contact" onclick="event.stopPropagation()"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3.09 4.18 2 2 0 0 1 5.06 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>${s.phone}</a>` : ''}
           <div class="v2-st-card__services">
-            ${[...s.fuelTypes, ...s.services].slice(0, 6).map(service => `<span>${service}</span>`).join('')}
+            ${fuelSvcs.map(sv => `<span class="v2-st-svc v2-st-svc--fuel">${sv}</span>`).join('')}
+            ${convSvcs.map(sv => `<span class="v2-st-svc v2-st-svc--conv">${sv}</span>`).join('')}
+            ${amenitySvcs.map(sv => `<span class="v2-st-svc v2-st-svc--amenity">${sv}</span>`).join('')}
+            ${extraSvcs.map(sv => `<span class="v2-st-svc">${sv}</span>`).join('')}
           </div>
         </div>
         <div class="v2-st-card__meta">
+          ${distStr ? `<span class="v2-st-card__dist">${distStr}</span>` : ''}
           <span class="v2-st-card__district">${s.district}</span>
-          ${s.open24 ? '<span class="v2-st-card__open24">24 / 7</span>' : ''}
+          ${s.open24 ? '<span class="v2-st-card__open24">24/7</span>' : ''}
         </div>
-      </div>
-    `).join('');
+      </div>`;
+    }).join('');
+
+    requestAnimationFrame(() => {
+      listEl.querySelectorAll('.v2-st-card').forEach((card, i) => {
+        card.style.animationDelay = `${i * 28}ms`;
+        card.classList.add('v2-card-enter');
+      });
+    });
 
     listEl.querySelectorAll('.v2-st-card').forEach(card => {
       const sid = parseInt(card.dataset.id);
@@ -594,6 +650,17 @@ window.ENQUIRY_ROUTES = ENQUIRY_ROUTES;
     }
   }
 
+  // ── Geolocation ──────────────────────────────────────────────────────
+  let userCoords = null;
+
+  function haversine(lat1, lon1, lat2, lon2) {
+    const R = 6371;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)**2;
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  }
+
   function applyFilters() {
     if (selectedId !== null) {
       selectedId = null;
@@ -602,6 +669,13 @@ window.ENQUIRY_ROUTES = ENQUIRY_ROUTES;
       isUserHovered = false;
     }
     renderList(getFiltered());
+    // Update clear button badge
+    const activeCount = filterServices.size + (filterRegion !== 'all' ? 1 : 0) + (filterSearch ? 1 : 0);
+    const clearBtn = document.getElementById('clearFiltersTop');
+    if (clearBtn) {
+      clearBtn.textContent = activeCount ? `Clear filters (${activeCount})` : 'Clear filters';
+      clearBtn.classList.toggle('has-active', activeCount > 0);
+    }
   }
 
   function clearAllFilters() {
@@ -646,6 +720,37 @@ window.ENQUIRY_ROUTES = ENQUIRY_ROUTES;
     applyFilters();
   });
 
+  // Region pill hover → highlight matching pins on map
+  document.querySelectorAll('#regionFilter [data-region]').forEach(btn => {
+    btn.addEventListener('mouseenter', () => {
+      const r = btn.dataset.region;
+      if (r === 'all') return;
+      allPins.forEach(({ s, pos }) => {
+        pos.classList.toggle('pin-region-highlight', s.region === r);
+        pos.classList.toggle('pin-region-dim', s.region !== r);
+      });
+    });
+    btn.addEventListener('mouseleave', () => {
+      allPins.forEach(({ pos }) => pos.classList.remove('pin-region-highlight', 'pin-region-dim'));
+    });
+  });
+
+  // Near Me — geolocation sort
+  document.getElementById('nearMeBtn')?.addEventListener('click', function() {
+    if (!navigator.geolocation) return;
+    this.classList.add('is-loading');
+    navigator.geolocation.getCurrentPosition(pos => {
+      userCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+      this.classList.remove('is-loading');
+      this.classList.add('is-active');
+      const label = this.querySelector('.near-me-label');
+      if (label) label.textContent = 'Nearest first';
+      applyFilters();
+    }, () => {
+      this.classList.remove('is-loading');
+    });
+  });
+
   // Mobile: tap outside pin and tooltip to dismiss tip
   document.querySelector('.v2-loc-map')?.addEventListener('pointerdown', e => {
     if (e.pointerType !== 'touch') return;
@@ -675,10 +780,10 @@ window.ENQUIRY_ROUTES = ENQUIRY_ROUTES;
         li.setAttribute('role', 'option');
         li.setAttribute('aria-selected', 'false');
         li.className = 'v2-loc-ac-item';
-        li.innerHTML = `<span class="v2-loc-ac-item__name">${s.name.replace('Engen ', '')}</span><span class="v2-loc-ac-item__town">${s.town} · ${s.district}</span>`;
+        li.innerHTML = `<span class="v2-loc-ac-item__name">${s.name.replace('Fillin ', '')}</span><span class="v2-loc-ac-item__town">${s.town} · ${s.district}</span>`;
         li.addEventListener('mousedown', e => {
           e.preventDefault();
-          inputEl.value = s.name.replace('Engen ', '');
+          inputEl.value = s.name.replace('Fillin ', '');
           acListEl.innerHTML = '';
           onSelect(s);
         });
@@ -719,7 +824,7 @@ window.ENQUIRY_ROUTES = ENQUIRY_ROUTES;
   const stationsSearchEl = document.getElementById('locSearch');
   const stationsAcEl     = document.getElementById('stationLocAc');
   setupAutocomplete(stationsSearchEl, stationsAcEl, s => {
-    filterSearch = s.name.replace('Engen ', '').toLowerCase();
+    filterSearch = s.name.replace('Fillin ', '').toLowerCase();
     applyFilters();
   });
 
@@ -727,7 +832,7 @@ window.ENQUIRY_ROUTES = ENQUIRY_ROUTES;
   const homeSearchEl = document.getElementById('homeLocSearch');
   const homeAcEl     = document.getElementById('homeLocAc');
   setupAutocomplete(homeSearchEl, homeAcEl, s => {
-    window.location.href = `stations.html?q=${encodeURIComponent(s.name.replace('Engen ', ''))}`;
+    window.location.href = `stations.html?q=${encodeURIComponent(s.name.replace('Fillin ', ''))}`;
   });
 
   // Home page form submit — navigate to stations with query

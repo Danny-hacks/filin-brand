@@ -83,14 +83,15 @@
   <div class="v2-wrap">
     <div class="v2-loc-grid">
 
-      <!-- Left col: heading + result count + scrollable station list -->
+      <!-- Left col: heading + story + stats + result count + scrollable station list -->
       <div class="v2-loc-copy">
         <div>
           <span class="v2-label">Station Locator</span>
           <h2 class="v2-loc-heading">
             Find a Fillin station
-            <em data-en="near you." data-fr="pres de chez vous.">near you.</em>
+            <em data-en="near you." data-fr="près de chez vous.">near you.</em>
           </h2>
+          <p class="v2-loc-lede">37 stations across Mauritius — from Port Louis to Mahebourg, north to south. Every stop built around the way your day moves.</p>
         </div>
         <p class="v2-loc-count" id="locCount">Showing <strong>37</strong> of <strong>37</strong> stations</p>
         <div class="v2-loc-list" id="stationList" aria-live="polite" aria-label="Filtered station list"></div>
@@ -110,6 +111,10 @@
               <ul class="v2-loc-autocomplete" id="stationLocAc" role="listbox" aria-label="Station suggestions"></ul>
             </div>
             <button type="submit" class="v2-btn v2-btn--yellow" data-en="Search" data-fr="Rechercher">Search</button>
+            <button type="button" class="v2-loc-near-btn" id="nearMeBtn" title="Sort by nearest station">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+              <span class="near-me-label">Near Me</span>
+            </button>
           </form>
           <div class="v2-loc-filters">
             <div class="v2-loc-filter-group">
@@ -129,7 +134,9 @@
               <div class="v2-loc-filter-pills" id="serviceFilter" role="group" aria-label="Filter by service">
                 <button class="v2-filter-pill" data-service="flagship">Flagship</button>
                 <button class="v2-filter-pill" data-service="open24">Open 24/7</button>
-                <button class="v2-filter-pill" data-service="shopIn">ShopIn</button>
+                <button class="v2-filter-pill" data-service="ShopIn">ShopIn</button>
+                <button class="v2-filter-pill" data-service="SipIn">SipIn</button>
+                <button class="v2-filter-pill" data-service="EatIn">EatIn</button>
                 <button class="v2-filter-pill" data-service="Cafe 365">Cafe 365</button>
                 <button class="v2-filter-pill" data-service="Car Wash">Car Wash</button>
                 <button class="v2-filter-pill" data-service="LPG">LPG</button>
@@ -144,7 +151,7 @@
         <!-- Map -->
         <div class="v2-loc-map locator-map" aria-label="Map of Mauritius with station locations">
           <div class="map-frame">
-            <svg id="locatorMap" class="map-svg" viewBox="0 0 800 900" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Interactive map of Mauritius with Engen station pins">
+            <svg id="locatorMap" class="map-svg" viewBox="0 0 800 900" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Interactive map of Mauritius with Fillin station pins">
               <defs>
                 <filter id="mapIslandShadow" x="-10%" y="-10%" width="120%" height="120%">
                   <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
@@ -168,6 +175,7 @@
               <p class="map-tip__region" id="tipRegion">North</p>
               <p class="map-tip__name" id="tipName">Station name</p>
               <p class="map-tip__addr" id="tipAddr">Town, Mauritius</p>
+              <div class="map-tip__svcs" id="tipSvcs"></div>
               <a class="map-tip__cta" id="tipCta" href="#" target="_blank" rel="noopener">
                 <span data-en="Open in Google Maps" data-fr="Ouvrir dans Google Maps">Open in Google Maps</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
@@ -339,7 +347,7 @@
       <span class="v2-label">At Every Station</span>
       <h2>More Than a Stop  - <br><em>A Destination</em></h2>
       <p class="v2-ip-head__lead">
-        Every Engen station is built around the customer. From quality fuel to hot food and premium retail  -  here's what you'll find across our 37-station network.
+        Every Fillin station is built around the customer. From quality fuel to hot food and premium retail  -  here's what you'll find across our 37-station network.
       </p>
     </div>
 
@@ -429,7 +437,7 @@
       <span class="v2-label">By the Numbers</span>
       <h2>A Network Built for <em>Mauritius</em></h2>
       <p class="v2-ip-head__lead">
-        From Port Louis to the south coast, the Engen network reaches every corner of the island  -  backed by robust infrastructure and a commitment to consistent supply.
+        From Port Louis to the south coast, the Fillin network reaches every corner of the island  -  backed by robust infrastructure and a commitment to consistent supply.
       </p>
     </div>
 
@@ -538,7 +546,7 @@
         <div class="v2-footer__col">
           <h4>Careers</h4>
           <ul>
-            <li><a href="careers.html">Why Work at Engen</a></li>
+            <li><a href="careers.html">Why Work at Fillin</a></li>
             <li><a href="careers.html">Vacancies</a></li>
             <li><a href="careers.html">Graduate Programs</a></li>
             <li><a href="mailto:recruitment@engen.mu">Apply Online</a></li>
